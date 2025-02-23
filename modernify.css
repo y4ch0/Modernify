@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
-    --root-font: "Open Sans", "Inter", sans-serif;
+    --root-font: "Inter", sans-serif;
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
     --link-color: 0, 81, 255;
@@ -17,7 +17,7 @@
     --wrapper-width-bp-3: 92vw;
     --intro-height: 30rem;
     --input-label-color: var(--primary-color);
-    --sidenav-text-color: var(--primary-color);
+    --sidenav-text-color: 0, 0, 0;
     --navbar-text-color: var(--primary-color);
     --details-label-color: var(--primary-color);
     --card-outline-color: var(--secondary-color);
@@ -31,6 +31,7 @@
 
 *:not(i, span.icon) {
     font-family: var(--root-font);
+    letter-spacing: 0.2px;
 }
 
 * {
@@ -54,13 +55,6 @@ body {
     line-height: 1.6;
     font-size: 1rem;
 }
-
-/*.form-control:focus,
-.button:focus,
-a:focus {
-    outline: 0.25rem solid rgb(var(--primary-color)) !important;
-    outline-offset: 3px;
-}*/
 
 header.gov-mark {
     display: flex;
@@ -147,57 +141,6 @@ header.accessibility-tools .at-c-5 {
     background-color: #000 !important;
 }
 
-header.gov-mark #explanation p {
-    font-size: 1rem;
-}
-
-header.gov-mark .wrapper {
-    width: var(--wrapper-width);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-header.gov-mark .wrapper .row {
-    display: flex;
-    width: 100%;
-    gap: 0.5rem;
-}
-
-header.gov-mark .wrapper .row .col {
-    width: 100%;
-}
-
-header.gov-mark .toggler {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: underline;
-}
-
-header.gov-mark .toggler:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-header.gov-mark p.header-paragraph {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-header.gov-mark img.flag {
-    height: 20px;
-    border-radius: 0;
-}
-
-header.gov-mark #explanation {
-    display: none;
-}
-
-header.gov-mark #explanation.show {
-    display: flex;
-}
-
 header.website-warning {
     width: 100%;
     display: flex;
@@ -210,7 +153,7 @@ header.website-warning {
 nav {
     width: 100%;
     display: flex;
-    background-color: #f7f7f7;
+    background-color: #fcfcfc;
     padding: 1.25rem;
     justify-content: center;
     color: var(--primary-color);
@@ -250,16 +193,10 @@ nav a:has(img) {
 }
 
 nav a img {
-    max-height: 4rem;
+    max-height: 3.5rem;
     padding: 0;
     margin: 0;
     border-radius: 0;
-}
-
-nav a:has(img):hover {
-    outline: 3px solid rgb(var(--primary-color));
-    outline-offset: 0.25rem;
-    border-radius: 0.1rem;
 }
 
 nav ul.nav {
@@ -278,7 +215,7 @@ nav ul.nav li a {
 }
 
 nav.side-nav ul.nav li.current a {
-    background-color: rgba(var(--sidenav-text-color), 0.1);
+    background-color: rgba(var(--primary-color), 0.1);
 }
 
 nav button.nav-collapse {
@@ -344,7 +281,7 @@ main {
 }
 
 main nav.side-nav {
-    width: 12vw;
+    width: 13vw;
     position: sticky;
     top: 7rem;
     height: 100%;
@@ -379,12 +316,13 @@ main nav.side-nav ul.nav li a {
 }
 
 main nav.side-nav ul.nav li a {
-    padding: 0.3rem 0.5rem;
+    padding: 0.4rem 0.6rem;
     border-radius: 0.5rem;
     transition: background-color 80ms ease-in-out;
     font-size: 0.95rem;
     text-decoration: none !important;
     line-height: 1.4;
+    font-weight: 450;
 }
 
 main nav.side-nav ul.nav li a:hover {
@@ -451,7 +389,7 @@ footer .wrapper {
     font-size: 0.95rem;
     line-height: 1.5;
     padding: 0.35rem 1.15rem;
-    margin: 0.25rem 0.25rem 0.25rem 0;
+    margin: 0;
     background-color: transparent;
     color: rgb(var(--primary-color));
     border-radius: 0.25rem;
@@ -538,7 +476,7 @@ form p {
     color: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
-    padding: 0.65rem 0.95rem;
+    padding: 0.55rem 0.85rem;
     border-radius: 0.3rem;
     line-height: 1.5 !important;
     transition: outline 80ms ease-in-out;
@@ -560,7 +498,10 @@ form p {
     gap: 0.35rem;
     align-items: center;
     font-weight: 450;
+    padding: 0.55rem 0.85rem;
     padding-left: 0.5rem;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
 }
 
 input[type="range"] {
@@ -611,8 +552,8 @@ textarea {
 .form-group label {
     font-weight: 550;
     color: rgb(var(--input-label-color));
-    margin: 0.25rem 0;
-    cursor: pointer;
+    margin: 0.1rem 0;
+    font-size: 0.95rem;
 }
 
 .form-group:has(input[type="range"]) {
