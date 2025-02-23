@@ -861,6 +861,16 @@ div.dropdown:has(ul.show) a.toggler::after {
     border: none;
 }
 
+.card.no-padding h1:first-child,
+.card.no-padding h2:first-child,
+.card.no-padding h3:first-child,
+.card.no-padding h4:first-child,
+.card.no-padding h5:first-child,
+.card.no-padding h6:first-child {
+    padding: 1rem;
+    padding-bottom: none;
+}
+
 .card.message-box {
     border: none;
     border-radius: 0;
