@@ -344,14 +344,14 @@ main {
 }
 
 main nav.side-nav {
-    width: 15vw;
+    width: 12vw;
     position: sticky;
     top: 7rem;
     height: 100%;
     overflow-y: auto;
     background-color: transparent;
-    border: 0.25rem solid rgba(0, 0, 0, 0.05);
-    border-radius: 0.4rem;
+    border: 0.15rem solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -359,11 +359,11 @@ main nav.side-nav {
     z-index: 1;
 }
 
-main nav.side-nav ul li ul {
+main nav.side-nav ul.nav li ul {
     list-style: square !important;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.3rem;
 }
 
 main nav.side-nav ul.nav {
@@ -380,21 +380,19 @@ main nav.side-nav ul.nav li a {
 
 main nav.side-nav ul.nav li a {
     padding: 0.3rem 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     transition: background-color 80ms ease-in-out;
-}
-
-main nav.side-nav ul.nav li:not(:last-child)::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    bottom: -0.15rem;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    line-height: 1.4;
 }
 
 main nav.side-nav ul.nav li a:hover {
-    background-color: rgba(var(--primary-color), 0.1);
+    background-color: rgba(var(--primary-color), 0.075);
+}
+
+main nav.side-nav ul.nav li.current a:hover {
+    background-color: rgba(var(--primary-color), 0.15);
 }
 
 main div.wrapper {
