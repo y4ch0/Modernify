@@ -218,6 +218,10 @@ nav.side-nav ul.nav li.current a {
     background-color: rgba(var(--primary-color), 0.1);
 }
 
+nav.side-nav ul.nav li.current ul li a {
+    background-color: transparent;
+}
+
 nav button.nav-collapse {
     width: 4rem;
     height: 4rem;
