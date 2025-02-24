@@ -28,23 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
             const dropdown = toggler.nextElementSibling;
             if (dropdown && dropdown.tagName === "UL") {
-                /*if (dropdown.classList.contains("show")) {
-                    const keyFrame = new KeyframeEffect(
-                        dropdown,
-                        [
-                            { top: "100%", opacity: "1", transform: "scale(1)" },
-                            { top: "calc(100% - 5px)", opacity: "0", transform: "scale(0.97)" },
-                        ],
-                        {
-                            duration: 150,
-                            easing: "ease-in-out",
-                            direction: "normal",
-                        }
-                    );
-                    const animation = new Animation(keyFrame, document.timeline);
-                    animation.play();
-                    animation.onfinish = () => dropdown.classList.remove("show");
-                }*/
                 dropdown.classList.toggle("show");
             }
         } else {
