@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const toggler = event.target.closest(".toggler");
         if (toggler) {
             event.preventDefault();
-            console.log("wykryto toggler - to on kontroluje dropdown");
             const dropdown = toggler.nextElementSibling;
             if (dropdown && dropdown.tagName === "UL") {
                 /*if (dropdown.classList.contains("show")) {
