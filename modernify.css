@@ -247,7 +247,7 @@ main {
     max-width: 100vw !important;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     padding-top: 3rem;
 }
 

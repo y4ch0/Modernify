@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
-    --root-font: "Open Sans", "Inter", sans-serif;
+    --root-font: "Inter", sans-serif;
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
     --link-color: 0, 81, 255;
@@ -39,6 +39,7 @@
     box-sizing: border-box;
     max-width: 100%;
     position: relative;
+    letter-spacing: 0.2px;
 }
 
 html {
@@ -169,6 +170,7 @@ nav div.logo {
 
 nav a {
     display: flex;
+    text-decoration: none !important;
 }
 
 nav:has(a > img) {
@@ -191,7 +193,6 @@ nav a img {
 }
 
 nav a:has(img):hover {
-    outline: 3px solid rgb(var(--primary-color));
     outline-offset: 0.25rem;
     border-radius: 0.1rem;
 }
@@ -837,7 +838,7 @@ div.dropdown ul li a:hover {
 
 div.dropdown ul.show {
     display: block;
-    animation: dropdown-show 0.15s ease-in-out forwards;
+    animation: dropdown-show 0.2s ease forwards;
 }
 
 div.dropdown:has(ul.show) a.toggler::after {
@@ -1680,14 +1681,12 @@ div.spinner span.spinner::after {
 
 @keyframes dropdown-show {
     0% {
-        top: calc(100% - 5px);
+        top: calc(100% - 10px);
         opacity: 0;
-        transform: scale(0.97);
     }
     100% {
         top: 100%;
         opacity: 1;
-        transform: scale(1);
     }
 }
 

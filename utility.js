@@ -26,27 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const toggler = event.target.closest(".toggler");
         if (toggler) {
             event.preventDefault();
+            console.log("wykryto toggler - to on kontroluje dropdown");
             const dropdown = toggler.nextElementSibling;
             if (dropdown && dropdown.tagName === "UL") {
                 dropdown.classList.toggle("show");
             }
         } else {
             document.querySelectorAll("ul.show").forEach((dropdown) => {
-                /*const keyFrame = new KeyframeEffect(
-                    dropdown,
-                    [
-                        { top: "100%", opacity: "1", transform: "scale(1)" },
-                        { top: "calc(100% - 5px)", opacity: "0", transform: "scale(0.97)" },
-                    ],
-                    {
-                        duration: 150,
-                        easing: "ease-in-out",
-                        direction: "normal",
-                    }
-                );
-                const animation = new Animation(keyFrame, document.timeline);
-                animation.play();
-                animation.onfinish = () => dropdown.classList.remove("show");*/
                 dropdown.classList.remove("show");
             });
         }
@@ -61,21 +47,20 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", () => {
             const dialog = document.getElementById(item.dataset.dialog_id);
             const body = dialog.querySelector(".body");
-            const keyFrame = new KeyframeEffect(body, [{ transform: "scale(1)" }, { transform: "scale(0.8)" }], {
-                duration: 300,
-                easing: "ease",
-                direction: "normal",
-            });
-            const keyFrame1 = new KeyframeEffect(dialog, [{ opacity: "1" }, { opacity: "0" }], {
-                duration: 300,
-                easing: "ease",
-                direction: "normal",
-            });
-
+            const keyFrame = new KeyframeEffect(
+                body,
+                [
+                    { transform: "scale(1)", opacity: "1" },
+                    { transform: "scale(0.8)", opacity: "0" },
+                ],
+                {
+                    duration: 300,
+                    easing: "ease",
+                    direction: "normal",
+                }
+            );
             const animation = new Animation(keyFrame, document.timeline);
-            const animation1 = new Animation(keyFrame1, document.timeline);
             animation.play();
-            animation1.play();
             animation.onfinish = () => dialog.close();
         });
     });
@@ -83,22 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("dialog").forEach((dialog) => {
         dialog.addEventListener("click", (event) => {
             const body = dialog.querySelector("div.body");
-            if (!body.contains(event.target)) {
-                const keyFrame = new KeyframeEffect(body, [{ transform: "scale(1)" }, { transform: "scale(0.8)" }], {
-                    duration: 300,
-                    easing: "ease",
-                    direction: "normal",
-                });
-                const keyFrame1 = new KeyframeEffect(dialog, [{ opacity: "1" }, { opacity: "0" }], {
-                    duration: 300,
-                    easing: "ease",
-                    direction: "normal",
-                });
-
+            if (!body.contains(event.target) && dialog.dataset.disable_pe != "1") {
+                const keyFrame = new KeyframeEffect(
+                    body,
+                    [
+                        { transform: "scale(1)", opacity: "1" },
+                        { transform: "scale(0.8)", opacity: "0" },
+                    ],
+                    {
+                        duration: 300,
+                        easing: "ease",
+                        direction: "normal",
+                    }
+                );
                 const animation = new Animation(keyFrame, document.timeline);
-                const animation1 = new Animation(keyFrame1, document.timeline);
                 animation.play();
-                animation1.play();
                 animation.onfinish = () => dialog.close();
             }
         });
