@@ -398,7 +398,7 @@ footer .wrapper {
     color: rgb(var(--primary-color));
     border-radius: 0.25rem;
     transition: all 80ms ease-in-out;
-    font-weight: 550 !important;
+    font-weight: 500 !important;
     transition-property: background-color, color, border, background;
     text-align: center;
     text-decoration: none !important;
@@ -554,7 +554,7 @@ textarea {
 }
 
 .form-group label {
-    font-weight: 550;
+    font-weight: 450;
     color: rgb(var(--input-label-color));
     margin: 0.1rem 0;
     font-size: 0.95rem;
