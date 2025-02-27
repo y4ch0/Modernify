@@ -3,7 +3,7 @@
 :root {
     --root-font: "Inter", sans-serif;
     --background-color: 255, 255, 255;
-    --dropdown-background: var(var(--background-color));
+    --dropdown-background: var(--background-color);
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
     --link-color: 0, 81, 255;
