@@ -386,6 +386,10 @@ footer .wrapper {
     filter: brightness(0.85);
 }
 
+.pill-rounded {
+    border-radius: 9999px !important;
+}
+
 .button {
     display: inline-flex;
     gap: 0.5rem;
@@ -405,6 +409,11 @@ footer .wrapper {
     transition-property: background-color, color, border, background;
     text-align: center;
     text-decoration: none !important;
+}
+
+.button.small {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
 }
 
 .button:not(.outlined, .primary, .secondary):hover {
