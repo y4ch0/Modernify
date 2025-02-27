@@ -543,7 +543,7 @@ input[type="file"]::file-selector-button {
     background-color: rgb(var(--primary-button-color));
     color: rgb(var(--primary-button-text));
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 0.3rem;
     padding: 0.25rem 0.5rem;
     transition: background-color 80ms ease-in-out;
 }
@@ -926,7 +926,7 @@ div.dropdown:has(ul.show) a.toggler::after {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14), inset 0 0 0px 2px transparent;
 }
 
-.card.radius-big img.card-image {
+.card.radius-big img.card-image:first-of-type {
     border-radius: 1rem 1rem 0 0;
 }
 
@@ -934,7 +934,7 @@ div.dropdown:has(ul.show) a.toggler::after {
     outline: 0.25rem solid rgb(var(--card-outline-color));
 }
 
-.card img.card-image {
+.card img.card-image:first-of-type {
     margin: -1rem;
     margin-bottom: 0.5rem;
     width: calc(100% + 2rem);
@@ -1253,7 +1253,7 @@ kbd {
 }
 
 .button-group .button:first-child {
-    border-radius: 0.25rem 0 0 0.25rem;
+    border-radius: 0.3rem 0 0 0.3rem;
 }
 
 .button-group .button.outlined:not(:last-child) {
@@ -1261,7 +1261,7 @@ kbd {
 }
 
 .button-group .button:last-child {
-    border-radius: 0 0.25rem 0.25rem 0;
+    border-radius: 0 0.3rem 0.3rem 0;
 }
 
 @keyframes modal_fadein {
@@ -1835,14 +1835,14 @@ div.spinner span.spinner::after {
         width: 100% !important;
     }
     .button-group .button:first-child {
-        border-radius: 0.25rem 0.25rem 0 0;
+        border-radius: 0.3rem 0.3rem 0 0;
     }
     .button-group .button.outlined:not(:last-child) {
         border-right: 2px solid rgb(var(--primary-color));
         border-bottom: none;
     }
     .button-group .button:last-child {
-        border-radius: 0 0 0.25rem 0.25rem;
+        border-radius: 0 0 0.3rem 0.3rem;
     }
     .card.message-box {
         flex-direction: column;
