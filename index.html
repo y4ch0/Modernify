@@ -9,43 +9,6 @@
         <script src="utility.js"></script>
     </head>
     <body>
-        <!--<header class="gov-mark">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="col">
-                        <p class="header-paragraph">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/200px-Flag_of_Poland.svg.png"
-                                class="flag"
-                            />
-                            Oficjalna strona Rzeczypospolitej Polskiej
-                            <a class="toggler">Skąd o tym wiem?</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="explanation">
-                <div class="wrapper">
-                    <div class="row">
-                        <div class="col">
-                            <h3>Oficjalne strony RP używają domeny .gov.pl</h3>
-                            <p>
-                                Strony, które mają zakończony adres strony
-                                <strong>.gov.pl</strong> są nadzorowane przez ministra właściwego ds. cyfryzacji
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h3>Zabezpieczenia strony RP</h3>
-                            <p>
-                                Strony zarządzane przez ministra właściwego ds. cyfryzacji posiadają certyfikat bezpieczeństwa, oraz ich adres
-                                rozpoczyna się od
-                                <strong>https://</strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>-->
         <!--<header class="accessibility-tools">
             <div class="wrapper">
                 <div class="row">
@@ -206,23 +169,60 @@
                 <div class="row">
                     <div class="col">
                         <h3 id="buttons">Buttons</h3>
-                        <button class="button primary">Pierwszy priorytet</button>
-                        <button class="button primary">Pierwszy priorytet</button>
-                        <button class="button secondary">Drugi priorytet</button>
-                        <button class="button outlined">Trzeci priorytet</button>
-                        <button class="button">Bez priorytetu</button>
-                        <button class="button primary" disabled>Niedostępny</button>
-                        <a class="button primary">Pierwszy priorytet</a>
-                        <a class="button secondary">Drugi priorytet</a>
-                        <a class="button outlined">Trzeci priorytet</a>
-                        <a class="button">Bez priorytetu</a>
-                        <a class="button secondary" aria-disabled="true">Niedostępny (aria-disabled)</a>
-                        <a class="button primary big">
-                            <!--<span class="icon"><img src="list.svg" alt="" /></span>-->
-                            <span>Pierwszy priorytet (duży przycisk)</span>
-                        </a>
-                        <a class="button outlined small">Trzeci priorytet</a>
-                        <a class="button outlined small pill-rounded">Trzeci priorytet</a>
+                        <h5>Classic</h5>
+                        <p>
+                            <button class="button primary">Pierwszy priorytet</button>
+                            <button class="button secondary">Drugi priorytet</button>
+                            <button class="button outlined">Trzeci priorytet</button>
+                            <button class="button">Bez priorytetu</button>
+                            <button class="button primary" disabled>Niedostępny</button>
+                        </p>
+                        <p>
+                            <a class="button primary">Pierwszy priorytet</a>
+                            <a class="button secondary">Drugi priorytet</a>
+                            <a class="button outlined">Trzeci priorytet</a>
+                            <a class="button">Bez priorytetu</a>
+                            <a class="button secondary" aria-disabled="true">Niedostępny (aria-disabled)</a>
+                        </p>
+                        <h5>Pill-rounded</h5>
+                        <p>
+                            <button class="button primary pill-rounded">Pierwszy priorytet</button>
+                            <button class="button secondary pill-rounded">Drugi priorytet</button>
+                            <button class="button outlined pill-rounded">Trzeci priorytet</button>
+                            <button class="button pill-rounded">Bez priorytetu</button>
+                            <button class="button primary pill-rounded" disabled>Niedostępny</button>
+                        </p>
+                        <h5>Big button</h5>
+                        <p>
+                            <a class="button primary big">
+                                <!--<span class="icon"><img src="list.svg" alt="" /></span>-->
+                                <span>Pierwszy priorytet (duży przycisk)</span>
+                            </a>
+                        </p>
+                        <h5>Small button</h5>
+                        <p>
+                            <button class="button primary small">Pierwszy priorytet</button>
+                            <button class="button secondary small">Drugi priorytet</button>
+                            <button class="button outlined small">Trzeci priorytet</button>
+                            <button class="button small">Bez priorytetu</button>
+                            <button class="button primary small" disabled>Niedostępny</button>
+                        </p>
+                        <h5>Small button; pill-rounded</h5>
+                        <p>
+                            <button class="button primary small pill-rounded">Pierwszy priorytet</button>
+                            <button class="button secondary small pill-rounded">Drugi priorytet</button>
+                            <button class="button outlined small pill-rounded">Trzeci priorytet</button>
+                            <button class="button small pill-rounded">Bez priorytetu</button>
+                            <button class="button primary small pill-rounded" disabled>Niedostępny</button>
+                        </p>
+                        <h5>Classic (bigger border radius)</h5>
+                        <p>
+                            <button class="button primary l-radius">Pierwszy priorytet</button>
+                            <button class="button secondary l-radius">Drugi priorytet</button>
+                            <button class="button outlined l-radius">Trzeci priorytet</button>
+                            <button class="button">Bez priorytetu</button>
+                            <button class="button primary l-radius" disabled>Niedostępny</button>
+                        </p>
                     </div>
                 </div>
                 <hr />
@@ -231,15 +231,15 @@
                         <h3 id="form-group">Form group/Form control (inputs)</h3>
                         <div class="form-group">
                             <label>Imię</label>
-                            <input type="text" class="form-control" value="Adrian" />
+                            <input type="text" class="form-control" value="Jan" />
                         </div>
                         <div class="form-group">
                             <label>Data urodzenia</label>
-                            <input type="date" class="form-control" value="2006-03-03" />
+                            <input type="date" class="form-control" value="1987-01-01" />
                         </div>
                         <div class="form-group">
                             <label>Waga (kg)</label>
-                            <input type="number" class="form-control" value="85" />
+                            <input type="number" class="form-control" value="75" />
                         </div>
                         <div class="form-group">
                             <label>Zdjęcie</label>
@@ -303,15 +303,15 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label>Imię</label>
-                                    <input type="text" class="form-control" value="Adrian" name="imie" />
+                                    <input type="text" class="form-control" value="Jan" name="imie" />
                                 </div>
                                 <div class="form-group">
                                     <label>Data urodzenia</label>
-                                    <input type="date" class="form-control" value="2006-03-03" name="data" />
+                                    <input type="date" class="form-control" value="1987-01-01" name="data" />
                                 </div>
                                 <div class="form-group">
                                     <label>Waga (kg)</label>
-                                    <input type="number" class="form-control" value="85" name="waga" />
+                                    <input type="number" class="form-control" value="75" name="waga" />
                                 </div>
                                 <div class="form-group">
                                     <label>Płeć</label>
@@ -918,16 +918,30 @@
                 <div class="row">
                     <div class="col">
                         <h3 id="button-group">Button group</h3>
+                        <h5>Fit text</h5>
                         <div class="button-group fit-text">
                             <button class="button primary">Przycisk 1</button>
                             <button class="button primary">Przycisk 2</button>
                             <button class="button primary">Przycisk 3</button>
                         </div>
                         <hr />
+                        <h5>Full width</h5>
                         <div class="button-group">
-                            <button class="button outlined">Przycisk 1</button>
-                            <button class="button outlined">Przycisk 2</button>
-                            <button class="button outlined">Przycisk 3</button>
+                            <button class="button primary">Przycisk 1</button>
+                            <button class="button primary">Przycisk 2</button>
+                            <button class="button primary">Przycisk 3</button>
+                        </div>
+                        <h5>Buttons pill rounded</h5>
+                        <div class="button-group">
+                            <button class="button primary pill-rounded">Przycisk 1</button>
+                            <button class="button primary">Przycisk 2</button>
+                            <button class="button primary pill-rounded">Przycisk 3</button>
+                        </div>
+                        <h5>Buttons l-radius</h5>
+                        <div class="button-group">
+                            <button class="button primary l-radius">Przycisk 1</button>
+                            <button class="button primary">Przycisk 2</button>
+                            <button class="button primary l-radius">Przycisk 3</button>
                         </div>
                     </div>
                 </div>

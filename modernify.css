@@ -325,7 +325,6 @@ main nav.side-nav ul.nav li a {
 main nav.side-nav ul.nav li a {
     padding: 0.4rem 0.6rem;
     border-radius: 0.5rem;
-    transition: background-color 80ms ease-in-out;
     font-size: 0.95rem;
     text-decoration: none !important;
     line-height: 1.4;
@@ -409,6 +408,10 @@ footer .wrapper {
     transition-property: background-color, color, border, background;
     text-align: center;
     text-decoration: none !important;
+}
+
+.button.l-radius {
+    border-radius: 0.45rem;
 }
 
 .button.small {
@@ -1256,12 +1259,28 @@ kbd {
     border-radius: 0.3rem 0 0 0.3rem;
 }
 
+.button-group .button.pill-rounded:first-child {
+    border-radius: 9999px 0 0 9999px !important;
+}
+
+.button-group .button.l-radius:first-child {
+    border-radius: 0.45rem 0 0 0.45rem !important;
+}
+
 .button-group .button.outlined:not(:last-child) {
     border-right: none;
 }
 
 .button-group .button:last-child {
     border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.button-group .button.pill-rounded:last-child {
+    border-radius: 0 9999px 9999px 0 !important;
+}
+
+.button-group .button.l-radius:last-child {
+    border-radius: 0 0.45rem 0.45rem 0 !important;
 }
 
 @keyframes modal_fadein {
@@ -1295,6 +1314,8 @@ dialog div.body .dialog-close {
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    opacity: 0.75;
+    font-weight: 350;
     cursor: pointer;
     border: none;
 }
@@ -1474,6 +1495,10 @@ span.details-mark {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+}
+
+span.details-mark.serif {
+    font-family: serif;
 }
 
 .custom-tooltip {
