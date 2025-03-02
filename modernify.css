@@ -18,6 +18,7 @@
     --wrapper-width-bp-2: 82vw;
     --wrapper-width-bp-3: 92vw;
     --intro-height: 30rem;
+    --sidenav-width: 13vw;
     --input-label-color: var(--primary-color);
     --sidenav-text-color: 0, 0, 0;
     --navbar-text-color: var(--primary-color);
@@ -157,7 +158,8 @@ nav {
     width: 100%;
     display: flex;
     background-color: rgb(var(--background-color));
-    padding: 1.25rem;
+    height: 4.5rem;
+    padding: 0.5rem;
     justify-content: center;
     color: var(--primary-color);
     position: sticky;
@@ -288,19 +290,20 @@ main {
 }
 
 main nav.side-nav {
-    width: 13vw;
-    position: sticky;
-    top: 7rem;
-    height: 100%;
+    width: var(--sidenav-width);
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    height: calc(100vh - 4.5rem);
     overflow-y: auto;
-    background-color: transparent;
-    border: 0.15rem solid rgba(0, 0, 0, 0.05);
-    border-radius: 0.5rem;
+    background-color: #fff;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     box-shadow: none !important;
-    z-index: 1;
+    z-index: 9999;
 }
 
 main nav.side-nav ul.nav li ul {
@@ -1764,6 +1767,11 @@ div.spinner span.spinner::after {
     main nav.side-nav {
         width: var(--wrapper-width-bp-2);
         position: static;
+        z-index: 1;
+        order: -1;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        height: auto;
     }
     header.accessibility-tools .wrapper {
         width: var(--wrapper-width-bp-1);
