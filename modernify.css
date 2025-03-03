@@ -41,6 +41,7 @@
     box-sizing: border-box;
     max-width: 100%;
     position: relative;
+    text-rendering: optimizeSpeed;
 }
 
 html {
@@ -407,7 +408,7 @@ footer .wrapper {
     color: rgb(var(--primary-color));
     border-radius: 0.3rem;
     transition: all 80ms ease-in-out;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     transition-property: background-color, color, border, background;
     text-align: center;
     text-decoration: none !important;
@@ -1869,6 +1870,18 @@ div.spinner span.spinner::after {
     }
     .button-group .button:first-child {
         border-radius: 0.3rem 0.3rem 0 0;
+    }
+    .button-group .button.pill-rounded:first-child {
+        border-radius: 1rem 1rem 0 0 !important;
+    }
+    .button-group .button.pill-rounded:last-child {
+        border-radius: 0 0 1rem 1rem !important;
+    }
+    .button-group .button.l-radius:first-child {
+        border-radius: 0.45rem 0.45rem 0 0 !important;
+    }
+    .button-group .button.l-radius:last-child {
+        border-radius: 0 0 0.45rem 0.45rem !important;
     }
     .button-group .button.outlined:not(:last-child) {
         border-right: 2px solid rgb(var(--primary-color));
