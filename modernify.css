@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
     --root-font: "Inter", sans-serif;
-    --background-color: 255, 255, 255;
-    --dropdown-background: var(--background-color);
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
+    --background-color: 255, 255, 255;
+    --dropdown-background-color: var(--background-color);
     --link-color: 0, 81, 255;
     --primary-button-color: var(--primary-color);
     --primary-button-text: 255, 255, 255;
@@ -34,7 +34,7 @@
 
 *:not(i, span.icon) {
     font-family: var(--root-font);
-    letter-spacing: 0.2px;
+    letter-spacing: 0.3px;
 }
 
 * {
@@ -46,6 +46,7 @@
 
 html {
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 body {
@@ -59,91 +60,6 @@ body {
     line-height: 1.6;
     font-size: 1rem;
     background-color: rgb(var(--background-color));
-}
-
-header.gov-mark {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    max-width: 100vw !important;
-    width: 100vw;
-    padding-bottom: 0;
-    border-bottom: 0.5rem solid #e93939;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-}
-
-header.accessibility-tools {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(var(--background-color));
-}
-
-header.accessibility-tools .wrapper {
-    width: var(--wrapper-width);
-    display: flex;
-    gap: 0;
-}
-
-header.accessibility-tools .wrapper .row {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    width: 100%;
-    margin: 0;
-}
-
-header.accessibility-tools a {
-    padding: 0 0.35rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(var(--background-color));
-    height: 1.5rem;
-    border: 1px solid rgb(var(--primary-color));
-    color: rgb(var(--primary-color));
-}
-
-header.accessibility-tools .at-fs-1 {
-    font-size: 0.85rem;
-    background-color: transparent !important;
-}
-
-header.accessibility-tools .at-fs-2 {
-    font-size: 1rem;
-    background-color: transparent !important;
-}
-
-header.accessibility-tools .at-fs-3 {
-    font-size: 1.1rem;
-    background-color: transparent !important;
-}
-
-header.gov-mark:has(#explanation.show) {
-    padding-bottom: 1rem;
-}
-
-header.accessibility-tools .at-c-2 {
-    background-color: #000 !important;
-    color: #00ff00 !important;
-}
-
-header.accessibility-tools .at-c-3 {
-    background-color: #fffb00 !important;
-    color: #000 !important;
-}
-
-header.accessibility-tools .at-c-4 {
-    color: #fffb00 !important;
-    background-color: #000 !important;
-}
-
-header.accessibility-tools .at-c-5 {
-    color: #ffffff !important;
-    background-color: #000 !important;
 }
 
 header.website-warning {
@@ -495,7 +411,7 @@ form p {
 .form-control {
     width: 100%;
     font-size: 1rem;
-    font-weight: 450;
+    font-weight: 400;
     color: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.3);
     background-color: rgb(var(--background-color));
@@ -763,14 +679,13 @@ div.dropdown ul {
     overflow-y: auto;
     z-index: 99;
     font-weight: 450;
-    font-size: 0.95rem;
-    background-color: rgb(var(--dropdown-background));
+    background-color: rgb(var(--dropdown-background-color));
     padding: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.25rem;
     width: max-content;
     max-width: 300px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.14);
 }
 
 div.dropdown .toggler::after {
@@ -783,6 +698,8 @@ div.dropdown ul li a {
     gap: 0.5rem;
     color: rgba(0, 0, 0, 0.8);
     border-radius: 0.25rem;
+    font-weight: 400;
+    font-size: 0.95rem;
 }
 
 div.dropdown.primary ul li a {
