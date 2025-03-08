@@ -21,6 +21,7 @@
     --sidenav-width: 13vw;
     --input-label-color: var(--primary-color);
     --sidenav-text-color: 0, 0, 0;
+    --sidenav-accent-color: 255, 0, 0;
     --navbar-text-color: var(--primary-color);
     --details-label-color: var(--primary-color);
     --card-outline-color: var(--secondary-color);
@@ -137,7 +138,7 @@ nav ul.nav li a {
 }
 
 nav.side-nav ul.nav li.current a {
-    background-color: rgba(var(--primary-color), 0.1);
+    background-color: rgba(var(--sidenav-accent-color), 0.1);
 }
 
 nav.side-nav ul.nav li.current ul li a {
@@ -252,11 +253,11 @@ main nav.side-nav ul.nav li a {
 }
 
 main nav.side-nav ul.nav li a:hover {
-    background-color: rgba(var(--primary-color), 0.075);
+    background-color: rgba(var(--sidenav-accent-color), 0.075);
 }
 
 main nav.side-nav ul.nav li.current a:hover {
-    background-color: rgba(var(--primary-color), 0.15);
+    background-color: rgba(var(--sidenav-accent-color), 0.15);
 }
 
 main div.wrapper {
@@ -788,7 +789,8 @@ div.dropdown:has(ul.show) a.toggler::after {
 
 .card.message-box div.description {
     flex: 1;
-    min-width: 0; /* Zapobiega nadmiernemu rozszerzaniu */
+    min-width: 0;
+    /* Zapobiega nadmiernemu rozszerzaniu */
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -803,7 +805,8 @@ div.dropdown:has(ul.show) a.toggler::after {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100% !important; /* Zapewnia, że tekst nie wychodzi poza dostępne miejsce */
+    max-width: 100% !important;
+    /* Zapewnia, że tekst nie wychodzi poza dostępne miejsce */
 }
 
 .card.message-box div.description p.topic {
@@ -1208,6 +1211,7 @@ kbd {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -1217,6 +1221,7 @@ kbd {
     0% {
         transform: scale(0.85);
     }
+
     100% {
         transform: scale(1);
     }
@@ -1250,10 +1255,16 @@ progress {
     height: 1.25rem;
     border-radius: 0.35rem;
 }
+
+progress.slim {
+    height: 0.5rem;
+}
+
 progress::-webkit-progress-bar {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 0.35rem;
 }
+
 progress::-webkit-progress-value {
     background-color: rgb(var(--progress-bar-color));
     border-radius: 0.35rem 0 0 0.35rem;
@@ -1558,10 +1569,12 @@ div.spinner span.spinner::after {
     width: 100%;
     overflow: hidden;
 }
+
 .slider .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .slider .slides .slide {
     min-width: 100%;
     overflow-x: hidden;
@@ -1570,12 +1583,14 @@ div.spinner span.spinner::after {
     justify-content: center;
     padding: 0 5rem;
 }
+
 .slider .slides .slide img {
     width: calc(100% + 10rem) !important;
     max-width: unset !important;
     margin-left: -5rem;
     display: block;
 }
+
 .slider-button {
     position: absolute;
     top: 50%;
@@ -1591,18 +1606,22 @@ div.spinner span.spinner::after {
     justify-content: center;
     overflow: hidden;
 }
+
 .slider-button img {
     height: 100%;
     width: calc(100% + 2.5rem);
     max-width: unset !important;
     opacity: 0.5;
 }
+
 .swipe-left {
     left: 10px;
 }
+
 .swipe-right {
     right: 10px;
 }
+
 .current-slide-indicator {
     position: absolute;
     bottom: 10px;
@@ -1614,6 +1633,7 @@ div.spinner span.spinner::after {
     padding: 0;
     margin: 0;
 }
+
 .current-slide-indicator li {
     width: 10px;
     height: 10px;
@@ -1621,6 +1641,7 @@ div.spinner span.spinner::after {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .current-slide-indicator li.active {
     background: rgba(0, 0, 0, 0.75);
 }
@@ -1662,6 +1683,7 @@ div.spinner span.spinner::after {
         top: calc(100% - 10px);
         opacity: 0;
     }
+
     100% {
         top: 100%;
         opacity: 1;
@@ -1672,28 +1694,34 @@ div.spinner span.spinner::after {
     0% {
         rotate: 0deg;
     }
+
     100% {
         rotate: 360deg;
     }
 }
 
 @media screen and (max-width: 1280px) {
+
     header.gov-mark .wrapper,
     nav .wrapper,
     main div.wrapper,
     footer .wrapper {
         width: var(--wrapper-width-bp-1);
     }
+
     nav ul.nav {
         display: flex;
     }
+
     main {
         flex-direction: column;
         align-items: center;
     }
+
     aside {
         display: none;
     }
+
     main nav.side-nav {
         width: var(--wrapper-width-bp-2);
         position: static;
@@ -1703,21 +1731,25 @@ div.spinner span.spinner::after {
         border-radius: 0.5rem;
         height: auto;
     }
+
     header.accessibility-tools .wrapper {
         width: var(--wrapper-width-bp-1);
     }
 }
 
 @media screen and (max-width: 1024px) {
+
     header.gov-mark .wrapper,
     nav .wrapper,
     main div.wrapper,
     footer .wrapper {
         width: var(--wrapper-width-bp-2);
     }
+
     main .wrapper .row {
         flex-direction: column;
     }
+
     nav:not(.side-nav) ul.nav {
         position: fixed;
         top: 0;
@@ -1733,113 +1765,143 @@ div.spinner span.spinner::after {
         font-size: 1.5rem;
         display: none;
     }
+
     nav ul.nav button.nav-collapse {
         position: absolute;
         top: 0;
         right: 0;
         display: flex;
     }
+
     nav button.nav-collapse {
         display: flex;
     }
+
     dialog div.body {
         max-width: 80%;
         min-width: unset;
         max-height: 70%;
     }
+
     header.accessibility-tools .wrapper {
         width: var(--wrapper-width-bp-2);
     }
+
     .website-intro h1.header-intro {
         font-size: 2.2rem;
     }
+
     .website-intro h2 {
         font-size: 1.5rem;
     }
+
     .slider .slides .slide {
         padding: 0 3rem;
     }
 }
 
 @media screen and (max-width: 768px) {
+
     header.gov-mark .wrapper,
     nav .wrapper,
     main div.wrapper,
     footer .wrapper {
         width: var(--wrapper-width-bp-3);
     }
+
     header.gov-mark .wrapper .row {
         flex-direction: column;
     }
+
     main .wrapper .row,
     footer .wrapper .row {
         flex-direction: column;
     }
+
     nav {
         padding: 0.75rem !important;
     }
+
     main nav.side-nav {
         width: var(--wrapper-width-bp-3);
     }
+
     dialog div.body {
         max-width: 95%;
         width: 95%;
         max-height: 80%;
     }
+
     header.accessibility-tools .wrapper {
         width: var(--wrapper-width-bp-3);
         flex-direction: column;
     }
+
     .button-group {
         flex-direction: column;
     }
+
     .button-group .button,
     .button-group.fit-text {
         width: 100% !important;
     }
+
     .button-group .button:first-child {
         border-radius: 0.3rem 0.3rem 0 0;
     }
+
     .button-group .button.pill-rounded:first-child {
         border-radius: 1rem 1rem 0 0 !important;
     }
+
     .button-group .button.pill-rounded:last-child {
         border-radius: 0 0 1rem 1rem !important;
     }
+
     .button-group .button.l-radius:first-child {
         border-radius: 0.45rem 0.45rem 0 0 !important;
     }
+
     .button-group .button.l-radius:last-child {
         border-radius: 0 0 0.45rem 0.45rem !important;
     }
+
     .button-group .button.outlined:not(:last-child) {
         border-right: 2px solid rgb(var(--primary-color));
         border-bottom: none;
     }
+
     .button-group .button:last-child {
         border-radius: 0 0 0.3rem 0.3rem;
     }
+
     .card.message-box {
         flex-direction: column;
         justify-content: start !important;
     }
+
     .card.message-box div {
         width: 100% !important;
         justify-content: start;
     }
+
     .card.message-box .timespan {
         order: -1;
     }
+
     .card.message-box.mb-slim .description {
         flex-direction: column !important;
     }
+
     .card.message-box.mb-slim .description p {
         width: 100%;
         max-width: 100% !important;
     }
+
     .card.message-box.mb-slim .description p.topic {
         white-space: initial;
     }
+
     div.dropdown ul li a {
         font-size: 1rem;
     }
