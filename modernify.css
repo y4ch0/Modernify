@@ -326,7 +326,7 @@ footer .wrapper {
     border-radius: 0.3rem;
     transition: all 80ms ease-in-out;
     font-weight: 400 !important;
-    transition-property: background-color, color, border, background;
+    transition-property: background-color, color, border, background, filter;
     text-align: center;
     text-decoration: none !important;
 }
@@ -422,12 +422,22 @@ form p {
     transition: outline 80ms ease-in-out;
 }
 
+.form-control.slim {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.95rem;
+}
+
 .form-control:is(select, input[type="date"]) {
     cursor: pointer;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    margin-right: -0.35rem;
+}
+
 .form-control:focus {
-    outline: 0.25rem solid rgb(var(--primary-color));
+    outline: 0.2rem solid rgb(var(--primary-color));
     outline-offset: -1px;
 }
 
@@ -487,6 +497,11 @@ textarea {
     display: flex;
     flex-direction: column;
     margin-bottom: 0.25rem;
+}
+
+.form-group.inline {
+    flex-direction: row;
+    gap: 0.35rem;
 }
 
 .form-group label {
