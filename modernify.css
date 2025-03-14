@@ -83,7 +83,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    font-weight: 500;
+    font-weight: 450;
     box-shadow: rgba(99, 99, 99, 0.1) 0px 5px 8px 0px;
 }
 
@@ -416,10 +416,28 @@ form p {
     color: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.3);
     background-color: rgb(var(--background-color));
-    padding: 0.55rem 0.85rem;
+    padding: 0.45rem 0.85rem;
     border-radius: 0.3rem;
     line-height: 1.5 !important;
+    outline: 0.2rem solid transparent;
+    outline-offset: -1px;
     transition: outline 80ms ease-in-out;
+}
+
+.form-control:focus {
+    outline-color: rgb(var(--primary-color));
+}
+
+.form-control:is(input[type=date], input[type=file]) {
+    padding: calc(0.45rem - 1px) 0.85rem;
+}
+
+.form-control:is(select) {
+    padding: calc(0.45rem + 1px) 0.85rem;
+}
+
+.form-control:is(label) {
+    padding: calc(0.55rem - 1px) 0.85rem !important;
 }
 
 .form-control.slim {
@@ -434,11 +452,6 @@ form p {
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
     margin-right: -0.35rem;
-}
-
-.form-control:focus {
-    outline: 0.2rem solid rgb(var(--primary-color));
-    outline-offset: -1px;
 }
 
 .form-control:is(label):has(input[type="radio"], input[type="checkbox"]) {
