@@ -319,7 +319,7 @@ footer .wrapper {
     border: 1px solid transparent;
     font-size: 0.95rem;
     line-height: 1.5;
-    padding: 0.35rem 1.15rem;
+    padding: 0.35rem 0.85rem;
     margin: 0;
     background-color: transparent;
     color: rgb(var(--primary-color));
