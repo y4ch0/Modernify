@@ -896,6 +896,11 @@ div.dropdown:has(ul.show) a.toggler::after {
     outline-offset: -2px;
 }
 
+.card.no-border:is(a),
+.block-cards.no-border .card:is(a) {
+    outline-offset: 0 !important;
+}
+
 .card:is(a):hover {
     outline: 0.25rem solid rgb(var(--card-outline-color));
 }
@@ -931,10 +936,8 @@ div.dropdown:has(ul.show) a.toggler::after {
 .card:is(a):hover h1,
 .card:is(a):hover h2,
 .card:is(a):hover h3,
-.card:is(a):hover h4,
-.card:is(a):hover h5,
-.card:is(a):hover h6 {
-    text-decoration: underline;
+.card:is(a):hover h4 {
+    color: rgb(var(--card-outline-color)) !important;
 }
 
 .block-cards {
