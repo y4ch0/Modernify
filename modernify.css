@@ -137,7 +137,8 @@ nav ul.nav li a {
     gap: 0.5rem;
 }
 
-nav.side-nav ul.nav li.current a {
+nav.side-nav ul.nav li.current a,
+nav.side-nav ul.nav li.current ul li a {
     background-color: rgba(var(--sidenav-accent-color), 0.1);
 }
 
@@ -256,8 +257,13 @@ main nav.side-nav ul.nav li a:hover {
     background-color: rgba(var(--sidenav-accent-color), 0.075);
 }
 
-main nav.side-nav ul.nav li.current a:hover {
+main nav.side-nav ul.nav li.current a:hover,
+main nav.side-nav ul.nav li.current ul li a:hover {
     background-color: rgba(var(--sidenav-accent-color), 0.15);
+}
+
+main nav.side-nav ul.nav li.current ul li a:hover {
+    background-color: rgba(var(--sidenav-accent-color), 0.075);
 }
 
 main div.wrapper {
@@ -883,6 +889,11 @@ div.dropdown:has(ul.show) a.toggler::after {
 
 .card.radius-big img.card-image:first-of-type {
     border-radius: 1rem 1rem 0 0;
+}
+
+.card:is(a) {
+    outline: 0.25rem solid transparent;
+    outline-offset: -2px;
 }
 
 .card:is(a):hover {
