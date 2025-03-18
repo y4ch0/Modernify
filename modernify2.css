@@ -1506,6 +1506,62 @@ span.details-mark.serif {
     overflow-x: auto;
 }
 
+.card-switch.slim-buttons ul.togglers {
+    border: none;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}
+
+.card-switch.slim-buttons ul.togglers li {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.25rem;
+}
+
+.card-switch.slim-buttons ul.togglers li:not(:last-child, :first-child) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.card-switch.slim-buttons ul.togglers li:first-child {
+    padding-right: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.card-switch.slim-buttons ul.togglers li:last-child {
+    padding-left: 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.card-switch.slim-buttons ul.togglers li a.card-toggler {
+    font-size: 0.85rem !important;
+    padding: 0.25rem 1rem;
+    font-weight: normal !important;
+    border-radius: 0;
+}
+
+.card-switch.slim-buttons ul.togglers li:first-child a.card-toggler {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.card-switch.slim-buttons ul.togglers li:last-child a.card-toggler {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.card-switch.slim-buttons ul.togglers li a.card-toggler.current {
+    background-color: rgb(var(--primary-button-color));
+    color: rgb(var(--primary-button-text)) !important;
+    font-weight: normal !important;
+}
+
+.card-switch.slim-buttons ul.togglers li a.card-toggler:hover {
+    filter: brightness(0.85);
+}
+
+.card-switch.slim-buttons ul.togglers li a.card-toggler:not(.current):hover {
+    background-color: rgba(var(--primary-button-color), 0.1);
+}
+
 .card-switch.big-buttons ul.togglers li a,
 .card-switch.big-buttons ul.togglers li {
     width: 100%;
@@ -1524,6 +1580,7 @@ span.details-mark.serif {
     margin: 0;
     list-style: none;
     min-width: 100%;
+    flex-wrap: nowrap;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
@@ -1546,13 +1603,13 @@ span.details-mark.serif {
     border-radius: 0.25rem 0.25rem 0 0;
     transition: all 80ms ease-in-out;
     font-weight: 450 !important;
-    transition-property: background-color, color, border;
+    transition-property: background-color, color, border, filter;
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
 }
 
-.card-switch:not(.big-buttons) ul.togglers li a.card-toggler:hover {
+.card-switch:not(.big-buttons, .slim-buttons) ul.togglers li a.card-toggler:hover {
     background-color: rgba(var(--primary-button-color), 0.1) !important;
 }
 
