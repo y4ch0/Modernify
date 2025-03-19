@@ -4,7 +4,8 @@
     --root-font: "Inter", sans-serif;
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
-    --background-color: 255, 255, 255;
+    --background-color: 245, 245, 245;
+    --text-default-color: 10, 10, 10;
     --dropdown-background-color: var(--background-color);
     --link-color: 0, 81, 255;
     --primary-button-color: var(--primary-color);
@@ -25,6 +26,7 @@
     --navbar-text-color: var(--primary-color);
     --details-label-color: var(--primary-color);
     --card-outline-color: var(--secondary-color);
+    --default-border-color: 0, 0, 0;
     --progress-bar-color: var(--primary-color);
     --process-list-divider-color: var(--primary-color);
     --info-circle-color: var(--primary-color);
@@ -60,6 +62,7 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     font-size: 1rem;
+    color: rgb(var(--text-default-color));
     background-color: rgb(var(--background-color));
 }
 
@@ -215,7 +218,7 @@ main nav.side-nav {
     left: 0;
     height: calc(100vh - 4.5rem);
     overflow-y: auto;
-    background-color: #fff;
+    background-color: rgb(var(--background-color));
     border-right: 1px solid rgba(0, 0, 0, 0.15);
     padding: 0.5rem;
     display: flex;
@@ -419,8 +422,8 @@ form p {
     width: 100%;
     font-size: 1rem;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: rgba(var(--text-default-color), 0.9);
+    border: 1px solid rgba(var(--default-border-color), 0.3);
     background-color: rgb(var(--background-color));
     padding: 0.45rem 0.85rem;
     border-radius: 0.3rem;
@@ -592,7 +595,7 @@ h6 {
 }
 
 .header-primary {
-    color: rgb(var(--primary-color));
+    color: rgb(var(--primary-color)) !important;
 }
 
 .header-secondary {
@@ -661,7 +664,7 @@ details summary:hover {
 }
 
 details summary:focus {
-    outline: 3px dotted #000;
+    outline: 3px dotted rgb(var(--text-default-color));
     outline-offset: -3px;
 }
 
@@ -695,7 +698,7 @@ table tr:first-child th {
 table tr th,
 table tr td {
     padding: 0.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(var(--default-border-color), 0.5);
 }
 
 div.dropdown {
@@ -716,7 +719,7 @@ div.dropdown ul {
     font-weight: 450;
     background-color: rgb(var(--dropdown-background-color));
     padding: 0.25rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--default-border-color), 0.1);
     border-radius: 0.25rem;
     width: max-content;
     max-width: 300px;
@@ -764,7 +767,7 @@ div.dropdown:has(ul.show) a.toggler::after {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(var(--default-border-color), 0.1);
     color: #000;
     border-radius: 0.35rem;
     outline: none;
@@ -974,7 +977,7 @@ hr {
     width: 100%;
     margin: 1rem 0;
     padding: 0;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(var(--default-border-color), 0.2);
     border-bottom: none;
 }
 
@@ -1204,7 +1207,7 @@ kbd {
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-size: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--default-border-color), 0.1);
     border-bottom-width: 3px;
     width: -moz-min-content;
     width: min-content;
@@ -1348,7 +1351,7 @@ progress::-webkit-progress-value {
     position: absolute;
     top: 0.125rem;
     left: -1.5rem;
-    border: 0.2rem solid black;
+    border: 0.2rem solid rgb(var(--default-border-color));
     font-weight: bold;
     border-radius: 1.5rem;
 }
@@ -1774,7 +1777,7 @@ div.spinner span.spinner::after {
         position: static;
         z-index: 1;
         order: -1;
-        border: 2px solid rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(var(--default-border-color), 0.1);
         border-radius: 0.5rem;
         height: auto;
     }
