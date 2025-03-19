@@ -4,7 +4,7 @@
     --root-font: "Inter", sans-serif;
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
-    --background-color: 245, 245, 245;
+    --background-color: 255, 255, 255;
     --text-default-color: 10, 10, 10;
     --dropdown-background-color: var(--background-color);
     --link-color: 0, 81, 255;
@@ -1009,7 +1009,7 @@ dialog[open] {
 }
 
 dialog div.body {
-    background-color: #fff;
+    background-color: rgb(var(--background-color));
     max-width: 40%;
     min-width: 20%;
     max-height: 70%;
