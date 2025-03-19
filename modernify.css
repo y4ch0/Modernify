@@ -683,7 +683,7 @@ table {
     border-collapse: collapse;
 }
 
-table tr:not(:first-child):hover {
+table tr:hover td {
     background-color: rgba(0, 0, 0, 0.03);
 }
 
