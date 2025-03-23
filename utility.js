@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.querySelectorAll(".card-switch").forEach(function (switcher) {
         const togglers = switcher.querySelectorAll(".togglers .card-toggler");
-        const cards = switcher.querySelectorAll(".cards .card");
+        const cards = switcher.querySelectorAll(".cards .card-item");
 
         function setActiveTab(index) {
             togglers.forEach((toggler, i) => {
