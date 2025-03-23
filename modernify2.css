@@ -145,6 +145,8 @@ nav.side-nav ul.nav li.current ul li a {
 nav button.nav-collapse {
     width: 4rem;
     height: 4rem;
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.75);
     align-items: center;
     justify-content: center;
     border: none;
