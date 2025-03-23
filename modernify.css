@@ -159,6 +159,7 @@ nav button.nav-collapse {
     width: 4rem;
     height: 4rem;
     font-size: 3rem;
+    aspect-ratio: 1/1;
     color: rgba(0, 0, 0, 0.75);
     align-items: center;
     justify-content: center;
@@ -166,6 +167,7 @@ nav button.nav-collapse {
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
     display: none;
+    overflow: hidden;
 }
 
 nav ul.nav button.nav-collapse {
