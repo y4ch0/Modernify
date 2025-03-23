@@ -799,7 +799,6 @@ div.dropdown:has(ul.show) a.toggler::after {
 
 .card.no-padding {
     padding: 0;
-    border: none;
 }
 
 .card.no-padding h1:first-child,
