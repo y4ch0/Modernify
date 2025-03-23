@@ -158,6 +158,8 @@ nav.side-nav ul.nav li.current ul li a {
 nav button.nav-collapse {
     width: 4rem;
     height: 4rem;
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.75);
     align-items: center;
     justify-content: center;
     border: none;
@@ -1566,8 +1568,9 @@ span.details-mark.serif {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.card-switch .cards .card {
+.card-switch .cards .card-item {
     border: none;
+    padding: 1rem 0;
 }
 
 .card-switch ul.togglers li a.card-toggler {
