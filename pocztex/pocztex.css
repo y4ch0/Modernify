@@ -25,7 +25,7 @@
     --sidenav-accent-color: 255, 0, 0;
     --navbar-text-color: var(--primary-color);
     --details-label-color: var(--primary-color);
-    --card-outline-color: var(--secondary-color);
+    --card-outline-color: var(--primary-color);
     --default-border-color: 0, 0, 0;
     --progress-bar-color: var(--primary-color);
     --process-list-divider-color: var(--primary-color);
@@ -597,6 +597,14 @@ h6 {
 p {
     padding: 0;
     margin: 0.4rem 0;
+}
+
+p.s-margin {
+    margin: 0.15rem 0;
+}
+
+p.xs-margin {
+    margin: 0;
 }
 
 h1,

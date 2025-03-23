@@ -598,6 +598,14 @@ p {
     margin: 0.4rem 0;
 }
 
+p.s-margin {
+    margin: 0.15rem 0;
+}
+
+p.xs-margin {
+    margin: 0;
+}
+
 h1,
 h2,
 h3,
