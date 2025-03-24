@@ -1429,21 +1429,27 @@ pre {
     overflow: auto;
     padding: 0.75rem;
     border-radius: 0.25rem;
+    display: block;
+    white-space: pre;
 }
 
 pre.code-block {
     border: 1px solid rgba(var(--default-border-color), 0.1);
 }
 
+pre.code-block:has(header) {
+    padding-top: 3rem;
+}
+
 pre.code-block header {
     padding: 0.35rem 0.65rem;
     margin: -0.75rem;
-    margin-bottom: 0.75rem;
     font-size: 0.8rem;
-    width: calc(100% + 1.5rem);
-    position: sticky;
-    left: -0.75rem;
-    top: -0.75rem;
+    width: 100%;
+    max-width: unset !important;
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
     max-width: unset;
     background-color: rgba(var(--default-border-color), 0.05);
 }
