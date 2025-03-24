@@ -156,7 +156,7 @@ nav.side-nav ul.nav li.current ul li a {
 }
 
 nav button.nav-collapse {
-    width: 4rem;
+    padding: 2rem 0;
     height: 4rem;
     font-size: 3rem;
     aspect-ratio: 1/1;

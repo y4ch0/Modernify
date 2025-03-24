@@ -2,7 +2,7 @@
 
 :root {
     --root-font: "Inter", sans-serif;
-    --primary-color: 228, 22, 19;
+    --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
     --background-color: 255, 255, 255;
     --text-default-color: 10, 10, 10;
@@ -10,11 +10,11 @@
     --link-color: 0, 81, 255;
     --primary-button-color: var(--primary-color);
     --primary-button-text: 255, 255, 255;
-    --primary-button-color-hover: 204, 18, 18;
+    --primary-button-color-hover: 39, 67, 192;
     --secondary-button-color: 59, 37, 158;
     --secondary-button-text: 255, 255, 255;
     --secondary-button-color-hover: 72, 45, 194;
-    --wrapper-width: 65vw;
+    --wrapper-width: 60vw;
     --wrapper-width-bp-1: 75vw;
     --wrapper-width-bp-2: 82vw;
     --wrapper-width-bp-3: 92vw;
@@ -25,7 +25,7 @@
     --sidenav-accent-color: 255, 0, 0;
     --navbar-text-color: var(--primary-color);
     --details-label-color: var(--primary-color);
-    --card-outline-color: var(--primary-color);
+    --card-outline-color: var(--secondary-color);
     --default-border-color: 0, 0, 0;
     --progress-bar-color: var(--primary-color);
     --process-list-divider-color: var(--primary-color);
@@ -156,7 +156,7 @@ nav.side-nav ul.nav li.current ul li a {
 }
 
 nav button.nav-collapse {
-    width: 4rem;
+    padding: 2rem 0;
     height: 4rem;
     font-size: 3rem;
     aspect-ratio: 1/1;
@@ -1429,21 +1429,27 @@ pre {
     overflow: auto;
     padding: 0.75rem;
     border-radius: 0.25rem;
+    display: block;
+    white-space: pre;
 }
 
 pre.code-block {
     border: 1px solid rgba(var(--default-border-color), 0.1);
 }
 
+pre.code-block:has(header) {
+    padding-top: 3rem;
+}
+
 pre.code-block header {
     padding: 0.35rem 0.65rem;
     margin: -0.75rem;
-    margin-bottom: 0.75rem;
     font-size: 0.8rem;
-    width: calc(100% + 1.5rem);
-    position: sticky;
-    left: -0.75rem;
-    top: -0.75rem;
+    width: 100%;
+    max-width: unset !important;
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
     max-width: unset;
     background-color: rgba(var(--default-border-color), 0.05);
 }
