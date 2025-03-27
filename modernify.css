@@ -798,6 +798,13 @@ div.dropdown:has(ul.show) a.toggler::after {
     transition: outline 80ms ease-in-out;
 }
 
+.card.inline {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    align-items: center;
+}
+
 .card.no-padding {
     padding: 0;
 }
