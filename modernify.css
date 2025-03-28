@@ -779,7 +779,7 @@ div.dropdown ul li a:hover {
 
 div.dropdown ul.show {
     display: block;
-    animation: dropdown-show 125ms ease forwards;
+    /*animation: dropdown-show 125ms ease forwards;*/
 }
 
 div.dropdown:has(ul.show) a.toggler::after {
