@@ -1452,11 +1452,12 @@ pre.code-block header {
     padding: 0.35rem 0.65rem;
     margin: -0.75rem;
     font-size: 0.8rem;
-    width: 100%;
+    width: calc(100% + 1.5rem);
     max-width: unset !important;
-    position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
+    position: sticky;
+    left: -0.75rem;
+    margin-top: -3rem;
+    margin-bottom: 0.75rem;
     max-width: unset;
     background-color: rgba(var(--default-border-color), 0.05);
 }
