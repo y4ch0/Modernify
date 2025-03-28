@@ -298,6 +298,17 @@ footer div.wrapper .row {
     gap: 1rem;
 }
 
+main div.wrapper .row.background-visible {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+main div.wrapper .row.full-width::before {
+    content: "";
+    width: 100vw;
+    position: absolute;
+}
+
 main div.wrapper .row .col,
 footer div.wrapper .row .col {
     width: 100%;
@@ -793,7 +804,7 @@ div.dropdown:has(ul.show) a.toggler::after {
     padding: 1rem;
     border: 2px solid rgba(var(--default-border-color), 0.1);
     color: #000;
-    border-radius: 0.35rem;
+    border-radius: 0.4rem;
     outline: none;
     transition: outline 80ms ease-in-out;
 }
@@ -983,7 +994,7 @@ div.dropdown:has(ul.show) a.toggler::after {
 
 .block-cards.no-border .card,
 .card.no-border {
-    border-color: transparent;
+    border: none;
 }
 
 .block-cards.no-border .card img.card-image,
