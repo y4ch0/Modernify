@@ -456,6 +456,14 @@ form p {
     transition: outline 80ms ease-in-out;
 }
 
+.form-control.no-border {
+    border-color: transparent;
+}
+
+.form-control.no-border.no-padding {
+    padding-left: 0 !important;
+}
+
 .form-control:focus {
     outline-color: rgb(var(--primary-color));
 }
@@ -544,9 +552,21 @@ textarea {
     margin-bottom: 0.25rem;
 }
 
-.form-group.inline {
-    flex-direction: row;
-    gap: 0.35rem;
+.form-group.inline div {
+    display: flex;
+}
+
+.form-group.inline div .form-control {
+    width: fit-content;
+    flex: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-group.inline div .button {
+    width: max-content !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .form-group label {
@@ -994,7 +1014,7 @@ div.dropdown:has(ul.show) a.toggler::after {
 
 .block-cards.no-border .card,
 .card.no-border {
-    border: none;
+    border-color: transparent;
 }
 
 .block-cards.no-border .card img.card-image,
