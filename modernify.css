@@ -826,7 +826,7 @@ div.dropdown ul li a:hover {
 
 div.dropdown ul.show {
     display: block;
-    animation: dropdown-show 60ms ease forwards;
+    /*animation: dropdown-show 60ms ease forwards;*/
 }
 
 .card {
