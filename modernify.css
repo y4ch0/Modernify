@@ -710,12 +710,34 @@ details summary {
     font-size: 1.1rem;
     font-weight: 500;
     padding: 0.75rem 1rem;
+    padding-left: 0.75rem;
     color: rgb(var(--details-label-color));
     cursor: pointer;
     margin: -1rem;
     transition: margin-bottom 0.3s ease;
     width: calc(100% + 2rem);
     max-width: unset !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+details summary::before {
+    content: "\002B";
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    aspect-ratio: 1/1;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(var(--details-label-color));
+    color: #fff;
+}
+
+details[open] summary::before {
+    content: "\2212";
 }
 
 details summary:hover {
