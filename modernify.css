@@ -694,6 +694,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.button.underline:hover {
+    text-decoration: underline !important;
+}
+
 details {
     width: 100%;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
