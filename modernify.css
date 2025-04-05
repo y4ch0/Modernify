@@ -350,14 +350,14 @@ footer .wrapper {
     border: 1px solid transparent;
     font-size: 0.95rem;
     line-height: 1.5;
-    padding: 0.35rem 0.85rem;
+    padding: 0.4rem 0.9rem;
     margin: 0;
     background-color: transparent;
     color: rgb(var(--primary-color));
     border-radius: 0.3rem;
-    transition: all 80ms ease-in-out;
-    font-weight: 400 !important;
+    transition: all 80ms ease;
     transition-property: background-color, color, border, background, filter;
+    font-weight: 400 !important;
     text-align: center;
     text-decoration: none !important;
 }
@@ -801,7 +801,7 @@ div.dropdown ul {
     background-color: rgb(var(--dropdown-background-color));
     padding: 0.25rem;
     border: 1px solid rgba(var(--default-border-color), 0.1);
-    border-radius: 0.25rem;
+    border-radius: 0.35rem;
     width: max-content;
     max-width: 300px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.14);
@@ -1850,6 +1850,10 @@ div.spinner span.spinner::after {
 
 .items-group tr[data-href] {
     cursor: pointer;
+}
+
+img.rounded {
+    border-radius: 0.5rem !important;
 }
 
 @keyframes dropdown-show {
