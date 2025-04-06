@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --root-font: "Inter", sans-serif;
+    --font-size: 16px;
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
     --background-color: 255, 255, 255;
@@ -49,7 +50,7 @@
 
 html {
     overflow-x: hidden;
-    font-size: 16px;
+    font-size: var(--font-size);
 }
 
 body {
@@ -61,7 +62,7 @@ body {
     width: 100vw;
     min-height: 100vh;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: var(--font-size);
     color: rgb(var(--text-default-color));
     background-color: rgb(var(--background-color));
 }
@@ -73,6 +74,10 @@ header.website-warning {
     align-items: center;
     background-color: #ffbb00 !important;
     text-align: center;
+}
+
+header.website-warning .wrapper {
+    width: var(--wrapper-width);
 }
 
 nav {
@@ -360,6 +365,10 @@ footer .wrapper {
     font-weight: 400 !important;
     text-align: center;
     text-decoration: none !important;
+}
+
+.button.full-width {
+    width: 100% !important;
 }
 
 .button.l-radius,
@@ -756,30 +765,55 @@ details[open] summary {
 .table {
     width: 100%;
     overflow-x: auto;
+    border-radius: 0.35rem;
+    border: 1px solid rgba(var(--default-border-color), 0.15);
 }
 
-table {
+.table table {
     min-width: 100%;
-    max-width: max-content !important;
     border-collapse: collapse;
+    text-align: center;
+    border-radius: 1rem;
 }
 
-table tr:hover td {
-    background-color: rgba(0, 0, 0, 0.03);
+.table table.max-content {
+    min-width: max-content !important;
 }
 
-table tr th {
-    background-color: rgba(0, 0, 0, 0.15);
+.table:has(table.max-content) {
+    max-width: max-content !important;
 }
 
-table tr:first-child th {
+.table table tr.no-breakspace th,
+.table table tr.no-breakspace td {
     white-space: nowrap;
 }
 
-table tr th,
-table tr td {
+.table table tr th,
+.table table tr td {
     padding: 0.5rem;
-    border: 1px solid rgba(var(--default-border-color), 0.5);
+    border-bottom: 1px solid rgba(var(--default-border-color), 0.15);
+}
+
+.table table tr th:not(:last-child),
+.table table tr td:not(:last-child) {
+    border-right: 1px dashed rgba(var(--default-border-color), 0.15);
+}
+
+.table table tr th {
+    font-weight: 600;
+    color: rgb(var(--text-default-color));
+    background-color: rgba(var(--default-border-color), 0.04);
+}
+
+.table table tr:last-child th,
+.table table tr:last-child td {
+    border-bottom: transparent;
+}
+
+.table table tr.stroke th,
+.table table tr.stroke td {
+    text-decoration: line-through;
 }
 
 div.dropdown {
@@ -1647,6 +1681,7 @@ span.details-mark.serif {
 .card-switch.big-buttons ul.togglers li a {
     font-size: 1.6rem !important;
     border-radius: 0.5rem !important;
+
 }
 
 .card-switch ul.togglers {
@@ -1684,6 +1719,7 @@ span.details-mark.serif {
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
+    border-bottom: 3px solid transparent;
 }
 
 .card-switch:not(.big-buttons) ul.togglers li a.card-toggler:hover {
@@ -1694,6 +1730,7 @@ span.details-mark.serif {
     background-color: transparent;
     font-weight: bold !important;
     color: rgb(var(--primary-button-color)) !important;
+    border-color: rgb(var(--primary-button-color)) !important;
 }
 
 .card-switch.big-buttons ul.togglers li a.card-toggler.current {
@@ -1825,6 +1862,7 @@ div.spinner span.spinner::after {
     max-width: unset !important;
     border-collapse: collapse;
     table-layout: fixed;
+    border-color: transparent;
 }
 
 .items-group tr th,
@@ -1856,6 +1894,10 @@ img.rounded {
     border-radius: 0.5rem !important;
 }
 
+ul.no-points {
+    list-style: none;
+}
+
 @keyframes dropdown-show {
     0% {
         top: calc(100% - 5px);
@@ -1883,7 +1925,8 @@ img.rounded {
     header.gov-mark .wrapper,
     nav .wrapper,
     main div.wrapper,
-    footer .wrapper {
+    footer .wrapper,
+    header.website-warning .wrapper {
         width: var(--wrapper-width-bp-1);
     }
 
@@ -1896,8 +1939,12 @@ img.rounded {
         align-items: center;
     }
 
-    aside {
+    main aside {
         display: none;
+    }
+
+    main:has(aside) div.wrapper {
+        width: var(--wrapper-width-bp-2);
     }
 
     main nav.side-nav {
@@ -1920,7 +1967,8 @@ img.rounded {
     header.gov-mark .wrapper,
     nav .wrapper,
     main div.wrapper,
-    footer .wrapper {
+    footer .wrapper,
+    header.website-warning .wrapper {
         width: var(--wrapper-width-bp-2);
     }
 
@@ -1983,7 +2031,8 @@ img.rounded {
     header.gov-mark .wrapper,
     nav .wrapper,
     main div.wrapper,
-    footer .wrapper {
+    footer .wrapper,
+    header.website-warning .wrapper {
         width: var(--wrapper-width-bp-3);
     }
 
@@ -1998,6 +2047,10 @@ img.rounded {
 
     nav {
         padding: 0.75rem !important;
+    }
+
+    main:has(aside) div.wrapper {
+        width: var(--wrapper-width-bp-3);
     }
 
     main nav.side-nav {

@@ -82,11 +82,13 @@
         </div>
     </nav>
     <header class="website-warning">
-        <p>
-            <strong>WAŻNY KOMUNIKAT: </strong>Website is still under early development. Any item on the page or its
-            components may be subject to
-            change.
-        </p>
+        <div class="wrapper">
+            <p>
+                <strong>WAŻNY KOMUNIKAT: </strong>Website is still under early development. Any item on the page or its
+                components may be subject to
+                change.
+            </p>
+        </div>
     </header>
     <div class="website-intro">
         <div class="wrapper">
@@ -497,7 +499,7 @@
                     <h3 id="table">Table</h3>
                     <div class="table">
                         <table>
-                            <tr>
+                            <tr class="no-breakspace">
                                 <th>Nazwa dokumentu</th>
                                 <th>Opis</th>
                                 <th>Rok wydania</th>
@@ -948,8 +950,10 @@
                                     <label for="pass">Hasło</label>
                                     <input type="password" name="pass" id="pass" class="form-control" />
                                 </div>
-                                <p><a href="#">Zapomniałem hasła</a></p>
-                                <p><a href="#">Rejestracja konta</a></p>
+                                <div class="form-group">
+                                    <p><a href="#">Zapomniałem hasła</a></p>
+                                    <p><a href="#">Rejestracja konta</a></p>
+                                </div>
                                 <button type="submit" class="button primary">Zaloguj się</button>
                             </form>
                             <button class="dialog-close" data-dialog_id="dialog2">&times;</button>
@@ -1433,6 +1437,15 @@
             <div class="row">
                 <div class="col">
                     <img src="https://placehold.co/500x350" alt="" class="rounded">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="no-points">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officia.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officia.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officia.</li>
+                    </ul>
                 </div>
             </div>
         </div>
