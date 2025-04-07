@@ -470,7 +470,7 @@ footer .wrapper {
 form {
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.45rem;
     width: 100%;
 }
 
@@ -1849,6 +1849,28 @@ div.spinner span.spinner::after {
 
 .swipe-right {
     right: 10px;
+}
+
+.swipe-right::after {
+    content: "";
+    border: 0.3rem solid rgba(var(--text-default-color), 0.85);
+    border-left: none;
+    border-bottom: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    aspect-ratio: 1/1;
+    rotate: 45deg;
+}
+
+.swipe-left::after {
+    content: "";
+    border: 0.3rem solid rgba(var(--text-default-color), 0.85);
+    border-left: none;
+    border-bottom: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    aspect-ratio: 1/1;
+    rotate: -135deg;
 }
 
 .current-slide-indicator {
