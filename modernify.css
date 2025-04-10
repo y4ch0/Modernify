@@ -895,7 +895,7 @@ div.dropdown ul.show {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border: 2px solid rgba(var(--default-border-color), 0.1);
+    border: 1px solid rgba(var(--default-border-color), 0.1);
     color: #000;
     border-radius: 0.4rem;
     outline: none;
@@ -906,7 +906,7 @@ div.dropdown ul.show {
     width: calc(100% + 2rem);
     max-width: unset;
     background-color: rgba(0, 0, 0, 0.05);
-    border-radius: calc(0.4rem - 2px) calc(0.4rem - 2px) 0 0;
+    border-radius: calc(0.4rem - 1px) calc(0.4rem - 1px) 0 0;
     margin: -1rem;
     margin-bottom: 0.25rem;
     padding: 0 0.5rem;
@@ -994,7 +994,6 @@ div.dropdown ul.show {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100% !important;
-    /* Zapewnia, że tekst nie wychodzi poza dostępne miejsce */
 }
 
 .card.message-box div.description p.topic {
@@ -1047,7 +1046,6 @@ div.dropdown ul.show {
 
 .card:is(a) {
     outline: 0.25rem solid transparent;
-    outline-offset: -2px;
 }
 
 .card.no-border:is(a),
@@ -1064,7 +1062,7 @@ div.dropdown ul.show {
     margin-bottom: 0.5rem;
     width: calc(100% + 2rem);
     max-width: unset !important;
-    border-radius: calc(0.35rem - 2px) calc(0.35rem - 2px) 0 0;
+    border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
 }
 
 .card div.image-centered {
@@ -1110,9 +1108,9 @@ div.dropdown ul.show {
 .block-cards.no-border .card img.card-image,
 .card.no-border img.card-image {
     max-width: calc(100% + 2rem + 4px);
-    width: calc(100% + 2rem + 4px);
-    margin-top: calc(-2px - 1rem);
-    margin-left: calc(-2px - 1rem);
+    width: calc(100% + 2rem + 2px);
+    margin-top: calc(-1px - 1rem);
+    margin-left: calc(-1px - 1rem);
 }
 
 .block-cards.small {
@@ -1524,7 +1522,6 @@ progress::-webkit-progress-value {
 ul.breadcrumb {
     display: flex;
     padding: 0;
-    row-gap: 0.25rem;
     margin: 0.5rem 0;
     list-style: none;
     text-overflow: ellipsis;
@@ -1533,8 +1530,14 @@ ul.breadcrumb {
 }
 
 ul.breadcrumb li:not(:last-child)::after {
-    content: "\003E";
+    content: "\203A";
     margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+ul.breadcrumb li {
+    display: flex;
+    align-items: center;
 }
 
 ul.breadcrumb li:last-child a {
