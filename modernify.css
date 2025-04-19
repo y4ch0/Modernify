@@ -22,7 +22,7 @@
     --wrapper-width-bp-3: 92vw;
     --intro-height: 30rem;
     --sidenav-width: 13vw;
-    --input-label-color: var(--primary-color);
+    --input-label-color: 20, 20, 20;
     --sidenav-text-color: 0, 0, 0;
     --sidenav-accent-color: 255, 0, 0;
     --navbar-text-color: var(--primary-color);
@@ -898,7 +898,12 @@ div.dropdown ul.show {
     color: #000;
     border-radius: 0.4rem;
     outline: none;
+    outline-offset: -1px;
     transition: outline 80ms ease-in-out;
+}
+
+.card.content-space-between {
+    justify-content: space-between;
 }
 
 .card .card__header {
