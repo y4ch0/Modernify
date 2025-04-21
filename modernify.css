@@ -34,6 +34,8 @@
     --info-circle-color: var(--primary-color);
     --tab-switch-link-color: var(--primary-color);
     --form-progress-bar-color: var(--primary-color);
+    --form-progress-step-background: var(--primary-button-color);
+    --form-progress-step-text: var(--primary-button-text);
     interpolate-size: allow-keywords;
 }
 
@@ -91,7 +93,7 @@ h6 {
 }
 
 h6 {
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(var(--text-default-color), 0.6);
 }
 
 header.website-warning {
@@ -192,11 +194,11 @@ nav button.nav-collapse {
     height: 4rem;
     font-size: 3rem;
     aspect-ratio: 1/1;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(var(--text-default-color), 0.75);
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--default-border-color), 0.1);
     cursor: pointer;
     display: none;
     overflow: hidden;
@@ -261,7 +263,7 @@ main nav.side-nav {
     height: calc(100vh - 4.5rem);
     overflow-y: auto;
     background-color: rgb(var(--background-color));
-    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(var(--default-border-color), 0.15);
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -352,7 +354,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 2rem 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--text-default-color), 0.1);
     margin-top: 4rem;
 }
 
@@ -532,7 +534,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .form-control:is(label):has(input[type="radio"], input[type="checkbox"]) {
     font-size: 0.95rem;
-    color: #000;
+    color: var(--text-default-color);
     display: flex;
     gap: 0.35rem;
     align-items: center;
@@ -619,7 +621,7 @@ textarea {
 .form-group:has(input[type="range"]) span.start-value,
 .form-group:has(input[type="range"]) span.end-value {
     font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.65);
+    color: rgba(var(--text-default-color), 0.65);
     font-weight: 600;
     position: absolute;
 }
@@ -638,7 +640,7 @@ textarea {
 
 .form-group:has(input[type="range"]) ul.steps-indicator {
     font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.65);
+    color: rgba(var(--text-default-color), 0.65);
     font-weight: 600;
     position: absolute;
     width: calc(100% - 5px);
@@ -709,8 +711,8 @@ a:hover {
 
 details {
     width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(var(--default-border-color), 0.1);
+    border-bottom: 1px solid rgba(var(--default-border-color), 0.1);
     overflow: hidden;
     padding: 1rem;
 }
@@ -741,8 +743,8 @@ details summary::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(var(--details-label-color));
-    color: #fff;
+    background-color: rgb(var(--primary-button-color));
+    color: rgb(var(--primary-button-text));
 }
 
 details[open] summary::before {
@@ -838,7 +840,7 @@ div.dropdown ul {
     border-radius: 0.35rem;
     width: max-content;
     max-width: 300px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 2px rgba(var(--text-default-color), 0.12), 0 8px 16px rgba(var(--text-default-color), 0.14);
 }
 
 div.dropdown .toggler {
@@ -865,22 +867,22 @@ div.dropdown ul li a {
     padding: 0.25rem 0.5rem;
     display: flex;
     gap: 0.35rem;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(var(--text-default-color), 0.8);
     border-radius: 0.25rem;
     font-weight: inherit;
     font-size: 0.95rem;
 }
 
 div.dropdown.primary ul li a {
-    color: rgb(var(--primary-color));
+    color: rgb(var(--primary-color)) !important;
 }
 
 div.dropdown.secondary ul li a {
-    color: rgb(var(--secondary-color));
+    color: rgb(var(--secondary-color)) !important;
 }
 
 div.dropdown ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(var(--text-default-color), 0.05);
     text-decoration: none;
 }
 
@@ -895,7 +897,7 @@ div.dropdown ul.show {
     flex-direction: column;
     padding: 1rem;
     border: 1px solid rgba(var(--default-border-color), 0.1);
-    color: #000;
+    color: rgb(var(--text-default-color));
     border-radius: 0.4rem;
     outline: none;
     outline-offset: -1px;
@@ -909,7 +911,7 @@ div.dropdown ul.show {
 .card .card__header {
     width: calc(100% + 2rem);
     max-width: unset;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(var(--text-default-color), 0.05);
     border-radius: calc(0.4rem - 1px) calc(0.4rem - 1px) 0 0;
     margin: -1rem;
     margin-bottom: 0.25rem;
@@ -947,8 +949,8 @@ div.dropdown ul.show {
 .card.message-box {
     border: none;
     border-radius: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(var(--default-border-color), 0.2);
+    border-bottom: 1px solid rgba(var(--default-border-color), 0.2);
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -1032,7 +1034,7 @@ div.dropdown ul.show {
 }
 
 .card.background {
-    background-color: rgba(0, 0, 0, 0.04);
+    background-color: rgba(var(--text-default-color), 0.04);
 }
 
 .card.l-radius {
@@ -1041,7 +1043,7 @@ div.dropdown ul.show {
 
 .card.shadow {
     background-color: rgb(var(--background-color));
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14), inset 0 0 0px 2px transparent;
+    box-shadow: 0 0 2px rgba(var(--text-default-color), 0.12), 0 2px 4px rgba(var(--text-default-color), 0.14), inset 0 0 0px 2px transparent;
 }
 
 .card.l-radius img.card-image:first-of-type {
@@ -1167,6 +1169,7 @@ dialog div.body {
     min-width: 20%;
     max-height: 70%;
     overflow-y: auto;
+    color: rgb(var(--text-default-color));
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
@@ -1277,7 +1280,7 @@ dialog[open] div.body {
     font-size: 0.85rem;
     margin: 0.25rem 0.25rem 0.25rem 0;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--text-default-color), 0.1);
 }
 
 .badge.information {
@@ -1287,7 +1290,7 @@ dialog[open] div.body {
 
 .badge.warning {
     background-color: rgba(255, 187, 0, 0.85);
-    color: #000;
+    color: rgb(var(--text-default-color));
 }
 
 .badge.success {
@@ -1320,7 +1323,7 @@ dialog[open] div.body {
 .form-progress .bars .bar {
     width: 100%;
     height: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(var(--text-default-color), 0.15);
 }
 
 .form-progress .bars .bar.complete {
@@ -1335,11 +1338,11 @@ dialog[open] div.body {
 }
 
 .form-progress .description h2.progress-heading .current-step {
-    background-color: rgb(var(--form-progress-bar-color));
+    background-color: rgb(var(--form-progress-step-background));
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    color: #fff;
+    color: rgb(var(--form-progress-step-text));
     font-size: 2rem;
     display: flex;
     justify-content: center;
@@ -1356,7 +1359,7 @@ dialog[open] div.body {
 }
 
 kbd {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(var(--text-default-color), 0.03);
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-size: 1rem;
@@ -1447,10 +1450,11 @@ dialog div.body .dialog-close {
     font-weight: 350;
     cursor: pointer;
     border: none;
+    color: rgb(var(--text-default-color));
 }
 
 dialog div.body .dialog-close:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--text-default-color), 0.1);
 }
 
 progress {
@@ -1464,7 +1468,7 @@ progress.slim {
 }
 
 progress::-webkit-progress-bar {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--text-default-color), 0.1);
     border-radius: 0.4rem;
 }
 
@@ -1546,12 +1550,12 @@ ul.breadcrumb li {
 
 ul.breadcrumb li:last-child a {
     pointer-events: none;
-    color: #000;
+    color: rgb(var(--text-default-color));
     text-decoration: none !important;
 }
 
 code {
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: rgba(var(--text-default-color), 0.075);
     font-family: monospace !important;
     font-weight: 500;
     padding: 0.25rem 0.35rem;
@@ -1595,7 +1599,7 @@ aside {
     height: 100% !important;
     position: sticky;
     top: 7rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(var(--default-border-color), 0.1);
     padding-left: 1rem;
 }
 
@@ -1617,7 +1621,7 @@ aside ul.aside-items li a {
     padding: 0.25rem 0;
     width: 100%;
     display: flex;
-    color: #000 !important;
+    color: rgb(var(--text-default-color)) !important;
 }
 
 aside ul.aside-items li a:hover::after,
@@ -1638,8 +1642,8 @@ aside ul.aside-items li.current a {
 .summary-box {
     width: 100%;
     padding: 1rem 1.5rem;
-    background-color: #e7f6f8;
-    border: 1px #99deea solid;
+    background-color: rgba(153, 222, 234, 0.25);
+    border: 1px rgb(153, 222, 234) solid;
     border-radius: 0.25rem;
 }
 
@@ -1679,7 +1683,7 @@ span.details-mark.serif {
     visibility: hidden;
     z-index: 99999;
     pointer-events: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(var(--text-default-color), 0.2);
 }
 
 .card-switch {
@@ -1691,7 +1695,7 @@ span.details-mark.serif {
 .card-switch.big-buttons ul.togglers {
     min-width: 100%;
     border-bottom: none;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(var(--text-default-color), 0.05);
     padding: 0.25rem;
     border-radius: 0.75rem;
     gap: 0.25rem;
@@ -1717,7 +1721,7 @@ span.details-mark.serif {
     margin: 0;
     list-style: none;
     min-width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(var(--default-border-color), 0.15);
 }
 
 .card-switch .cards .card-item {
@@ -1736,7 +1740,7 @@ span.details-mark.serif {
     margin: 0;
     padding: 0.35rem 1.15rem;
     background-color: transparent;
-    color: #000;
+    color: rgb(var(--text-default-color)) !important;
     border-radius: 0.25rem 0.25rem 0 0;
     transition: all 80ms ease-in-out;
     font-weight: 450 !important;
@@ -1895,13 +1899,13 @@ div.spinner span.spinner::after {
 .current-slide-indicator li {
     width: 10px;
     height: 10px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(var(--text-default-color), 0.2);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .current-slide-indicator li.active {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(var(--text-default-color), 0.75);
 }
 
 .items-group {
@@ -1915,7 +1919,7 @@ div.spinner span.spinner::after {
 .items-group tr th,
 .items-group tr td {
     border: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+    border-bottom: 1px solid rgba(var(--default-border-color), 0.2) !important;
     text-align: center;
 }
 
