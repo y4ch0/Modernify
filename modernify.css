@@ -931,10 +931,6 @@ div.dropdown ul.show {
     margin-bottom: 0.25rem;
 }
 
-.card.no-border .card__header {
-    border-radius: 0.4rem;
-}
-
 .card.inline {
     display: flex;
     flex-direction: row;
@@ -1041,6 +1037,11 @@ div.dropdown ul.show {
     border-radius: 1rem;
 }
 
+.card.l-radius .card__header {
+    border-radius: 1rem 1rem 0 0;
+    padding: 0.25rem 0.75rem;
+}
+
 .card.shadow {
     background-color: rgb(var(--background-color));
     box-shadow: 0 0 2px rgba(var(--text-default-color), 0.12), 0 2px 4px rgba(var(--text-default-color), 0.14), inset 0 0 0px 2px transparent;
@@ -1134,6 +1135,15 @@ hr {
     padding: 0;
     border: 1px solid rgba(var(--default-border-color), 0.2);
     border-bottom: none;
+}
+
+div.vr {
+    display: inline-block;
+    align-self: stretch;
+    height: 100%;
+    min-height: 1rem;
+    width: 1px;
+    background-color: rgba(var(--default-border-color), 0.2);
 }
 
 big {
