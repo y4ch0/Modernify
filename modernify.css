@@ -57,6 +57,7 @@
 html {
     overflow-x: hidden;
     font-size: var(--font-size);
+    scroll-behavior: smooth;
 }
 
 body {
