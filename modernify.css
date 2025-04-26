@@ -37,7 +37,7 @@
     --form-progress-step-background: var(--primary-button-color);
     --form-progress-step-text: var(--primary-button-text);
     --accent-color: var(--primary-color);
-    --dialog-border: 1px solid transparent;
+    --dialog-border: none;
     interpolate-size: allow-keywords;
 }
 
@@ -405,7 +405,7 @@ footer .wrapper {
 
 .button.l-radius,
 .button.big {
-    border-radius: 0.45rem;
+    border-radius: 0.5rem;
 }
 
 .button.small {
@@ -600,14 +600,14 @@ textarea {
 .form-group.inline div .form-control {
     width: fit-content;
     flex: 1;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
 }
 
 .form-group.inline div .button {
     width: max-content !important;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .form-group label {
@@ -907,6 +907,19 @@ div.dropdown ul.show {
     transition: outline 80ms ease-in-out;
 }
 
+.card hr.card-divider {
+    max-width: unset;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    border-color: rgba(var(--default-border-color), 0.1);
+}
+
+.card.no-border hr.card-divider,
+.block-cards.no-border .card hr.card-divider {
+    width: calc(100% + 2rem + 2px);
+    margin-left: calc(-1rem - 1px);
+}
+
 .card.content-space-between {
     justify-content: space-between;
 }
@@ -929,8 +942,8 @@ div.dropdown ul.show {
 }
 
 .card.no-border .card__header {
-    width: calc(100% + 2rem + 4px);
-    margin: calc(-1rem - 2px);
+    width: calc(100% + 2rem + 2px);
+    margin: calc(-1rem - 1px);
     margin-bottom: 0.25rem;
 }
 
@@ -1165,6 +1178,12 @@ dialog {
     z-index: 9999;
     padding: 0;
     margin: 0;
+}
+
+dialog hr.dialog-divider {
+    max-width: unset;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
 }
 
 dialog::backdrop {
@@ -1410,7 +1429,7 @@ kbd {
 }
 
 .button-group .button.l-radius:first-child {
-    border-radius: 0.45rem 0 0 0.45rem !important;
+    border-radius: 0.5rem 0 0 0.5rem !important;
 }
 
 .button-group .button.outlined:not(:last-child) {
@@ -1426,7 +1445,7 @@ kbd {
 }
 
 .button-group .button.l-radius:last-child {
-    border-radius: 0 0.45rem 0.45rem 0 !important;
+    border-radius: 0 0.5rem 0.5rem 0 !important;
 }
 
 @keyframes modal_fadein {
@@ -2196,11 +2215,11 @@ div.wcag-tools .wt-toggler {
     }
 
     .button-group .button.l-radius:first-child {
-        border-radius: 0.45rem 0.45rem 0 0 !important;
+        border-radius: 0.5rem 0.5rem 0 0 !important;
     }
 
     .button-group .button.l-radius:last-child {
-        border-radius: 0 0 0.45rem 0.45rem !important;
+        border-radius: 0 0 0.5rem 0.5rem !important;
     }
 
     .button-group .button.outlined:not(:last-child) {

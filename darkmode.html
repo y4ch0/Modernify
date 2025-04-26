@@ -24,10 +24,7 @@
             --secondary-button-color: 60, 60, 60;
             --secondary-button-text: 255, 255, 255;
             --secondary-button-color-hover: 40, 40, 40;
-        }
-
-        dialog div.body {
-            border: 1px solid rgba(var(--default-border-color), 0.25);
+            --dialog-border: 1px solid rgba(var(--default-border-color), 0.25);
         }
     </style>
 </head>
@@ -116,6 +113,32 @@
         </div>
     </div>
     <main>
+        <!--<div class="wcag-tools">
+            <a href="#" class="toggler dialog-open" data-dialog_id="wcag-tools"><svg id="Layer_1" data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.88">
+                    <title>accessibility</title>
+                    <path
+                        d="M61.44,0A61.46,61.46,0,1,1,18,18,61.21,61.21,0,0,1,61.44,0Zm-.39,74.18L52.1,98.91a4.94,4.94,0,0,1-2.58,2.83A5,5,0,0,1,42.7,95.5l6.24-17.28a26.3,26.3,0,0,0,1.17-4,40.64,40.64,0,0,0,.54-4.18c.24-2.53.41-5.27.54-7.9s.22-5.18.29-7.29c.09-2.63-.62-2.8-2.73-3.3l-.44-.1-18-3.39A5,5,0,0,1,27.08,46a5,5,0,0,1,5.05-7.74l19.34,3.63c.77.07,1.52.16,2.31.25a57.64,57.64,0,0,0,7.18.53A81.13,81.13,0,0,0,69.9,42c.9-.1,1.75-.21,2.6-.29l18.25-3.42A5,5,0,0,1,94.5,39a5,5,0,0,1,1.3,7,5,5,0,0,1-3.21,2.09L75.15,51.37c-.58.13-1.1.22-1.56.29-1.82.31-2.72.47-2.61,3.06.08,1.89.31,4.15.61,6.51.35,2.77.81,5.71,1.29,8.4.31,1.77.6,3.19,1,4.55s.79,2.75,1.39,4.42l6.11,16.9a5,5,0,0,1-6.82,6.24,4.94,4.94,0,0,1-2.58-2.83L63,74.23,62,72.4l-1,1.78Zm.39-53.52a8.83,8.83,0,1,1-6.24,2.59,8.79,8.79,0,0,1,6.24-2.59Zm36.35,4.43a51.42,51.42,0,1,0,15,36.35,51.27,51.27,0,0,0-15-36.35Z" />
+                </svg></a>
+            <dialog id="wcag-tools" open>
+                <div class="body">
+                    <h2>Narzędzia dostępności</h2>
+                    <h6>Accessibility tools</h6>
+                    <div class="row">
+                        <p>Wielkość tekstu:</p>
+                        <a href="#" class="wt-toggler wt-fs-1" title="Normalny rozmiar tekstu">A</a>
+                        <a href="#" class="wt-toggler wt-fs-2" title="Powiększony rozmiar tekstu">AA</a>
+                        <a href="#" class="wt-toggler wt-fs-3" title="Największy rozmiar tekstu">AAA</a>
+                    </div>
+                    <div class="row">
+                        <p>Kontrast:</p>
+                        <a href="#" class="wt-toggler wt-c-off" title="Tryb kontrastu wyłączony">A</a>
+                        <a href="#" class="wt-toggler wt-c-on" title="Tryb kontrastu włączony">A</a>
+                    </div>
+                    <button class="dialog-close" data-dialog_id="wcag-tools">&times;</button>
+                </div>
+            </dialog>
+        </div>-->
         <nav class="side-nav">
             <ul class="nav">
                 <li class="current"><a href="#">Lorem ipsum dolor sit amet.</a></li>
@@ -578,7 +601,6 @@
                     <div class="dropdown">
                         <a class="button outlined toggler" title="No priority color theme set">Dropdown toggler</a>
                         <ul>
-                            <h6>Sort by</h6>
                             <li><a href="#">Dropdown item</a></li>
                             <li><a href="#">Dropdown item</a></li>
                             <li><a href="#">Dropdown item</a></li>
@@ -665,6 +687,7 @@
                                 aspernatur ipsam consectetur rerum
                                 magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
                             </p>
+                            <hr class="card-divider">
                             <a href="#" class="button outlined">Przeczytaj</a>
                         </div>
                         <div class="card">
@@ -964,6 +987,7 @@
                                     <p><a href="#">Zapomniałem hasła</a></p>
                                     <p><a href="#">Rejestracja konta</a></p>
                                 </div>
+                                <hr class="dialog-divider">
                                 <button type="submit" class="button primary">Zaloguj się</button>
                             </form>
                             <button class="dialog-close" data-dialog_id="dialog2">&times;</button>
@@ -1474,6 +1498,31 @@
                             <a href="#" class="button primary full-width">Przeczytaj więcej</a>
                         </div>
                     </div>
+                </div>
+                <div class="col">
+                    <div class="card l-radius no-border" style="background-color: #0086f312;">
+                        <div class="card__header" style="background-color: #0086f3; color: #fff;">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                        </div>
+                        <div class="card__content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iusto quae beatae
+                                aspernatur velit odit!</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut fugiat ratione alias odio,
+                                labore inventore.</p>
+                        </div>
+                        <div class="card__footer">
+                            <a href="#" class="button primary full-width">Przeczytaj więcej</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, obcaecati!</p>
+                </div>
+                <div class="vr responsive"></div>
+                <div class="col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, obcaecati!</p>
                 </div>
             </div>
         </div>
