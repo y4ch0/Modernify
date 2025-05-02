@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./../modernify.css">
     <script src="./../utility.js"></script>
     <link rel="stylesheet" href="pocztex.css">
+    <script src="./../jquery.js"></script>
 </head>
 
 <body>
@@ -76,31 +77,46 @@
                                     <h3>Wyceń przesyłkę</h3>
                                     <h5>Gabaryt przesyłki</h5>
                                     <div class="block-cards small">
-                                        <a href="#" class="card centered">
-                                            <h2>S</h2>
-                                            <p class="xs-margin">9x40x65 [cm]</p>
-                                            <p class="xs-margin">do 20kg</p>
-                                        </a>
-                                        <a href="#" class="card centered">
-                                            <h2>M</h2>
-                                            <p class="xs-margin">20x40x65 [cm]</p>
-                                            <p class="xs-margin">do 20kg</p>
-                                        </a>
-                                        <a href="#" class="card centered">
-                                            <h2>L</h2>
-                                            <p class="xs-margin">42x40x65 [cm]</p>
-                                            <p class="xs-margin">do 20kg</p>
-                                        </a>
-                                        <a href="#" class="card centered">
-                                            <h2>XL</h2>
-                                            <p class="xs-margin">60x60x70 [cm]</p>
-                                            <p class="xs-margin">do 20kg</p>
-                                        </a>
-                                        <a href="#" class="card centered">
-                                            <h2>2XL</h2>
-                                            <p class="xs-margin">W+S+D <= 250cm [cm]</p>
-                                                    <p class="xs-margin">D <= 120cm do 30kg</p>
-                                        </a>
+                                        <label class="form-control package-size highlight">
+                                            <input type="radio" name="size" value="1" checked>
+                                            <div class="card no-border no-padding centered">
+                                                <h1>S</h1>
+                                                <p>9x40x65 [cm]</p>
+                                                <p>do 20 kg</p>
+                                            </div>
+                                        </label>
+                                        <label class="form-control package-size highlight">
+                                            <input type="radio" name="size" value="2">
+                                            <div class="card no-border no-padding centered">
+                                                <h1>M</h1>
+                                                <p>20x40x65 [cm]</p>
+                                                <p>do 20 kg</p>
+                                            </div>
+                                        </label>
+                                        <label class="form-control package-size highlight">
+                                            <input type="radio" name="size" value="3">
+                                            <div class="card no-border no-padding centered">
+                                                <h1>L</h1>
+                                                <p>42x40x65 [cm]</p>
+                                                <p>do 20 kg</p>
+                                            </div>
+                                        </label>
+                                        <label class="form-control package-size highlight">
+                                            <input type="radio" name="size" value="4">
+                                            <div class="card no-border no-padding centered">
+                                                <h1>XL</h1>
+                                                <p>60x60x70 [cm]</p>
+                                                <p>do 20 kg</p>
+                                            </div>
+                                        </label>
+                                        <label class="form-control highlight">
+                                            <input type="radio" name="size" value="5" disabled>
+                                            <div class="card no-border no-padding centered">
+                                                <h1>2XL</h1>
+                                                <p>W+S+D <= 250cm</p>
+                                                        <p>D <= 120cm do 30kg</p>
+                                            </div>
+                                        </label>
                                     </div>
                                     <h5>Sposób dostawy</h5>
                                     <div class="block-cards small">
@@ -116,9 +132,10 @@
                                     </div>
                                     <h5>Wycena końcowa</h5>
                                     <div class="card background no-border centered">
-                                        <h2 class="header-primary">17,50zł</h2>
+                                        <h2 class="header-primary" id="package-final-price">17,50zł</h2>
                                     </div>
-                                    <div class="card no-background no-border"><a href=""
+                                    <hr>
+                                    <div class="card no-background no-border no-padding"><a href=""
                                             class="button primary big">Nadaj
                                             przesyłkę</a></div>
                                 </div>
@@ -153,6 +170,35 @@
             <p>Pocztex&reg;</p>
         </div>
     </footer>
+    <script>
+        $(document).ready(function () {
+            let packagePrice = 17.50;
+            let packageSize = 1; // Default size S
+
+            // Function to format the price string
+            function formatPrice(price) {
+                let formattedPrice = price.toFixed(2).replace('.', ',');
+                return formattedPrice + "zł";
+            }
+
+            $(".package-size").click(function () {
+                packageSize = $(this).find("input").val();
+
+                if (packageSize == 1) {
+                    packagePrice = 17.50;
+                } else if (packageSize == 2) {
+                    packagePrice = 22.13;
+                } else if (packageSize == 3) {
+                    packagePrice = 25.00;
+                } else if (packageSize == 4) {
+                    packagePrice = 30.00;
+                }
+
+                // Use the formatPrice function to display the formatted price
+                $("#package-final-price").text(formatPrice(packagePrice));
+            });
+        });
+    </script>
 </body>
 
 </html>

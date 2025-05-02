@@ -54,6 +54,10 @@
     accent-color: rgb(var(--accent-color));
 }
 
+*[id] {
+    scroll-margin-top: 5rem;
+}
+
 html {
     overflow-x: hidden;
     font-size: var(--font-size);
@@ -493,7 +497,7 @@ form p {
     padding: 0.45rem 0.85rem;
     border-radius: 0.3rem;
     line-height: 1.5 !important;
-    outline: 0.2rem solid transparent;
+    outline: 0.15rem solid transparent;
     outline-offset: -1px;
     transition: outline 80ms ease-in-out;
 }
@@ -552,6 +556,15 @@ input[type=number]::-webkit-inner-spin-button {
 
 .form-control.highlight:is(label):has(input:checked) {
     outline-color: rgb(var(--card-outline-color)) !important;
+}
+
+.form-control:disabled,
+.form-control:has(input:disabled) * {
+    color: rgba(var(--text-default-color), 0.35) !important;
+}
+
+.form-control:has(input:disabled) {
+    border-color: rgba(var(--default-border-color), 0.2);
 }
 
 input[type="range"] {
@@ -783,7 +796,6 @@ details[open] summary {
 .table table {
     min-width: 100%;
     border-collapse: collapse;
-    text-align: center;
     border-radius: 1rem;
 }
 
@@ -815,6 +827,7 @@ details[open] summary {
     font-weight: 600;
     color: rgb(var(--text-default-color));
     background-color: rgba(var(--default-border-color), 0.04);
+    text-align: center;
 }
 
 .table table tr:last-child th,
@@ -1886,6 +1899,7 @@ div.spinner span.spinner::after {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    filter: brightness(1) !important;
 }
 
 .slider-button img {
@@ -1893,6 +1907,10 @@ div.spinner span.spinner::after {
     width: calc(100% + 2.5rem);
     max-width: unset !important;
     opacity: 0.5;
+}
+
+.slider-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .swipe-left {

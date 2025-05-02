@@ -8,27 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="modernify.css" />
     <script src="utility.js"></script>
+    <script src="scrollspy.js"></script>
 </head>
 
 <body>
-    <!--<header class="accessibility-tools">
-            <div class="wrapper">
-                <div class="row">
-                    <p>Wielkość tekstu:</p>
-                    <a href="#" class="at-fs-1" title="Normalny rozmiar tekstu">A</a>
-                    <a href="#" class="at-fs-2" title="Powiększony rozmiar tekstu">AA</a>
-                    <a href="#" class="at-fs-3" title="Największy rozmiar tekstu">AAA</a>
-                </div>
-                <div class="row">
-                    <p>Kontrast:</p>
-                    <a href="#" class="at-c-1" title="Tryb kontrastu wyłączony">A</a>
-                    <a href="#" class="at-c-2" title="Tryb kontrastu: Zielono (tekst)-Czarny (tło)">A</a>
-                    <a href="#" class="at-c-3" title="Tryb kontrastu: Czarno (tekst)-Żółty (tło)">A</a>
-                    <a href="#" class="at-c-4" title="Tryb kontrastu: Żółto (tekst)-Czarny (tło)">A</a>
-                    <a href="#" class="at-c-5" title="Tryb kontrastu: Biało (tekst)-Czarny (tło)">A</a>
-                </div>
-            </div>
-        </header>-->
     <nav>
         <div class="wrapper">
             <div class="logo">
@@ -68,9 +51,8 @@
     <header class="website-warning">
         <div class="wrapper">
             <p>
-                <strong>WAŻNY KOMUNIKAT: </strong>Website is still under early development. Any item on the page or its
-                components may be subject to
-                change.
+                <strong>Lorem, ipsum dolor:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus nihil incidunt quasi earum ut voluptate?
             </p>
         </div>
     </header>
@@ -138,7 +120,7 @@
             </ul>
         </nav>
         <div class="wrapper">
-            <div class="row">
+            <div class="row" id="section-1">
                 <div class="col">
                     <h3 id="layout-grid">Multi-column row</h3>
                 </div>
@@ -179,7 +161,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="section-2">
                 <div class="col">
                     <h3 id="headers">Headers</h3>
                     <hr />
@@ -202,7 +184,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="section-3">
                 <div class="col">
                     <h3 id="buttons">Buttons</h3>
                     <h5>Classic</h5>
@@ -354,13 +336,13 @@
                     <div class="form-group inline">
                         <label>Hasło</label>
                         <div>
-                            <input type="password" class="form-control" value="TestoweHasło123" />
-                            <button class="button primary" type="submit">Pokaż hasło</button>
+                            <input type="password" class="form-control" value="TestoweHasło123" id="password-example" />
+                            <button class="button primary" type="submit" id="show-password-example">Pokaż hasło</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="section-4">
                 <form action="formularz.php" method="get" class="col">
                     <h3 id="form">Form</h3>
                     <h4>Redirect to <code>.php</code> file after submit.</h4>
@@ -508,7 +490,7 @@
                     </details>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="section-5">
                 <div class="col">
                     <h3 id="table">Table</h3>
                     <div class="table">
@@ -1541,13 +1523,13 @@
             </div>
         </div>
         <aside>
-            <h5>na tej stronie</h5>
+            <h5>Na tej stronie</h5>
             <ul class="aside-items">
-                <li class="current"><a href="#">Lorem, ipsum dolor.</a></li>
-                <li><a href="#">Lorem, ipsum dolor.</a></li>
-                <li><a href="#">Lorem, ipsum dolor.</a></li>
-                <li><a href="#">Lorem, ipsum dolor.</a></li>
-                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li class="current"><a href="#section-1">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-2">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-3">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-4">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-5">Lorem, ipsum dolor.</a></li>
             </ul>
         </aside>
     </main>
@@ -1588,46 +1570,12 @@
             </div>
         </div>
     </footer>
-    <dialog id="patient-warning">
-        <div class="body">
-            <h2>
-                Komunikat Dyrekcji
-                <abbr title="Szpital Kliniczny
-                    Ministerstwa Spraw Wewnętrznych i Administracji
-                    z Warmińsko - Mazurskim Centrum Onkologii
-                    w Olsztynie">Szpitala MSWiA</abbr>
-            </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fuga.</p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias totam atque aut error quos
-                consequatur recusandae. Dolore cum
-                assumenda iste, praesentium et non nisi error deserunt quae eius nam, necessitatibus debitis sit alias!
-                Repellat debitis libero,
-                dolores, corrupti sed minima delectus odit, incidunt illum ducimus excepturi nostrum quidem. Perferendis
-                magni totam delectus
-                dignissimos. Repellat, porro reprehenderit eligendi officia beatae sit obcaecati commodi quaerat quas!
-                Vitae est sequi deserunt
-                voluptate iste provident numquam ipsa saepe quam, maxime officia minima accusamus obcaecati odit ratione
-                incidunt, vel quaerat
-                porro inventore dolor doloremque aliquid eligendi, sunt quo? Accusantium animi repellat quos laudantium
-                mollitia ea, excepturi
-                eveniet voluptatum dignissimos nulla, soluta dolor! Delectus esse velit iusto numquam ducimus repellat
-                culpa, recusandae debitis
-                natus impedit ex, corrupti consequatur! Doloremque ipsum harum, sapiente obcaecati voluptate odio vero
-                necessitatibus asperiores,
-                amet veniam eaque aliquid quam, nisi molestias consectetur commodi alias. Nulla praesentium facilis
-                temporibus! Sequi temporibus
-                consequuntur voluptas expedita iure quasi obcaecati nihil repudiandae placeat voluptatibus, laudantium
-                tempore voluptates quia hic
-                iste quis error facere adipisci? Ratione, eum consectetur nam magni placeat ipsum, iusto quo impedit
-                eos, reiciendis fugiat
-                pariatur corrupti debitis earum natus cum! Animi molestiae cumque qui veritatis dolorem, vero neque
-                asperiores provident expedita,
-                itaque amet?
-            </p>
-            <button class="dialog-close" data-dialog_id="patient-warning">&times;</button>
-        </div>
-    </dialog>
+    <script>
+        $("#show-password-example").on("click", (e) => {
+            $("#password-example").get(0).type = ($("#password-example").get(0).type == "text" ? "password" : "text");
+            $("#show-password-example").text(($("#password-example").get(0).type == "text" ? "Ukryj hasło" : "Pokaż hasło"));
+        })
+    </script>
 </body>
 
 </html>
