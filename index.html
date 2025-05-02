@@ -1521,8 +1521,13 @@
                     </label>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#" id="sidenav-toggler" class="button primary">Toggle sidenav</a>
+                </div>
+            </div>
         </div>
-        <aside>
+        <aside id="aside">
             <h5>Na tej stronie</h5>
             <ul class="aside-items">
                 <li class="current"><a href="#section-1">Lorem, ipsum dolor.</a></li>
@@ -1574,6 +1579,10 @@
         $("#show-password-example").on("click", (e) => {
             $("#password-example").get(0).type = ($("#password-example").get(0).type == "text" ? "password" : "text");
             $("#show-password-example").text(($("#password-example").get(0).type == "text" ? "Ukryj hasło" : "Pokaż hasło"));
+        })
+        $("#sidenav-toggler").on("click", (e) => {
+            e.preventDefault();
+            $(".side-nav").toggle();
         })
     </script>
 </body>

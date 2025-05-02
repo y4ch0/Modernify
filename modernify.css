@@ -51,6 +51,9 @@
     max-width: 100%;
     position: relative;
     text-rendering: optimizeSpeed;
+}
+
+*:is(input[type=checkbox], input[type=radio]) {
     accent-color: rgb(var(--accent-color));
 }
 
@@ -497,7 +500,7 @@ form p {
     padding: 0.45rem 0.85rem;
     border-radius: 0.3rem;
     line-height: 1.5 !important;
-    outline: 0.15rem solid transparent;
+    outline: 2px solid transparent;
     outline-offset: -1px;
     transition: outline 80ms ease-in-out;
 }
@@ -1911,6 +1914,10 @@ div.spinner span.spinner::after {
 
 .slider-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.slider-button:focus {
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 .swipe-left {
