@@ -416,6 +416,10 @@ footer .wrapper {
     border-radius: 0.5rem;
 }
 
+.square-radius {
+    border-radius: 0 !important;
+}
+
 .button.small {
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
@@ -500,7 +504,7 @@ form p {
     padding: 0.45rem 0.85rem;
     border-radius: 0.3rem;
     line-height: 1.5 !important;
-    outline: 2px solid transparent;
+    outline: 3px solid transparent;
     outline-offset: -1px;
     transition: outline 80ms ease-in-out;
 }
