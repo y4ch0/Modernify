@@ -637,7 +637,7 @@ textarea {
 }
 
 .form-group label {
-    font-weight: 450;
+    font-weight: 500;
     color: rgb(var(--input-label-color));
     margin: 0.1rem 0;
     font-size: 0.95rem;
@@ -1907,6 +1907,7 @@ div.spinner span.spinner::after {
     justify-content: center;
     overflow: hidden;
     filter: brightness(1) !important;
+    border-radius: 0.35rem;
 }
 
 .slider-button img {
@@ -1917,7 +1918,7 @@ div.spinner span.spinner::after {
 }
 
 .slider-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(var(--primary-button-color), 0.2);
 }
 
 .slider-button:focus {
@@ -1934,9 +1935,10 @@ div.spinner span.spinner::after {
 
 .swipe-right::after {
     content: "";
-    border: 0.3rem solid rgba(var(--text-default-color), 0.85);
+    border: 0.3rem solid rgb(var(--primary-button-color));
     border-left: none;
     border-bottom: none;
+    margin-right: 0.35rem;
     width: 0.75rem;
     height: 0.75rem;
     aspect-ratio: 1/1;
@@ -1945,9 +1947,10 @@ div.spinner span.spinner::after {
 
 .swipe-left::after {
     content: "";
-    border: 0.3rem solid rgba(var(--text-default-color), 0.85);
+    border: 0.3rem solid rgb(var(--primary-button-color));
     border-left: none;
     border-bottom: none;
+    margin-left: 0.35rem;
     width: 0.75rem;
     height: 0.75rem;
     aspect-ratio: 1/1;
