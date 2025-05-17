@@ -202,7 +202,7 @@ nav.side-nav ul.nav li.current ul li a {
 
 nav button.nav-collapse {
     padding: 2rem 0;
-    height: 4rem;
+    height: 4.5rem;
     font-size: 3rem;
     aspect-ratio: 1/1;
     color: rgba(var(--text-default-color), 0.75);
@@ -395,7 +395,7 @@ footer .wrapper {
     border: 1px solid transparent;
     font-size: 0.95rem;
     line-height: 1.5;
-    padding: 0.4rem 0.9rem;
+    padding: 0.45rem 0.95rem;
     margin: 0;
     background-color: transparent;
     color: rgb(var(--primary-color));
@@ -862,7 +862,7 @@ div.dropdown ul {
     max-height: 300px;
     overflow-y: auto;
     z-index: 99;
-    font-weight: 450;
+    font-weight: normal;
     background-color: rgb(var(--dropdown-background-color));
     padding: 0.25rem;
     border: 1px solid rgba(var(--default-border-color), 0.1);
@@ -2154,14 +2154,10 @@ div.wcag-tools .wt-toggler {
         display: none;
     }
 
-    nav ul.nav button.nav-collapse {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-    }
-
     nav button.nav-collapse {
+        position: absolute;
+        top: -0.75rem;
+        right: 0;
         display: flex;
     }
 
