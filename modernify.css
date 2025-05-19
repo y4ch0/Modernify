@@ -217,6 +217,7 @@ nav button.nav-collapse {
 
 nav ul.nav button.nav-collapse {
     display: none;
+    top: 0;
 }
 
 nav button.nav-collapse img {
@@ -2023,17 +2024,21 @@ ul.no-points {
 }
 
 div.wcag-tools {
-    width: 100vw;
-    height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 10;
+    width: 4rem;
+    height: 4rem;
 }
 
 div.wcag-tools a.toggler {
     aspect-ratio: 1/1;
+    height: 3.75rem;
+    width: 3.75rem !important;
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #2256b8;
     position: absolute;
     top: 10rem;
@@ -2043,13 +2048,30 @@ div.wcag-tools a.toggler {
 }
 
 div.wcag-tools a.toggler svg {
-    width: 40px;
+    width: 3.5rem;
     fill: white;
 }
 
 div.wcag-tools .wt-toggler {
+    height: 2rem;
     padding: 5px 10px;
+    margin: 0;
+    display: inline-flex;
     border: 1px solid rgba(var(--default-border-color), 0.5);
+}
+
+div.wcag-tools .wt-c-on {
+    background-color: #ffbb00;
+    color: #000;
+}
+
+div.wcag-tools .wt-c-off {
+    background-color: #fff;
+    color: #000;
+}
+
+div.wcag-tools .wt-fs-1 {
+    font-size: 90%;
 }
 
 @keyframes dropdown-show {
@@ -2158,6 +2180,10 @@ div.wcag-tools .wt-toggler {
         position: absolute;
         top: -0.75rem;
         right: 0;
+        display: flex;
+    }
+
+    nav ul.nav button.nav-collapse {
         display: flex;
     }
 

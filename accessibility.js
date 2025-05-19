@@ -2,31 +2,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const root = document.documentElement;
     const body = document.body;
     const nav = document.querySelector("nav");
-    const header = document.querySelector(".accessibility-tools"); // Wyłączony z modyfikacji
+    const header = document.querySelector(".wcag-tools"); // Wyłączony z modyfikacji
 
     // Pobieramy wszystkie elementy oraz priorytetowe
-    const allElements = document.querySelectorAll("*:not(.accessibility-tools)"); // Wyklucz header
-    const priorityElements = document.querySelectorAll(
-        "button, a, input, select, textarea, label, .dropdown ul, summary, .header-primary, .header-secondary, .card p, .card h4, .details-mark, span.spinner, .card-switch h1, .summary-box"
-    );
+    const allElements = document.querySelectorAll("*:not(.wt-toggler)"); // Wyklucz header
+    const priorityElements = document.querySelectorAll("button, a, input, select, textarea, label, .dropdown ul, summary, .header-primary, .header-secondary, .card p, .card h4, .details-mark, span.spinner, .card-switch h1, .summary-box");
 
     // Obsługa zmiany rozmiaru czcionki
     const fontSizeMap = {
-        "at-fs-1": "100%",
-        "at-fs-2": "120%",
-        "at-fs-3": "135%",
+        "wt-fs-1": "100%",
+        "wt-fs-2": "120%",
     };
 
     // Obsługa trybów kontrastu
     const contrastMap = {
-        "at-c-1": { background: "", color: "", outline: "" },
-        "at-c-2": { background: "#000", color: "#0f0", outline: "#0f0" },
-        "at-c-3": { background: "#ff0", color: "#000", outline: "#000" },
-        "at-c-4": { background: "#000", color: "#ff0", outline: "#ff0" },
-        "at-c-5": { background: "#000", color: "#fff", outline: "#fff" },
+        "wt-c-off": { background: "", color: "", outline: "" },
+        "wt-c-on": { background: "#ffbb00", color: "#000", outline: "#000" },
     };
 
-    document.querySelector(".accessibility-tools").addEventListener("click", function (event) {
+    document.querySelector(".wcag-tools").addEventListener("click", function (event) {
         if (event.target.tagName === "A") {
             event.preventDefault();
             const classList = event.target.classList;
