@@ -1,102 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const root = document.documentElement;
-    const body = document.body;
-    const nav = document.querySelector("nav");
-    const header = document.querySelector(".wcag-tools"); // Wyłączony z modyfikacji
+    const root = document.querySelector(":root");
+    const savedVariables = {};
+    const defaultFontSize = getComputedStyle(root).getPropertyValue("--font-size");
 
-    // Pobieramy wszystkie elementy oraz priorytetowe
-    const allElements = document.querySelectorAll("*:not(.wt-toggler)"); // Wyklucz header
-    const priorityElements = document.querySelectorAll("button, a, input, select, textarea, label, .dropdown ul, summary, .header-primary, .header-secondary, .card p, .card h4, .details-mark, span.spinner, .card-switch h1, .summary-box");
+    function saveCSSVariables() {
+        const styles = getComputedStyle(root);
+        const getCSSProp = (element, propName) => getComputedStyle(root).getPropertyValue(propName);
+        console.log(getCSSProp);
+    }
 
-    // Obsługa zmiany rozmiaru czcionki
-    const fontSizeMap = {
-        "wt-fs-1": "100%",
-        "wt-fs-2": "120%",
-    };
-
-    // Obsługa trybów kontrastu
-    const contrastMap = {
-        "wt-c-off": { background: "", color: "", outline: "" },
-        "wt-c-on": { background: "#ffbb00", color: "#000", outline: "#000" },
-    };
-
-    document.querySelector(".wcag-tools").addEventListener("click", function (event) {
-        if (event.target.tagName === "A") {
-            event.preventDefault();
-            const classList = event.target.classList;
-
-            // Obsługa zmiany rozmiaru czcionki
-            Object.keys(fontSizeMap).forEach((cls) => {
-                if (classList.contains(cls)) {
-                    root.style.setProperty("font-size", fontSizeMap[cls], "important");
-                }
-            });
-
-            // Obsługa zmiany kontrastu
-            Object.keys(contrastMap).forEach((cls) => {
-                if (classList.contains(cls)) {
-                    const contrast = contrastMap[cls];
-
-                    // Zmieniamy tło (oprócz headera accessibility-tools)
-                    if (contrast.background) {
-                        body.style.setProperty("background-color", contrast.background, "important");
-                        header.style.setProperty("background-color", contrast.background, "important");
-                        nav.style.setProperty("background-color", contrast.background, "important");
-                    } else {
-                        body.style.removeProperty("background-color");
-                        nav.style.removeProperty("background-color");
-                        header.style.removeProperty("background-color");
-                    }
-
-                    // Zmieniamy kolor tekstu (oprócz headera accessibility-tools)
-                    if (contrast.color) {
-                        body.style.setProperty("color", contrast.color, "important");
-                        header.style.setProperty("color", contrast.color, "important");
-                        nav.style.setProperty("color", contrast.color, "important");
-
-                        // Ustawiamy border-color
-                        allElements.forEach((el) => {
-                            el.style.setProperty("border-color", contrast.color, "important");
-                        });
-
-                        // Priorytetowe elementy
-                        priorityElements.forEach((el) => {
-                            el.style.setProperty("color", contrast.color, "important");
-                            el.style.setProperty("border-color", contrast.color, "important");
-                            el.style.setProperty("background-color", contrast.background, "important");
-                        });
-
-                        // Outline tylko dla elementów, które już go miały
-                        allElements.forEach((el) => {
-                            const computedStyle = window.getComputedStyle(el);
-                            if (computedStyle.outlineStyle !== "none") {
-                                el.style.setProperty("outline-color", contrast.outline, "important");
-                            }
-                        });
-                    } else {
-                        body.style.removeProperty("color");
-                        nav.style.removeProperty("color");
-                        header.style.removeProperty("color");
-
-                        // Resetujemy border-color
-                        allElements.forEach((el) => {
-                            el.style.removeProperty("border-color");
-                        });
-
-                        // Resetujemy priorytetowe elementy
-                        priorityElements.forEach((el) => {
-                            el.style.removeProperty("color");
-                            el.style.removeProperty("border-color");
-                            el.style.removeProperty("background-color");
-                        });
-
-                        // Resetujemy outline
-                        allElements.forEach((el) => {
-                            el.style.removeProperty("outline-color");
-                        });
-                    }
-                }
-            });
+    function revertVariables() {
+        var r = document.querySelector(":root");
+        for (const [name, value] of Object.entries(savedVariables)) {
+            r.style.setProperty(name, value);
+            console.log("Made revert");
         }
+    }
+
+    saveCSSVariables();
+
+    document.querySelector(".wt-fs-1").addEventListener("click", (e) => {
+        e.preventDefault();
+        var r = document.querySelector(":root");
+        r.style.setProperty("--font-size", defaultFontSize);
+    });
+
+    document.querySelector(".wt-fs-2").addEventListener("click", (e) => {
+        e.preventDefault();
+        var r = document.querySelector(":root");
+        r.style.setProperty("--font-size", "20px");
+    });
+
+    document.querySelector(".wt-c-off").addEventListener("click", (e) => {
+        e.preventDefault();
+        revertVariables();
+    });
+
+    document.querySelector(".wt-c-on").addEventListener("click", (e) => {
+        e.preventDefault();
+        var r = document.querySelector(":root");
+        r.style.setProperty("--background-color", "255, 255, 0");
+        r.style.setProperty("--primary-color", "0, 0, 0");
+        r.style.setProperty("--secondary-color", "0, 0, 0");
+        r.style.setProperty("--primary-button-color", "0, 0, 0");
+        r.style.setProperty("--secondary-button-color", "0, 0, 0");
     });
 });
