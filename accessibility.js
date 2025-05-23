@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const defaultFontSize = getComputedStyle(root).getPropertyValue("--font-size");
 
     function saveCSSVariables() {
-        const styles = getComputedStyle(root);
+        var r = document.querySelector(":root");
         const getCSSProp = (element, propName) => getComputedStyle(root).getPropertyValue(propName);
         console.log(getCSSProp);
     }
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".wt-fs-2").addEventListener("click", (e) => {
         e.preventDefault();
         var r = document.querySelector(":root");
-        r.style.setProperty("--font-size", "20px");
+        r.style.setProperty("--font-size", "18px");
     });
 
     document.querySelector(".wt-c-off").addEventListener("click", (e) => {

@@ -2107,10 +2107,10 @@ label.switch input.switch-toggler {
     justify-content: start;
     border: none;
     border-radius: 2rem;
-    width: 2.5rem;
-    height: 1.45rem;
-    min-height: 1.45rem;
-    min-width: 2.5rem;
+    width: 2.55rem;
+    height: 1.5rem;
+    min-height: 1.5rem;
+    min-width: 2.55rem;
     padding: 0.2rem;
     background-color: rgba(var(--text-default-color), 0.3);
     position: relative;
@@ -2119,8 +2119,8 @@ label.switch input.switch-toggler {
 
 label.switch input.switch-toggler::before {
     content: "";
-    aspect-ratio: 1/1;
-    height: 100% !important;
+    width: 1.1rem;
+    height: 1.1rem;
     background-color: white;
     border-radius: 1rem;
     transition: all 100ms ease;
