@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olsztyn - Ogród z natury</title>
+    <link rel="stylesheet" href="../modernify.css">
+    <script src="../utility.js"></script>
+    <script src="../scrollspy.js"></script>
+    <link rel="shortcut icon" href="https://olsztyn.eu/favicon2.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: 53, 128, 46;
+            --secondary-color: 53, 128, 46;
+            --primary-button-color-hover: 53, 109, 46;
+        }
+
+        .website-intro {
+            background-image: url("https://meteor-turystyka.pl/images/places/0/107.jpg");
+            background-size: cover;
+        }
+
+        .website-intro h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(30, 30, 30, 0.6);
+        }
+
+        .website-intro h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            text-shadow: 2px 2px 3px rgba(30, 30, 30, 0.75);
+            font-weight: 300;
+        }
+
+        @media screen and (max-width: 1024px) {
+            nav div:has(form) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#" class="website-logo">
+                    <img src="https://olsztyn.eu/fileadmin/templates/gfx/logo_olsztyn.jpg" alt="Logo miasta Olsztyna" />
+                </a>
+            </div>
+            <div>
+                <form action="search.php">
+                    <div class="form-group inline">
+                        <div>
+                            <input type="search" class="form-control" placeholder="Wyszukaj na portalu">
+                            <button class="button primary" type="submit"><svg style="height: 1.5rem;"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.0392 15.6244C18.2714 14.084 19.0082 12.1301 19.0082 10.0041C19.0082 5.03127 14.9769 1 10.0041 1C5.03127 1 1 5.03127 1 10.0041C1 14.9769 5.03127 19.0082 10.0041 19.0082C12.1301 19.0082 14.084 18.2714 15.6244 17.0392L21.2921 22.707C21.6828 23.0977 22.3163 23.0977 22.707 22.707C23.0977 22.3163 23.0977 21.6828 22.707 21.2921L17.0392 15.6244ZM10.0041 17.0173C6.1308 17.0173 2.99087 13.8774 2.99087 10.0041C2.99087 6.1308 6.1308 2.99087 10.0041 2.99087C13.8774 2.99087 17.0173 6.1308 17.0173 10.0041C17.0173 13.8774 13.8774 17.0173 10.0041 17.0173Z"
+                                        fill="#fff" />
+                                </svg></button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <ul id="nav-menu" class="nav">
+                <button class="nav-collapse">&times;</button>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="toggler">Navigation link</a>
+                        <ul>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button class="nav-collapse">&equiv;</button>
+        </div>
+    </nav>
+    <header class="website-warning">
+        <div class="wrapper">
+            <p><strong>Komunikat urzędu:</strong> Roboty drogowe w okolicach ulicy Kopernika, oraz pl. Pułaskiego <a
+                    href="#">Szczegóły utrudnień</a></p>
+        </div>
+    </header>
+    <div class="website-intro">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col">
+                    <h1>Olsztyn</h1>
+                    <h2>Ogród z natury</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col" style="flex: 0.6">
+                    <a class="card">
+                        <img src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/499932686_1103820758444180_8939211629140782119_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RH6EHT8DXwEQ7kNvwEJfeGf&_nc_oc=AdnLOuYeNxo4GGa4ZscoxSP5tyfunJp-IpTEr9opL_u38oNXl7G1Uw4YAImRaDj3-60&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=aXmADueWQk2_M37kSt2TeQ&oh=00_AfIDIPiyKDKFXEyVOK7KZoewDx5KqPk5xISCRY2l9OUABQ&oe=68368331"
+                            alt="Zdjęcie artykułu" class="card-image">
+
+                        <div>
+                            <h3>Roboty drogowe na ulicach Kajki, Kopernika, oraz pl. Pułaskiego</h3>
+                            <span class="badge information">2025-05-22</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col card" style="flex: 0.4">
+                    <h2>Pogoda w Olsztynie</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Aktualności</h2>
+                    <div class="block-cards small">
+                        <a class="card">
+                            <img src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/499932686_1103820758444180_8939211629140782119_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RH6EHT8DXwEQ7kNvwEJfeGf&_nc_oc=AdnLOuYeNxo4GGa4ZscoxSP5tyfunJp-IpTEr9opL_u38oNXl7G1Uw4YAImRaDj3-60&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=aXmADueWQk2_M37kSt2TeQ&oh=00_AfIDIPiyKDKFXEyVOK7KZoewDx5KqPk5xISCRY2l9OUABQ&oe=68368331"
+                                alt="Zdjęcie artykułu" class="card-image">
+
+                            <div>
+                                <h3>Roboty drogowe na ulicach Kajki, Kopernika, oraz pl. Pułaskiego</h3>
+                                <span class="badge information">2025-05-22</span>
+                            </div>
+                        </a>
+                        <a class="card">
+                            <img src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/499932686_1103820758444180_8939211629140782119_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RH6EHT8DXwEQ7kNvwEJfeGf&_nc_oc=AdnLOuYeNxo4GGa4ZscoxSP5tyfunJp-IpTEr9opL_u38oNXl7G1Uw4YAImRaDj3-60&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=aXmADueWQk2_M37kSt2TeQ&oh=00_AfIDIPiyKDKFXEyVOK7KZoewDx5KqPk5xISCRY2l9OUABQ&oe=68368331"
+                                alt="Zdjęcie artykułu" class="card-image">
+
+                            <div>
+                                <h3>Roboty drogowe na ulicach Kajki, Kopernika, oraz pl. Pułaskiego</h3>
+                                <span class="badge information">2025-05-22</span>
+                            </div>
+                        </a>
+                        <a class="card">
+                            <img src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/499932686_1103820758444180_8939211629140782119_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RH6EHT8DXwEQ7kNvwEJfeGf&_nc_oc=AdnLOuYeNxo4GGa4ZscoxSP5tyfunJp-IpTEr9opL_u38oNXl7G1Uw4YAImRaDj3-60&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=aXmADueWQk2_M37kSt2TeQ&oh=00_AfIDIPiyKDKFXEyVOK7KZoewDx5KqPk5xISCRY2l9OUABQ&oe=68368331"
+                                alt="Zdjęcie artykułu" class="card-image">
+
+                            <div>
+                                <h3>Roboty drogowe na ulicach Kajki, Kopernika, oraz pl. Pułaskiego</h3>
+                                <span class="badge information">2025-05-22</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#"><img
+                            src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/486020816_1089835029855371_1567399414104899058_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1i6YIvTkjMYQ7kNvwHrX7y9&_nc_oc=Adn-H8YPgnwXaE4f0qYk8KHhXqHASLorMzRQ_Rnxvo7em8D-iKxW1xbuEi5-1I9fK4c&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=Q__DQz6lnPLUv5X6xLCe3A&oh=00_AfLWxHOR9Pvg5WsJlzjwZZmeVqv6CgMULFZlsNAeYjqYcg&oe=6836A713"
+                            alt="Dzieje się w Olsztynie - portal miasta Olsztyna"></a>
+                </div>
+                <div class="col">
+                    <a href="#"><img src="https://opnt.olsztyn.eu/wp-content/uploads/2022/08/logo-ciuwo-ciuwo.png"
+                            alt="Dzieje się w Olsztynie - portal miasta Olsztyna"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
