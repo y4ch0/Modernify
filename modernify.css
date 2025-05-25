@@ -727,6 +727,21 @@ h6 {
     color: rgb(var(--secondary-color));
 }
 
+.header-underlined {
+    position: relative;
+    margin-bottom: calc(0.5rem + 3px);
+}
+
+.header-underlined::after {
+    content: "";
+    width: 5rem;
+    height: 3px;
+    background-color: rgb(var(--primary-color));
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
 a {
     color: rgb(var(--link-color));
     cursor: pointer;
@@ -2017,7 +2032,7 @@ div.spinner span.spinner::after {
 }
 
 img.rounded {
-    border-radius: 0.5rem !important;
+    border-radius: 1rem !important;
 }
 
 ul.no-points {
