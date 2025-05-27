@@ -2038,9 +2038,17 @@ div.wcag-tools {
     position: fixed;
     top: 10rem;
     right: 0;
+    transform: translateX(calc(100% - 3.75rem));
+    transition: transform 300ms ease;
     z-index: 10;
-    width: 4rem;
-    height: 4rem;
+    width: 17rem;
+    display: flex;
+}
+
+div.wcag-tools .tools {
+    background-color: rgb(var(--background-color));
+    border: #2256b8 2px solid;
+    padding: 0.5rem 0.75rem;
 }
 
 div.wcag-tools a.toggler {
@@ -2051,10 +2059,8 @@ div.wcag-tools a.toggler {
     align-items: center;
     justify-content: center;
     background-color: #2256b8;
-    position: absolute;
     padding: 7px;
     border-radius: 0.35rem 0 0 0.35rem;
-    right: 0;
 }
 
 div.wcag-tools a.toggler svg {
@@ -2064,24 +2070,17 @@ div.wcag-tools a.toggler svg {
 
 div.wcag-tools .wt-toggler {
     padding: 5px 10px;
+    padding-left: 0;
     margin: 0;
     display: inline-flex;
-    border: 1px solid rgba(var(--default-border-color), 0.5);
+    gap: 0.35rem;
     color: #000 !important;
+    font-size: 0.9rem;
+    align-items: center;
 }
 
-div.wcag-tools .wt-c-on {
-    background-color: #ffbb00;
-    color: #000;
-}
-
-div.wcag-tools .wt-c-off {
-    background-color: #fff;
-    color: #000;
-}
-
-div.wcag-tools .wt-fs-2 {
-    font-size: 130%;
+div.wcag-tools .wt-toggler svg {
+    height: 1.2rem;
 }
 
 fieldset {

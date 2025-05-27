@@ -1,23 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
     const root = document.querySelector(":root");
-    const savedVariables = {};
     const defaultFontSize = getComputedStyle(root).getPropertyValue("--font-size");
-
-    function saveCSSVariables() {
-        var r = document.querySelector(":root");
-        const getCSSProp = (element, propName) => getComputedStyle(root).getPropertyValue(propName);
-        console.log(getCSSProp);
-    }
+    const defaultBackground = getComputedStyle(root).getPropertyValue("--background-color");
+    const defaultFontColor = getComputedStyle(root).getPropertyValue("--text-default-color");
+    const defaultPrimary = getComputedStyle(root).getPropertyValue("--primary-color");
+    const defaultSecondary = getComputedStyle(root).getPropertyValue("--secondary-color");
 
     function revertVariables() {
         var r = document.querySelector(":root");
-        for (const [name, value] of Object.entries(savedVariables)) {
-            r.style.setProperty(name, value);
-            console.log("Made revert");
-        }
+        r.style.setProperty("--background-color", defaultBackground);
+        r.style.setProperty("--text-default-color", defaultFontColor);
+        r.style.setProperty("--primary-color", defaultPrimary);
+        r.style.setProperty("--secondary-color", defaultSecondary);
     }
-
-    saveCSSVariables();
 
     document.querySelector(".wt-fs-1").addEventListener("click", (e) => {
         e.preventDefault();
@@ -44,5 +39,35 @@ document.addEventListener("DOMContentLoaded", function () {
         r.style.setProperty("--secondary-color", "0, 0, 0");
         r.style.setProperty("--primary-button-color", "0, 0, 0");
         r.style.setProperty("--secondary-button-color", "0, 0, 0");
+    });
+
+    var linkUnderline = false;
+
+    document.querySelector(".wt-l-und").addEventListener("click", (e) => {
+        e.preventDefault();
+        linkUnderline = !linkUnderline;
+        if (linkUnderline) {
+            document.querySelectorAll("a").forEach((item) => {
+                item.style.setProperty("text-decoration", "underline", "important");
+            });
+        } else {
+            document.querySelectorAll("a").forEach((item) => {
+                item.style.setProperty("text-decoration", "none", "");
+            });
+        }
+    });
+
+    var toggled = false;
+
+    document.querySelector(".wcag-tools .toggler").addEventListener("click", (e) => {
+        e.preventDefault();
+        toggled = !toggled;
+        if (toggled) {
+            const root = document.querySelector(".wcag-tools");
+            root.style.transform = "translateX(0)";
+        } else {
+            const root = document.querySelector(".wcag-tools");
+            root.style.transform = "translateX(calc(100% - 3.75rem))";
+        }
     });
 });
