@@ -29,7 +29,7 @@
     /* Common variables */
     --intro-height: 30rem;
     --sidenav-width: 13vw;
-    --input-label-color: 20, 20, 20;
+    --input-label-color: var(--text-default-color);
     --sidenav-text-color: 0, 0, 0;
     --sidenav-accent-color: 255, 0, 0;
     --navbar-text-color: var(--primary-color);
@@ -503,7 +503,6 @@ form p {
 
 .form-control {
     width: 100%;
-    min-width: 100px;
     font-size: 1rem;
     font-weight: 400;
     color: rgba(var(--text-default-color), 0.9);
@@ -1754,6 +1753,7 @@ span.details-mark.serif {
     color: white;
     padding: 6px 10px;
     border-radius: 0.25rem;
+    border: var(--dialog-border);
     font-size: 0.8rem;
     max-width: 95vw;
     width: fit-content;
@@ -2079,13 +2079,21 @@ div.wcag-tools .wt-toggler {
     margin: 0;
     display: inline-flex;
     gap: 0.35rem;
-    color: #000 !important;
+    color: rgb(var(--text-default-color)) !important;
     font-size: 0.9rem;
     align-items: center;
 }
 
 div.wcag-tools .wt-toggler svg {
     height: 1.2rem;
+    fill: rgb(var(--text-default-color));
+    border-color: rgb(var(--text-default-color));
+}
+
+
+div.wcag-tools .wt-toggler:not(.wt-l-und) svg * {
+    fill: rgb(var(--text-default-color));
+    border-color: rgb(var(--text-default-color));
 }
 
 fieldset {

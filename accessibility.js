@@ -7,7 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const defaultSecondary = getComputedStyle(root).getPropertyValue("--secondary-color");
     const defaultPrimaryButton = getComputedStyle(root).getPropertyValue("--primary-button-color");
     const defaultSecondaryButton = getComputedStyle(root).getPropertyValue("--secondary-button-color");
+    const defaultPrimaryButtonHover = getComputedStyle(root).getPropertyValue("--primary-button-color-hover");
+    const defaultSecondaryButtonHover = getComputedStyle(root).getPropertyValue("--secondary-button-color-hover");
     const defaultLinkDecor = getComputedStyle(root).getPropertyValue("--link-default-decoration");
+    const defaultPrimaryButtonText = getComputedStyle(root).getPropertyValue("--primary-button-text");
+    const defaultSecondaryButtonText = getComputedStyle(root).getPropertyValue("--secondary-button-text");
+    const defaultLabelColor = getComputedStyle(root).getPropertyValue("--input-label-color");
+    const defaultBorderColor = getComputedStyle(root).getPropertyValue("--default-border-color");
 
     function revertVariables() {
         var r = document.querySelector(":root");
@@ -17,6 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
         r.style.setProperty("--secondary-color", defaultSecondary);
         r.style.setProperty("--primary-button-color", defaultPrimaryButton);
         r.style.setProperty("--secondary-button-color", defaultSecondaryButton);
+        r.style.setProperty("--primary-button-text", defaultPrimaryButtonText);
+        r.style.setProperty("--secondary-button-text", defaultSecondaryButtonText);
+        r.style.setProperty("--input-label-color", defaultLabelColor);
+        r.style.setProperty("--default-border-color", defaultBorderColor);
+        r.style.setProperty("--primary-button-color-hover", defaultPrimaryButtonHover);
+        r.style.setProperty("--secondary-button-color-hover", defaultSecondaryButtonHover);
     }
 
     document.querySelector(".wt-fs-1").addEventListener("click", (e) => {
@@ -39,11 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".wt-c-on").addEventListener("click", (e) => {
         e.preventDefault();
         var r = document.querySelector(":root");
+        r.style.setProperty("--text-default-color", "0, 0, 0");
         r.style.setProperty("--background-color", "255, 255, 0");
         r.style.setProperty("--primary-color", "0, 0, 0");
         r.style.setProperty("--secondary-color", "0, 0, 0");
         r.style.setProperty("--primary-button-color", "0, 0, 0");
         r.style.setProperty("--secondary-button-color", "0, 0, 0");
+        r.style.setProperty("--primary-button-text", "255, 255, 255");
+        r.style.setProperty("--secondary-button-text", "255, 255, 255");
+        r.style.setProperty("--input-label-color", "0, 0, 0");
+        r.style.setProperty("--default-border-color", "0, 0, 0");
+        r.style.setProperty("--primary-button-color-hover", "60,60,60");
+        r.style.setProperty("--secondary-button-color-hover", "60,60,60");
     });
 
     var linkUnderline = false;
