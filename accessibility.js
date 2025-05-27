@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const defaultFontColor = getComputedStyle(root).getPropertyValue("--text-default-color");
     const defaultPrimary = getComputedStyle(root).getPropertyValue("--primary-color");
     const defaultSecondary = getComputedStyle(root).getPropertyValue("--secondary-color");
+    const defaultPrimaryButton = getComputedStyle(root).getPropertyValue("--primary-button-color");
+    const defaultSecondaryButton = getComputedStyle(root).getPropertyValue("--secondary-button-color");
+    const defaultLinkDecor = getComputedStyle(root).getPropertyValue("--link-default-decoration");
 
     function revertVariables() {
         var r = document.querySelector(":root");
@@ -12,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         r.style.setProperty("--text-default-color", defaultFontColor);
         r.style.setProperty("--primary-color", defaultPrimary);
         r.style.setProperty("--secondary-color", defaultSecondary);
+        r.style.setProperty("--primary-button-color", defaultPrimaryButton);
+        r.style.setProperty("--secondary-button-color", defaultSecondaryButton);
     }
 
     document.querySelector(".wt-fs-1").addEventListener("click", (e) => {
@@ -47,13 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         linkUnderline = !linkUnderline;
         if (linkUnderline) {
-            document.querySelectorAll("a").forEach((item) => {
-                item.style.setProperty("text-decoration", "underline", "important");
-            });
+            document.querySelector(":root").style.setProperty("--link-default-decoration", "underline");
         } else {
-            document.querySelectorAll("a").forEach((item) => {
-                item.style.setProperty("text-decoration", "none", "");
-            });
+            document.querySelector(":root").style.setProperty("--link-default-decoration", defaultLinkDecor);
         }
     });
 

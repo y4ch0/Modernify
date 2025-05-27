@@ -12,6 +12,7 @@
     --font-size: 16px;
     --header-base-size: 2.05rem;
     --link-color: 0, 81, 255;
+    --link-default-decoration: "none";
     --text-default-color: 10, 10, 10;
     /* Buttons */
     --primary-button-color: var(--primary-color);
@@ -308,7 +309,7 @@ main nav.side-nav ul.nav li a {
     padding: 0.4rem 0.6rem;
     border-radius: 0.5rem;
     font-size: 0.95rem;
-    text-decoration: none !important;
+    text-decoration: var(--link-default-decoration) !important;
     line-height: 1.4;
     font-weight: normal;
 }
@@ -407,6 +408,10 @@ footer .wrapper {
     font-weight: 400 !important;
     text-align: center;
     text-decoration: none !important;
+}
+
+.button:is(a) {
+    text-decoration: var(--link-default-decoration) !important;
 }
 
 .button.full-width {
@@ -745,7 +750,7 @@ h6 {
 a {
     color: rgb(var(--link-color));
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: var(--link-default-decoration);
 }
 
 a:hover {
@@ -930,7 +935,7 @@ div.dropdown.secondary ul li a {
 
 div.dropdown ul li a:hover {
     background-color: rgba(var(--text-default-color), 0.05);
-    text-decoration: none;
+    text-decoration: var(--link-default-decoration);
 }
 
 div.dropdown ul.show {
@@ -1140,7 +1145,7 @@ div.dropdown ul.show {
 }
 
 .card:is(a):hover {
-    text-decoration: none;
+    text-decoration: var(--link-default-decoration);
 }
 
 .card .button {
@@ -1625,7 +1630,7 @@ ul.breadcrumb li {
 ul.breadcrumb li:last-child a {
     pointer-events: none;
     color: rgb(var(--text-default-color));
-    text-decoration: none !important;
+    text-decoration: var(--link-default-decoration) !important;
 }
 
 code {
@@ -1820,7 +1825,7 @@ span.details-mark.serif {
     transition-property: background-color, color, border;
     text-align: center;
     white-space: nowrap;
-    text-decoration: none;
+    text-decoration: var(--link-default-decoration);
     border-bottom: 3px solid transparent;
 }
 
