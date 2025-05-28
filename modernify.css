@@ -603,6 +603,7 @@ input[type="file"]::file-selector-button {
     cursor: pointer;
     background-color: rgb(var(--primary-button-color));
     color: rgb(var(--primary-button-text));
+    font-family: var(--root-font);
     border: none;
     border-radius: 0.3rem;
     padding: 0.25rem 0.5rem;

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const defaultSecondaryButtonText = getComputedStyle(root).getPropertyValue("--secondary-button-text");
     const defaultLabelColor = getComputedStyle(root).getPropertyValue("--input-label-color");
     const defaultBorderColor = getComputedStyle(root).getPropertyValue("--default-border-color");
+    const defaultFontFamily = getComputedStyle(root).getPropertyValue("--root-font");
 
     function revertVariables() {
         var r = document.querySelector(":root");
@@ -71,9 +72,25 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         linkUnderline = !linkUnderline;
         if (linkUnderline) {
+            document.querySelector(".wt-l-und").style.fontWeight = "bold";
             document.querySelector(":root").style.setProperty("--link-default-decoration", "underline");
         } else {
+            document.querySelector(".wt-l-und").style.fontWeight = "normal";
             document.querySelector(":root").style.setProperty("--link-default-decoration", defaultLinkDecor);
+        }
+    });
+
+    var verdanaEnabled = false;
+
+    document.querySelector(".wt-f-verdana").addEventListener("click", (e) => {
+        e.preventDefault();
+        verdanaEnabled = !verdanaEnabled;
+        if (verdanaEnabled) {
+            document.querySelector(".wt-f-verdana").style.fontWeight = "bold";
+            document.querySelector(":root").style.setProperty("--root-font", "Verdana, sans-serif");
+        } else {
+            document.querySelector(".wt-f-verdana").style.fontWeight = "normal";
+            document.querySelector(":root").style.setProperty("--root-font", defaultFontFamily);
         }
     });
 
