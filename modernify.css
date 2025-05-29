@@ -1800,7 +1800,11 @@ span.details-mark.serif {
     margin: 0;
     list-style: none;
     min-width: 100%;
-    border-bottom: 1px solid rgba(var(--default-border-color), 0.15);
+    /*border-bottom: 1px solid rgba(var(--default-border-color), 0.15);*/
+}
+
+.card-switch ul.togglers.centered {
+    justify-content: center;
 }
 
 .card-switch .cards .card-item {
@@ -1928,6 +1932,10 @@ div.spinner span.spinner::after {
     border-radius: 0.35rem;
 }
 
+.slider-button.outlined {
+    border: 1px solid rgb(var(--primary-button-color));
+}
+
 .slider-button img {
     height: 100%;
     width: calc(100% + 2.5rem);
@@ -1993,6 +2001,11 @@ div.spinner span.spinner::after {
     background: rgba(var(--text-default-color), 0.2);
     border-radius: 50%;
     cursor: pointer;
+}
+
+.current-slide-indicator li:active {
+    outline: 1px solid rgb(var(--text-default-color));
+    outline-offset: 1px;
 }
 
 .current-slide-indicator li.active {
