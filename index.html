@@ -1591,6 +1591,7 @@
             <div class="row">
                 <div class="col">
                     <a href="#" id="sidenav-toggler" class="button primary">Toggle sidenav</a>
+                    <a href="#" id="sidenav-class-toggler" class="button primary">Toggle sidenav inline style</a>
                 </div>
             </div>
             <div class="row">
@@ -1675,6 +1676,10 @@
         $("#sidenav-toggler").on("click", (e) => {
             e.preventDefault();
             $(".side-nav").toggle();
+        });
+        $("#sidenav-class-toggler").on("click", (e) => {
+            e.preventDefault();
+            $(".side-nav").toggleClass('inline');
         });
     </script>
 </body>

@@ -285,6 +285,13 @@ main nav.side-nav {
     z-index: 9999;
 }
 
+main nav.side-nav.inline {
+    z-index: inherit;
+    position: sticky;
+    top: 6rem;
+    height: calc(100vh - 8rem);
+}
+
 main nav.side-nav ul.nav li ul {
     display: flex;
     flex-direction: column;
@@ -2214,6 +2221,13 @@ label.switch input.switch-toggler:checked::before {
         display: flex;
     }
 
+    main nav.side-nav.inline {
+        border: none;
+        border-bottom: 1px solid rgba(var(--default-border-color), 0.15);
+        border-radius: 0;
+        position: static;
+    }
+
     main {
         flex-direction: column;
         align-items: center;
@@ -2232,7 +2246,7 @@ label.switch input.switch-toggler:checked::before {
         position: static;
         z-index: 1;
         order: -1;
-        border: 2px solid rgba(var(--default-border-color), 0.1);
+        border: 1px solid rgba(var(--default-border-color), 0.15);
         border-radius: 0.5rem;
         height: auto;
     }
