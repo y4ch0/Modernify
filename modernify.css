@@ -505,6 +505,7 @@ form p {
     width: 100%;
     font-size: 1rem;
     font-weight: 400;
+    max-width: 100%;
     color: rgba(var(--text-default-color), 0.9);
     border: 1px solid rgba(var(--default-border-color), 0.3);
     background-color: rgb(var(--background-color));
@@ -757,7 +758,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.button.underline:hover {
+.button.underlined:hover {
     text-decoration: underline !important;
 }
 
@@ -1282,13 +1283,22 @@ dialog[open] div.body {
     font-size: 2rem;
 }
 
+.alert .icon svg {
+    width: 2rem;
+}
+
 .alert.information {
     border-left: 0.4rem solid rgb(0, 155, 216);
     background-color: rgba(0, 155, 216, 0.1);
 }
 
+.alert.outlined {
+    border: 2px solid rgb(var(--primary-color));
+    border-left-width: 2px !important;
+}
+
 .alert.outlined.information {
-    border: 0.25rem solid rgb(0, 82, 165);
+    border-color: rgb(0, 108, 215);
     background-color: transparent;
     border-radius: 0.35rem;
 }
@@ -1299,7 +1309,7 @@ dialog[open] div.body {
 }
 
 .alert.outlined.warning {
-    border: 0.25rem solid rgb(255, 187, 0);
+    border-color: rgb(255, 187, 0);
     background-color: transparent;
     border-radius: 0.35rem;
 }
@@ -1310,7 +1320,7 @@ dialog[open] div.body {
 }
 
 .alert.outlined.success {
-    border: 0.25rem solid rgb(0, 134, 11);
+    border-color: rgb(0, 134, 11);
     background-color: transparent;
     border-radius: 0.35rem;
 }
@@ -1321,7 +1331,7 @@ dialog[open] div.body {
 }
 
 .alert.outlined.error {
-    border: 0.25rem solid rgb(204, 0, 0);
+    border-color: rgb(204, 0, 0);
     background-color: transparent;
     border-radius: 0.35rem;
 }
@@ -1800,7 +1810,10 @@ span.details-mark.serif {
     margin: 0;
     list-style: none;
     min-width: 100%;
-    /*border-bottom: 1px solid rgba(var(--default-border-color), 0.15);*/
+}
+
+.card-switch ul.togglers.underlined {
+    border-bottom: 1px solid rgba(var(--default-border-color), 0.15);
 }
 
 .card-switch ul.togglers.centered {
