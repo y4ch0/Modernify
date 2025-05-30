@@ -907,6 +907,7 @@ div.dropdown .toggler {
     position: relative;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 div.dropdown .toggler::after {
@@ -914,8 +915,8 @@ div.dropdown .toggler::after {
     border: 0.15rem solid currentColor;
     border-top: none;
     border-left: none;
-    width: 0.3rem;
-    height: 0.3rem;
+    width: 0.4rem;
+    height: 0.4rem;
     rotate: 45deg;
     margin-top: -0.3rem;
     margin-left: 0.1rem;
@@ -924,7 +925,7 @@ div.dropdown .toggler::after {
 }
 
 div.dropdown ul li a {
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem !important;
     display: flex;
     gap: 0.35rem;
     color: rgba(var(--text-default-color), 0.8);
@@ -2184,6 +2185,61 @@ label.switch input.switch-toggler:checked::before {
     transform: translateX(calc(100% - 1px));
 }
 
+nav.inline-nav {
+    width: 100%;
+    display: flex;
+    background-color: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(var(--default-border-color), 0.15);
+    height: fit-content;
+    padding: 0;
+    align-items: end;
+    justify-content: space-between;
+    position: static;
+    z-index: inherit;
+}
+
+nav.inline-nav>.logo {
+    padding: 0.3rem 0;
+}
+
+nav.inline-nav>ul.nav-list {
+    width: max-content;
+    display: flex;
+    gap: 0.35rem;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav.inline-nav ul.nav-list>li {
+    border-bottom: 3px solid transparent;
+}
+
+nav.inline-nav ul.nav-list>li.current {
+    font-weight: bold;
+    border-bottom: 3px solid rgb(var(--navbar-text-color));
+}
+
+nav.inline-nav ul.nav-list li a {
+    color: rgb(var(--navbar-text-color));
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    gap: 0.35rem;
+}
+
+nav.inline-nav .inline-nav-collapse {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: rgb(var(--primary-button-color));
+    color: rgb(var(--primary-button-text));
+}
+
 @keyframes dropdown-show {
     0% {
         top: calc(100% - 5px);
@@ -2267,6 +2323,10 @@ label.switch input.switch-toggler:checked::before {
         width: var(--wrapper-width-bp-2);
     }
 
+    nav.inline-nav {
+        align-items: start;
+    }
+
     main .wrapper .row {
         flex-direction: column;
     }
@@ -2340,6 +2400,32 @@ label.switch input.switch-toggler:checked::before {
 
     header.gov-mark .wrapper .row {
         flex-direction: column;
+    }
+
+    nav.inline-nav .inline-nav-collapse {
+        display: flex;
+    }
+
+    nav.inline-nav>ul.nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.inline-nav>ul.nav-list>li {
+        width: 100%;
+    }
+
+    nav.inline-nav>ul.nav-list>li .dropdown {
+        width: 100%;
+    }
+
+    nav.inline-nav>ul.nav-list>li .dropdown .toggler {
+        width: 100%;
+    }
+
+    nav.inline-nav>ul.nav-list>li>a {
+        width: 100%;
     }
 
     main .wrapper .row,

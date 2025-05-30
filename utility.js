@@ -1,15 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // navbar show/hide
     var navbar_enabled = false;
-    document.querySelectorAll("header.gov-mark a.toggler").forEach((element) => {
-        element.addEventListener("click", () => {
-            if (!document.getElementById("explanation").classList.contains("show")) {
-                document.getElementById("explanation").classList.toggle("show");
-            } else {
-                document.getElementById("explanation").classList.remove("show");
-            }
-        });
-    });
     document.querySelectorAll(".nav-collapse").forEach((element) => {
         element.addEventListener("click", () => {
             if (!navbar_enabled) {
@@ -20,6 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("nav-menu").style.display = "none";
             }
         });
+    });
+    var inline_navbar_enabled = false;
+    document.querySelector(".inline-nav-collapse").addEventListener("click", (e) => {
+        e.preventDefault();
+        inline_navbar_enabled = !inline_navbar_enabled;
+        if (inline_navbar_enabled) {
+            document.querySelector(".inline-nav ul").style.display = "flex";
+        } else {
+            document.querySelector(".inline-nav ul").style.display = "none";
+        }
     });
     // dropdown open/close
     document.body.addEventListener("click", function (event) {
