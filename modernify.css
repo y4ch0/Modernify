@@ -1600,7 +1600,7 @@ progress::-webkit-progress-value {
 
 .process-list ol.process-list li.step-item::before {
     content: counter(item);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 2rem;
     height: 2rem;
     display: flex;
