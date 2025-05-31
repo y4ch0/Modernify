@@ -7,9 +7,10 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="modernify.css" />
-    <script src="utility.js"></script>
+    <!--<script src="utility.js"></script>
     <script src="scrollspy.js"></script>
-    <script src="accessibility.js"></script>
+    <script src="modernify.accessibility.js"></script>-->
+    <script src="modernify/framework_src/dist/modernify.bundle.js"></script>
     <style>
         .website-intro h1.header-intro {
             font-size: 3rem;
@@ -48,7 +49,7 @@
                 <li><a href="#">Navigation link</a></li>
                 <li>
                     <div class="dropdown">
-                        <a href="#" class="toggler">Navigation link</a>
+                        <a href="#" data-toggle="dropdown" class="toggler">Navigation link</a>
                         <ul>
                             <li>
                                 <a href="#">Dropdown item</a>
@@ -195,7 +196,7 @@
                     <li><a href="#">Link strony</a></li>
                     <li>
                         <div class="dropdown">
-                            <a href="#" class="toggler">Link strony</a>
+                            <a href="#" class="toggler" data-toggle="dropdown">Link strony</a>
                             <ul>
                                 <li>
                                     <a href="#">Dropdown item</a>
@@ -628,7 +629,8 @@
                 <div class="col">
                     <h3 id="dropdown">Dropdown</h3>
                     <div class="dropdown">
-                        <a class="button outlined toggler" title="No priority color theme set">Dropdown toggler</a>
+                        <a class="button outlined toggler" title="No priority color theme set"
+                            data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
                             <li><a href="#">Dropdown item</a></li>
                             <li><a href="#">Dropdown item</a></li>
@@ -636,7 +638,8 @@
                         </ul>
                     </div>
                     <div class="dropdown primary">
-                        <a class="button primary toggler" title="Primary priority color theme set">Dropdown toggler</a>
+                        <a class="button primary toggler" title="Primary priority color theme set"
+                            data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
                             <li><a href="#">Dropdown item</a></li>
                             <li><a href="#">Dropdown item</a></li>
@@ -644,7 +647,8 @@
                         </ul>
                     </div>
                     <div class="dropdown secondary">
-                        <a class="button secondary toggler" title="Secondary priority color theme set">Dropdown
+                        <a class="button secondary toggler" title="Secondary priority color theme set"
+                            data-toggle="dropdown">Dropdown
                             toggler</a>
                         <ul>
                             <li><a href="#">Dropdown item</a></li>
@@ -938,9 +942,12 @@
             <div class="row">
                 <div class="col">
                     <h3 id="dialog">Modal (dialog)</h3>
-                    <button class="button primary dialog-open" data-dialog_id="dialog1">Open dialog id 1</button>
-                    <button class="button primary dialog-open" data-dialog_id="dialog2">Open dialog id 2</button>
-                    <button class="button primary dialog-open" data-dialog_id="dialog3">Open dialog id 3</button>
+                    <button class="button primary dialog-open" data-target="#dialog1" data-toggle="modal">Open dialog
+                        id 1</button>
+                    <button class="button primary dialog-open" data-target="#dialog2" data-toggle="modal">Open dialog
+                        id 2</button>
+                    <button class="button primary dialog-open" data-target="#dialog3" data-toggle="modal">Open dialog
+                        id 3</button>
                     <dialog id="dialog1">
                         <div class="body">
                             <h3>Dialog with id 1</h3>
@@ -970,7 +977,7 @@
                                 reiciendis fugiat pariatur corrupti debitis earum natus cum! Animi molestiae cumque qui
                                 veritatis dolorem, vero neque asperiores provident expedita, itaque amet?
                             </p>
-                            <button class="dialog-close" data-dialog_id="dialog1">&times;</button>
+                            <button class="dialog-close" data-target="#dialog1">&times;</button>
                         </div>
                     </dialog>
                     <dialog id="dialog2">
@@ -992,7 +999,7 @@
                                 <hr class="dialog-divider" />
                                 <button type="submit" class="button primary">Zaloguj się</button>
                             </form>
-                            <button class="dialog-close" data-dialog_id="dialog2">&times;</button>
+                            <button class="dialog-close" data-target="#dialog2">&times;</button>
                         </div>
                     </dialog>
                     <dialog id="dialog3">
@@ -1000,7 +1007,7 @@
                             <h3>Dialog title</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ea error nisi
                                 dolore, et praesentium illo deserunt excepturi ad rem?</p>
-                            <button class="dialog-close" data-dialog_id="dialog3">&times;</button>
+                            <button class="dialog-close" data-target="#dialog3">&times;</button>
                         </div>
                     </dialog>
                 </div>
