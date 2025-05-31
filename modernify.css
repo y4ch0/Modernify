@@ -75,6 +75,7 @@ html {
     overflow-x: hidden;
     font-size: var(--font-size);
     scroll-behavior: smooth;
+    max-width: 100vw !important;
 }
 
 body {
@@ -509,14 +510,16 @@ form p {
 }
 
 .form-control {
-    width: 100%;
+    width: 100% !important;
     font-size: 1rem;
     font-weight: 400;
-    max-width: 100%;
     color: rgba(var(--text-default-color), 0.9);
     border: 1px solid rgba(var(--default-border-color), 0.3);
     background-color: rgb(var(--background-color));
     padding: 0.45rem 0.85rem;
+    margin: 0;
+    background-clip: padding-box;
+    display: block;
     border-radius: 0.3rem;
     line-height: 1.5 !important;
     outline: 3px solid transparent;
@@ -538,6 +541,7 @@ form p {
 
 .form-control:is(input[type="date"], input[type="file"]) {
     padding: calc(0.45rem - 1px) 0.85rem;
+    appearance: none;
 }
 
 .form-control:is(select) {
