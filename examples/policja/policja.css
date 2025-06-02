@@ -1,0 +1,4 @@
+:root {
+    --primary-color: 0, 33, 86;
+    --card-outline-color: var(--primary-color);
+}

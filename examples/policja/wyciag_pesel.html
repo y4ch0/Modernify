@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rejestr PESEL</title>
+    <link rel="stylesheet" href="./../../modernify@1.0.0/dist/css/modernify.min.css">
+    <script src="./../../modernify@1.0.0/dist/js/modernify.bundle.js"></script>
+    <link rel="stylesheet" href="policja.css">
+    <style>
+        :root {
+            --root-font: "Verdana", sans-serif;
+            --font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#" class="website-logo">
+                    <h1>Rejestr PESEL</h1>
+                </a>
+            </div>
+            <ul id="nav-menu" class="nav">
+                <button class="nav-collapse">
+                    &times;
+                </button>
+                <li><a href="#">Wyszukiwanie PESEL</a></li>
+                <li><a href="#">Listy gończe</a></li>
+                <li><a href="#">Statystyki</a></li>
+                <li><a href="#">Użytkownik</a></li>
+            </ul>
+            <button class="nav-collapse">
+                &equiv;
+            </button>
+        </div>
+    </nav>
+    <header class="website-warning">
+        <div class="wrapper">
+            <p>To <b>nie jest</b> system informatyczny jakkolwiek powiązany z rzeczywistymi wyciągami danych z rejestru
+                numerów
+                PESEL. Wszelkie dane wyświetlone na stronie są efektem losowego generowania danych osobowych w tym
+                numeru PESEL, numerów wniosków, oraz adresu zmieszkania i innych danych osobowych w rozumieniu ustawy
+                RODO.</p>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col">
+                    <h1>Rejestr PESEL</h1>
+                    <h3>Wyciąg danych z rejestru</h3>
+                </div>
+                <fieldset class="col">
+                    <legend>Akcje</legend>
+                    <a href="" class="button primary">Wydrukuj raport</a>
+                    <a href="" class="button primary">Wyszukaj rodzinę</a>
+                    <a href="" class="button primary">Wprowadź korektę</a>
+                    <div class="dropdown">
+                        <a href="" class="button primary toggler">Oznacz jako</a>
+                        <ul class="dropdown">
+                            <li><a href="#"><b>brak oznaczenia</b></a></li>
+                            <li><a href="#">zaginiony</a></li>
+                            <li><a href="#">martwy</a></li>
+                            <li><a href="#">zmiana obywatelstwa</a></li>
+                            <li><a href="#">nieznane</a></li>
+                        </ul>
+                    </div>
+
+                </fieldset>
+            </div>
+            <div class="row">
+                <div class="col"><img
+                        src="https://www.ciechanowiak.pl/cnk/wp-content/uploads/2024/07/PK_8231_przed-ok-scaled.jpg"
+                        alt="Przykładowe zdjęcie Jana Grzegorza Kowalskiego - nieistniejąca osoba na wymyślone dane"
+                        title="Przykładowe zdjęcie Jana Grzegorza Kowalskiego - nieistniejąca osoba na wymyślone dane">
+                </div>
+                <div class="col">
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <th colspan="100%">Dane osobowe cz. I</th>
+                            </tr>
+                            <tr>
+                                <th>Imię</th>
+                                <td>Jan</td>
+                            </tr>
+                            <tr>
+                                <th>Drugie imię</th>
+                                <td>Grzegorz</td>
+                            </tr>
+                            <tr>
+                                <th>Nazwisko</th>
+                                <td>Kowalski</td>
+                            </tr>
+                            <tr>
+                                <th>Nazwisko rodowe</th>
+                                <td>Kowalski</td>
+                            </tr>
+                            <tr>
+                                <th>Stan cywilny</th>
+                                <td>Kawaler</td>
+                            </tr>
+                            <tr>
+                                <th>Płeć</th>
+                                <td>mężczyzna</td>
+                            </tr>
+                            <tr>
+                                <th>Nr PESEL</th>
+                                <td>89230257232</td>
+                            </tr>
+                            <tr>
+                                <th>Imię ojca</th>
+                                <td>Andrzej</td>
+                            </tr>
+                            <tr>
+                                <th>Imię matki</th>
+                                <td>Wiesława</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="vr responsive"></div>
+                <div class="col">
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <th colspan="100%">Dane osobowe cz. II</th>
+                            </tr>
+                            <tr>
+                                <th>Data urodzenia</th>
+                                <td>02.03.1989</td>
+                            </tr>
+                            <tr>
+                                <th>Miejsce urodzenia</th>
+                                <td>Pl-14-Warszawa</td>
+                            </tr>
+                            <tr>
+                                <th>Kraj urodzenia</th>
+                                <td>Polska</td>
+                            </tr>
+                            <tr>
+                                <th>Ozn akt urdz</th>
+                                <td>7865321/00/WA/1989/591256</td>
+                            </tr>
+                            <tr>
+                                <th>Obywatelstwo</th>
+                                <td>polskie</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card-switch">
+                        <ul class="togglers">
+                            <li><a href="#" class="card-toggler">Rejestr Dowodów Osobistych</a></li>
+                            <li><a href="#" class="card-toggler">Dane zameldowania</a></li>
+                            <li><a href="#" class="card-toggler">Rejestr Dokumentów Paszportowych</a></li>
+                            <li><a href="#" class="card-toggler">Centralny Rejestr Wyborców</a></li>
+                        </ul>
+                        <div class="cards">
+                            <div class="card-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>Rejestr Dowodów Osobistych</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="table">
+                                            <table>
+                                                <tr>
+                                                    <th colspan="100%">RDO - dane osobowe</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Imię (imiona)</th>
+                                                    <td>Jan Grzegorz</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nazwisko</th>
+                                                    <td>Kowalski</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nr PESEL</th>
+                                                    <td>89230257232</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Data urodzenia</th>
+                                                    <td>02.03.1989</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="table">
+                                            <table>
+                                                <tr>
+                                                    <th colspan="100%">RDO - dane dowodu osobistego</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nr dowodu</th>
+                                                    <td>KPL 992132</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Organ wydający</th>
+                                                    <td>Prezydent m. st. Warszawa</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nr wniosku</th>
+                                                    <td>5521052/2012/00215213/01</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <td>wydany</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Data ważności</th>
+                                                    <td>09.08.2027</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Status WADO</th>
+                                                    <td>aktywna</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="table">
+                                            <table>
+                                                <tr>
+                                                    <th colspan="100%">RDO - pozostałe dane</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nazwisko rodowe</th>
+                                                    <td>Kowalski</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Płeć</th>
+                                                    <td>mężczyzna</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Imię ojca</th>
+                                                    <td>Andrzej</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Imię matki</th>
+                                                    <td>Wiesława</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Miejsce urodzenia</th>
+                                                    <td>Olsztyn</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>Dane zameldowania</h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="table">
+                                            <table>
+                                                <tr>
+                                                    <th colspan="100%">Dane zameldowania</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="100%">POBYT STAŁY</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Miejscowość</th>
+                                                    <td>Warszawa</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Województwo</th>
+                                                    <td>Pl-14-Mazowieckie</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Powiat</th>
+                                                    <td>Warszawa</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Gmina</th>
+                                                    <td>Warszawa (gm. miejska - m. st.)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Kod pocztowy</th>
+                                                    <td>01-123</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Ulica</th>
+                                                    <td>Wiejska</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nr domu</th>
+                                                    <td>22</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nr lokalu</th>
+                                                    <td>7</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Data zameldowania (p. st.)</th>
+                                                    <td>07.03.1989</td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="100%">POBYT CZASOWY</th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="100%">Brak czasowego adresu zameldowania <a href="#"
+                                                            class="button primary small outlined ">Sprawdź historię
+                                                            adresów zameldowania na pobyt
+                                                            czasowy</a></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <p>Wyciąg danych z rejestru PESEL</p>
+            <p>Rejestr udostępniony dla: Pl-14-Policja-Stol</p>
+    </footer>
+</body>
+
+</html>

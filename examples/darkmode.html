@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../modernify@1.0.0/dist/css/modernify.min.css">
+    <script src="./../modernify@1.0.0/dist/js/modernify.bundle.js"></script>
+    <style>
+        :root {
+            --background-color: 20, 20, 20;
+            --text-default-color: 245, 245, 245;
+            --input-label-color: 245, 245, 245;
+            --link-color: 0, 120, 255;
+            --default-border-color: 245, 245, 245;
+            --sidenav-text-color: var(--text-default-color);
+            --primary-color: 255, 204, 0;
+            --secondary-color: 60, 60, 60;
+            --card-outline-color: var(--primary-color);
+            --primary-button-text: 0, 0, 0;
+            --primary-button-color-hover: 227, 184, 13;
+            --secondary-button-color: 60, 60, 60;
+            --secondary-button-text: 255, 255, 255;
+            --secondary-button-color-hover: 40, 40, 40;
+            --dialog-border: 1px solid rgba(var(--default-border-color), 0.25);
+        }
+
+        .website-intro h1.header-intro {
+            font-size: 3rem;
+            background: #1a329c;
+            background: linear-gradient(to right, #1a329c 0%, #452bb9 100%);
+            background-clip: text;
+            font-weight: 750;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .website-intro h2 {
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .website-intro {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#" class="website-logo">
+                    <img src="logo.svg" alt="" />
+                </a>
+            </div>
+            <ul id="nav-menu" class="nav">
+                <button class="nav-collapse">&times;</button>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="toggler">Navigation link</a>
+                        <ul>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button class="nav-collapse">&equiv;</button>
+        </div>
+    </nav>
+    <header class="website-warning">
+        <div class="wrapper">
+            <p><strong>Lorem, ipsum dolor:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus nihil incidunt quasi earum ut voluptate?</p>
+        </div>
+    </header>
+    <div class="website-intro">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col">
+                    <h1 class="header-intro">Modernify</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="header-secondary">Modern needs. Modern solutions.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p><small>Current version</small> <b>1.0.0</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="wcag-tools">
+            <a href="#" class="toggler"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 122.88 122.88">
+                    <title>Accessibility tools</title>
+                    <path
+                        d="M61.44,0A61.46,61.46,0,1,1,18,18,61.21,61.21,0,0,1,61.44,0Zm-.39,74.18L52.1,98.91a4.94,4.94,0,0,1-2.58,2.83A5,5,0,0,1,42.7,95.5l6.24-17.28a26.3,26.3,0,0,0,1.17-4,40.64,40.64,0,0,0,.54-4.18c.24-2.53.41-5.27.54-7.9s.22-5.18.29-7.29c.09-2.63-.62-2.8-2.73-3.3l-.44-.1-18-3.39A5,5,0,0,1,27.08,46a5,5,0,0,1,5.05-7.74l19.34,3.63c.77.07,1.52.16,2.31.25a57.64,57.64,0,0,0,7.18.53A81.13,81.13,0,0,0,69.9,42c.9-.1,1.75-.21,2.6-.29l18.25-3.42A5,5,0,0,1,94.5,39a5,5,0,0,1,1.3,7,5,5,0,0,1-3.21,2.09L75.15,51.37c-.58.13-1.1.22-1.56.29-1.82.31-2.72.47-2.61,3.06.08,1.89.31,4.15.61,6.51.35,2.77.81,5.71,1.29,8.4.31,1.77.6,3.19,1,4.55s.79,2.75,1.39,4.42l6.11,16.9a5,5,0,0,1-6.82,6.24,4.94,4.94,0,0,1-2.58-2.83L63,74.23,62,72.4l-1,1.78Zm.39-53.52a8.83,8.83,0,1,1-6.24,2.59,8.79,8.79,0,0,1,6.24-2.59Zm36.35,4.43a51.42,51.42,0,1,0,15,36.35,51.27,51.27,0,0,0-15-36.35Z" />
+                </svg></a>
+            <div class="tools">
+                <h4>Dostępność</h4>
+                <a href="#" class="wt-toggler wt-fs-2">
+                    <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="ic_fluent_font_increase_24_regular" fill="#212121" fill-rule="nonzero">
+                                <path
+                                    d="M12.590967,4.27630842 L12.6533323,4.36790706 L12.7039495,4.47258193 L18.0719261,17.9725819 C18.2249738,18.3574836 18.0370189,18.7935777 17.6521173,18.9466253 C17.2992907,19.086919 16.9034484,18.9406759 16.7220392,18.6188555 L16.6780739,18.5268165 L15.077,14.499 L8.927,14.499 L7.32167695,18.5274423 C7.18106646,18.8801427 6.80276705,19.0671395 6.44432732,18.9777044 L6.34725692,18.9463762 C5.99455653,18.8057657 5.80755974,18.4274663 5.89699479,18.0690265 L5.92832305,17.9719561 L11.3103464,4.47195612 C11.5319522,3.91609111 12.2523801,3.85100704 12.590967,4.27630842 Z M12.006,6.776 L9.525,12.999 L14.48,12.999 L12.006,6.776 Z M17.6834824,3.07042232 C17.8845216,2.97641824 18.1174942,2.97641824 18.3185334,3.07042232 L18.4160963,3.12525804 L20.6671042,4.62105637 L20.7549114,4.68916802 C21.0264848,4.93394581 21.0850834,5.3471779 20.876677,5.66080596 C20.6682707,5.97443402 20.2646042,6.08049026 19.9337359,5.9249446 L19.8369274,5.87037881 L18.001,4.65071759 L16.1650884,5.87037881 L16.0682799,5.9249446 C15.7374116,6.08049026 15.3337451,5.97443402 15.1253388,5.66080596 C14.9169324,5.3471779 14.975531,4.93394581 15.2471044,4.68916802 L15.3349116,4.62105637 L17.5859195,3.12525804 L17.6834824,3.07042232 Z"
+                                    id="🎨-Color">
+
+                                </path>
+                            </g>
+                        </g>
+                    </svg>Większa czcionka</a>
+                <a href="#" class="wt-toggler wt-fs-1"><svg viewBox="0 0 24 24" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>ic_fluent_font_decrease_24_regular</title>
+                        <desc>Created with Sketch.</desc>
+                        <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="ic_fluent_font_decrease_24_regular" fill="#212121" fill-rule="nonzero">
+                                <path
+                                    d="M12.584698,7.28640216 L12.6470548,7.37835529 L12.6975843,7.48344458 L16.4475843,16.9802043 C16.5997146,17.3654695 16.4107214,17.8011146 16.0254562,17.9532449 C15.6722964,18.0926976 15.2768036,17.9455119 15.0961616,17.6232602 L15.0524157,17.5311167 L14.055,15.005 L9.945,15.005 L8.94758432,17.5311167 C8.8081316,17.8842765 8.43044766,18.0725132 8.07171647,17.9842545 L7.97454381,17.9532449 C7.62138406,17.8137921 7.43314729,17.4361082 7.52140603,17.077377 L7.55241568,16.9802043 L11.3024157,7.48344458 C11.5228673,6.92515774 12.2459745,6.85947693 12.584698,7.28640216 Z M12,9.8 L10.537,13.505 L13.463,13.505 L12,9.8 Z M20.876677,3.33675137 C21.0850834,3.65037943 21.0264848,4.06361153 20.7549114,4.30838932 L20.6671042,4.37650097 L18.4160963,5.8722993 C18.1960388,6.01852788 17.9180282,6.03680645 17.6834824,5.92713502 L17.5859195,5.8722993 L15.3349116,4.37650097 C14.9899208,4.14725399 14.8960918,3.68174224 15.1253388,3.33675137 C15.3337451,3.02312331 15.7374116,2.91706708 16.0682799,3.07261274 L16.1650884,3.12717853 L18.001,4.346 L19.8369274,3.12717853 C20.1819183,2.89793155 20.6474301,2.99176051 20.876677,3.33675137 Z"
+                                    id="🎨-Color">
+
+                                </path>
+                            </g>
+                        </g>
+                    </svg>Normalna czcionka</a>
+                <a href="#" class="wt-toggler wt-c-on"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#000000" fill-rule="evenodd"
+                            d="M68,121 C72.9705627,121 77,116.970563 77,112 C77,107.029437 72.9705627,103 68,103 C63.0294373,103 59,107.029437 59,112 C59,116.970563 63.0294373,121 68,121 Z M68,119.8 C72.2313475,119.8 75.8,116.307821 75.8,112 C75.8,108.076069 72.6281738,104.2 68,104.2 L68,119.8 Z"
+                            transform="matrix(-1 0 0 1 77 -103)" />
+                    </svg>Tryb kontrastu</a>
+                <a href="#" class="wt-toggler wt-c-off"><svg fill="#000000" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M256,0C114.84,0,0,114.842,0,256s114.84,256,256,256s256-114.842,256-256S397.16,0,256,0z M231.226,460.96
+			C129.027,448.682,49.548,361.454,49.548,256S129.027,63.318,231.226,51.04V460.96z M280.774,460.96V51.04
+			C382.973,63.318,462.452,150.546,462.452,256S382.973,448.682,280.774,460.96z" />
+                            </g>
+                        </g>
+                    </svg>Brak trybu kontrastu</a>
+                <a href="#" class="wt-toggler wt-l-und"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M15.246 14H8.754l-1.6 4H5l6-15h2l6 15h-2.154l-1.6-4zm-.8-2L12 5.885 9.554 12h4.892zM3 20h18v2H3v-2z" />
+                        </g>
+                    </svg>Podkreśl linki</a>
+            </div>
+        </div>
+
+        <nav class="side-nav">
+            <ul class="nav">
+                <li class="current"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li>
+                    <a href="#"> Lorem ipsum dolor sit amet. </a>
+                    <ul>
+                        <li class="current"><a href="#">Sublink</a></li>
+                        <li><a href="#">Sublink</a></li>
+                        <li><a href="#">Sublink</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+            <div class="row" id="section-1">
+                <div class="col">
+                    <h3 id="layout-grid">Multi-column row</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h1>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h3>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h5>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis reiciendis voluptatem
+                        delectus ex praesentium ipsa. Odio aspernatur eveniet ipsa. Esse, illo quod. Quibusdam aperiam
+                        praesentium ipsa
+                        aspernatur amet quas inventore cum totam, hic voluptate deleniti, adipisci quasi ipsam numquam?
+                        Dolor, sapiente veritatis sit dolorem optio numquam error dicta commodi?
+                    </p>
+                </div>
+                <div class="col">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h1>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h3>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h5>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis reiciendis voluptatem
+                        delectus ex praesentium ipsa. Odio aspernatur eveniet ipsa. Esse, illo quod. Quibusdam aperiam
+                        praesentium ipsa
+                        aspernatur amet quas inventore cum totam, hic voluptate deleniti, adipisci quasi ipsam numquam?
+                        Dolor, sapiente veritatis sit dolorem optio numquam error dicta commodi?
+                    </p>
+                </div>
+            </div>
+            <div class="row" id="section-2">
+                <div class="col">
+                    <h3 id="headers">Headers</h3>
+                    <hr />
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h1>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h3>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h4>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h5>
+                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="link">Link</h3>
+                    <p>
+                        <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit rerum tenetur, quae
+                            nulla blanditiis id maiores. Dolor quo illum perspiciatis. </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row" id="section-3">
+                <div class="col">
+                    <h3 id="buttons">Buttons</h3>
+                    <h5>Classic</h5>
+                    <p>
+                        <button class="button primary underline">Pierwszy priorytet</button>
+                        <button class="button secondary">Drugi priorytet</button>
+                        <button class="button outlined">Trzeci priorytet</button>
+                        <button class="button">Bez priorytetu</button>
+                        <button class="button primary" disabled>Niedostępny</button>
+                    </p>
+                    <p>
+                        <a class="button primary">Pierwszy priorytet</a>
+                        <a class="button secondary">Drugi priorytet</a>
+                        <a class="button outlined">Trzeci priorytet</a>
+                        <a class="button">Bez priorytetu</a>
+                        <a class="button secondary" aria-disabled="true">Niedostępny (aria-disabled)</a>
+                    </p>
+                    <h5>Square</h5>
+                    <p>
+                        <button class="button primary square-radius">Pierwszy priorytet</button>
+                        <button class="button secondary square-radius">Drugi priorytet</button>
+                        <button class="button outlined square-radius">Trzeci priorytet</button>
+                        <button class="button square-radius">Bez priorytetu</button>
+                        <button class="button primary square-radius" disabled>Niedostępny</button>
+                    </p>
+                    <h5>Big button</h5>
+                    <p>
+                        <a class="button primary big">
+                            <!--<span class="icon"><img src="list.svg" alt="" /></span>-->
+                            <span>Pierwszy priorytet (duży przycisk)</span>
+                        </a>
+                    </p>
+                    <h5>Small button</h5>
+                    <p>
+                        <button class="button primary small">Pierwszy priorytet</button>
+                        <button class="button secondary small">Drugi priorytet</button>
+                        <button class="button outlined small">Trzeci priorytet</button>
+                        <button class="button small">Bez priorytetu</button>
+                        <button class="button primary small" disabled>Niedostępny</button>
+                    </p>
+                    <h5>Small button; pill-rounded</h5>
+                    <p>
+                        <button class="button primary small pill-rounded">Pierwszy priorytet</button>
+                        <button class="button secondary small pill-rounded">Drugi priorytet</button>
+                        <button class="button outlined small pill-rounded">Trzeci priorytet</button>
+                        <button class="button small pill-rounded">Bez priorytetu</button>
+                        <button class="button primary small pill-rounded" disabled>Niedostępny</button>
+                    </p>
+                    <h5>Classic (bigger border radius)</h5>
+                    <p>
+                        <button class="button primary l-radius">Pierwszy priorytet</button>
+                        <button class="button secondary l-radius">Drugi priorytet</button>
+                        <button class="button outlined l-radius">Trzeci priorytet</button>
+                        <button class="button">Bez priorytetu</button>
+                        <button class="button primary l-radius" disabled>Niedostępny</button>
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col">
+                    <h3 id="form-group">Form group/Form control (inputs)</h3>
+                    <div class="form-group">
+                        <label>Imię</label>
+                        <input type="text" class="form-control" value="Jan" />
+                    </div>
+                    <div class="form-group">
+                        <label>Data urodzenia</label>
+                        <input type="date" class="form-control" value="1987-01-01" />
+                    </div>
+                    <div class="form-group">
+                        <label>Waga (kg)</label>
+                        <input type="number" class="form-control" value="75" />
+                    </div>
+                    <div class="form-group">
+                        <label>Zdjęcie</label>
+                        <input type="file" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Suwak</label>
+                        <input type="range" class="form-control" min="1" max="10" value="1" step="1" />
+                        <span class="start-value">0</span>
+                        <span class="end-value">10</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Wiadomość</label>
+                        <textarea name="" id="" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control">
+                            <input type="checkbox" />
+                            Zgoda na przetwarzanie danych osobowych
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Płeć</label>
+                        <label class="form-control">
+                            <input type="radio" name="gender" value="male" checked="checked" />
+                            Mężczyzna
+                        </label>
+                        <label class="form-control">
+                            <input type="radio" name="gender" value="female" />
+                            Kobieta
+                        </label>
+                        <label class="form-control no-border">
+                            <input type="radio" name="gender" value="male" checked="checked" />
+                            Mężczyzna
+                        </label>
+                        <label class="form-control no-border">
+                            <input type="radio" name="gender" value="female" />
+                            Kobieta
+                        </label>
+                        <label class="form-control no-border no-padding">
+                            <input type="radio" name="gender" value="male" checked="checked" />
+                            Mężczyzna
+                        </label>
+                        <label class="form-control no-border no-padding">
+                            <input type="radio" name="gender" value="female" />
+                            Kobieta
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Suwak</label>
+                        <input type="range" class="form-control" min="1" max="10" value="1" step="1" />
+                        <ul class="steps-indicator">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label>Płeć</label>
+                        <select class="form-control">
+                            <option value="input1">Option 1</option>
+                            <option value="input2">Option 2</option>
+                            <option value="input3">Option 3</option>
+                            <option value="input4">Option 4</option>
+                        </select>
+                    </div>
+                    <h3>Inline form-group</h3>
+                    <div class="form-group inline">
+                        <label>Hasło</label>
+                        <div>
+                            <input type="password" class="form-control" value="TestoweHasło123" id="password-example" />
+                            <button class="button primary" type="submit" id="show-password-example">Pokaż hasło</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="section-4">
+                <form action="formularz.php" method="get" class="col">
+                    <h3 id="form">Form</h3>
+                    <h4>Redirect to <code>.php</code> file after submit.</h4>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Imię</label>
+                                <input type="text" class="form-control" value="Jan" name="imie" />
+                            </div>
+                            <div class="form-group">
+                                <label>Data urodzenia</label>
+                                <input type="date" class="form-control" value="1987-01-01" name="data" />
+                            </div>
+                            <div class="form-group">
+                                <label>Waga (kg)</label>
+                                <input type="number" class="form-control" value="75" name="waga" />
+                            </div>
+                            <div class="form-group">
+                                <label>Płeć</label>
+                                <select class="form-control" name="plec">
+                                    <option value="input1">Option 1</option>
+                                    <option value="input2">Option 2</option>
+                                    <option value="input3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="button primary">Zapisz</button>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="details">Details</h3>
+                    <details>
+                        <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit
+                            eveniet unde, tempore cum tenetur quisquam ipsa expedita hic in illum assumenda debitis
+                            atque molestias officiis
+                            veritatis minima!
+                        </p>
+                    </details>
+                </div>
+            </div>
+            <div class="row" id="section-5">
+                <div class="col">
+                    <h3 id="table">Table</h3>
+                    <div class="table">
+                        <table>
+                            <tr class="no-breakspace">
+                                <th>Nazwa dokumentu</th>
+                                <th>Opis</th>
+                                <th>Rok wydania</th>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius
+                                    beatae ex voluptas? Quibusdam pariatur alias laboriosam facere dolorum.</td>
+                                <td>2025</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius
+                                    beatae ex voluptas? Quibusdam pariatur alias laboriosam facere dolorum.</td>
+                                <td>2025</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius
+                                    beatae ex voluptas? Quibusdam pariatur alias laboriosam facere dolorum.</td>
+                                <td>2025</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius
+                                    beatae ex voluptas? Quibusdam pariatur alias laboriosam facere dolorum.</td>
+                                <td>2025</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius
+                                    beatae ex voluptas? Quibusdam pariatur alias laboriosam facere dolorum.</td>
+                                <td>2025</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem ipsum dolor sit amet.</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius
+                                    beatae ex voluptas? Quibusdam pariatur alias laboriosam facere dolorum.</td>
+                                <td>2025</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="dropdown">Dropdown</h3>
+                    <div class="dropdown">
+                        <a class="button outlined toggler" title="No priority color theme set">Dropdown toggler</a>
+                        <ul>
+                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#">Dropdown item</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown primary">
+                        <a class="button primary toggler" title="Primary priority color theme set">Dropdown toggler</a>
+                        <ul>
+                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#">Dropdown item</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown secondary">
+                        <a class="button secondary toggler" title="Secondary priority color theme set">Dropdown
+                            toggler</a>
+                        <ul>
+                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#">Dropdown item</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="card">Card</h3>
+                    <h4>Full-column width</h4>
+                    <div class="card">
+                        <img src="https://placehold.co/500x100" alt="" class="card-image" />
+                        <h4>Lorem ipsum dolor sit amet.</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur
+                            ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum
+                            temporibus.</p>
+                        <a href="#" class="button outlined">Przeczytaj</a>
+                    </div>
+                    <h4>Card with shadow</h4>
+                    <div class="card shadow no-border l-radius">
+                        <img src="https://placehold.co/500x100" alt="" class="card-image" />
+                        <h4>Lorem ipsum dolor sit amet.</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur
+                            ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum
+                            temporibus.</p>
+                        <a href="#" class="button outlined">Przeczytaj</a>
+                    </div>
+                    <h3 id="block-cards">Block cards</h3>
+                    <h4>No border; With background; Without button</h4>
+                    <div class="block-cards">
+                        <div class="card background no-border">
+                            <big class="header-primary"><strong>BMI</strong> 28.40</big>
+                        </div>
+                        <div class="card background no-border">
+                            <big class="header-primary"><strong>BMI</strong> 28.40</big>
+                        </div>
+                        <div class="card background no-border">
+                            <big class="header-primary"><strong>BMI</strong> 28.40</big>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Block cards</h3>
+                    <h4>Classic cards</h4>
+                    <div class="block-cards">
+                        <a href="#" class="card content-space-between">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <hr class="card-divider" />
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="block-cards small">
+                        <a class="card shadow l-radius no-border">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                        </a>
+                        <div class="card shadow l-radius no-border">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <div class="card shadow l-radius no-border">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="block-cards no-border">
+                        <a class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Block cards</h3>
+                    <h4>Cards as <code>&lt;a></code></h4>
+                    <div class="block-cards">
+                        <a href="#" class="card">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                        <a href="#" class="card">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                        <a href="#" class="card">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                    </div>
+                    <h3>Block cards</h3>
+                    <h4>No border (cards as <code>&lt;a></code>)</h4>
+                    <div class="block-cards no-border">
+                        <a href="#" class="card">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                        <a href="#" class="card">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                        <a href="#" class="card">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate
+                                aspernatur ipsam consectetur rerum magnam illo nesciunt explicabo! Aperiam iusto itaque
+                                animi rerum temporibus.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Block cards</h3>
+                    <h4>No border; Centered; Small</h4>
+                    <div class="block-cards no-border small">
+                        <a href="#" class="card centered">
+                            <div class="image-centered">
+                                <img src="https://placehold.co/150x150" alt="" />
+                            </div>
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card centered">
+                            <div class="image-centered">
+                                <img src="https://placehold.co/150x150" alt="" />
+                            </div>
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card centered">
+                            <div class="image-centered">
+                                <img src="https://placehold.co/150x150" alt="" />
+                            </div>
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card centered">
+                            <div class="image-centered">
+                                <img src="https://placehold.co/150x150" alt="" />
+                            </div>
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card centered">
+                            <div class="image-centered">
+                                <img src="https://placehold.co/150x150" alt="" />
+                            </div>
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card centered">
+                            <div class="image-centered">
+                                <img src="https://placehold.co/150x150" alt="" />
+                            </div>
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card centered">
+                            <div class="image-centered">
+                                <img src="https://placehold.co/150x150" alt="" />
+                            </div>
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                    </div>
+                    <h4>No border; Small</h4>
+                    <div class="block-cards no-border small">
+                        <a href="#" class="card">
+                            <img src="https://placehold.co/150x150" alt="" />
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="https://placehold.co/150x150" alt="" />
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="https://placehold.co/150x150" alt="" />
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="https://placehold.co/150x150" alt="" />
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="https://placehold.co/150x150" alt="" />
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="https://placehold.co/150x150" alt="" />
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                        <a href="#" class="card">
+                            <img src="https://placehold.co/150x150" alt="" />
+                            <h4>Lorem, ipsum dolor.</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="image">Image</h3>
+                    <img src="https://placehold.co/1920x200" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="dialog">Modal (dialog)</h3>
+                    <button class="button primary dialog-open" data-dialog_id="dialog1">Open dialog id 1</button>
+                    <button class="button primary dialog-open" data-dialog_id="dialog2">Open dialog id 2</button>
+                    <button class="button primary dialog-open" data-dialog_id="dialog3">Open dialog id 3</button>
+                    <dialog id="dialog1">
+                        <div class="body">
+                            <h3>Dialog with id 1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fuga.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias totam atque aut error
+                                quos consequatur recusandae. Dolore cum assumenda iste, praesentium et non nisi error
+                                deserunt quae eius nam,
+                                necessitatibus debitis sit alias! Repellat debitis libero, dolores, corrupti sed minima
+                                delectus odit, incidunt illum ducimus excepturi nostrum quidem. Perferendis magni totam
+                                delectus dignissimos.
+                                Repellat, porro reprehenderit eligendi officia beatae sit obcaecati commodi quaerat
+                                quas! Vitae est sequi deserunt voluptate iste provident numquam ipsa saepe quam, maxime
+                                officia minima accusamus
+                                obcaecati odit ratione incidunt, vel quaerat porro inventore dolor doloremque aliquid
+                                eligendi, sunt quo? Accusantium animi repellat quos laudantium mollitia ea, excepturi
+                                eveniet voluptatum dignissimos
+                                nulla, soluta dolor! Delectus esse velit iusto numquam ducimus repellat culpa,
+                                recusandae debitis natus impedit ex, corrupti consequatur! Doloremque ipsum harum,
+                                sapiente obcaecati voluptate odio vero
+                                necessitatibus asperiores, amet veniam eaque aliquid quam, nisi molestias consectetur
+                                commodi alias. Nulla praesentium facilis temporibus! Sequi temporibus consequuntur
+                                voluptas expedita iure quasi
+                                obcaecati nihil repudiandae placeat voluptatibus, laudantium tempore voluptates quia hic
+                                iste quis error facere adipisci? Ratione, eum consectetur nam magni placeat ipsum, iusto
+                                quo impedit eos,
+                                reiciendis fugiat pariatur corrupti debitis earum natus cum! Animi molestiae cumque qui
+                                veritatis dolorem, vero neque asperiores provident expedita, itaque amet?
+                            </p>
+                            <button class="dialog-close" data-dialog_id="dialog1">&times;</button>
+                        </div>
+                    </dialog>
+                    <dialog id="dialog2">
+                        <div class="body">
+                            <h3>Logowanie</h3>
+                            <form action="" autocomplete="off">
+                                <div class="form-group">
+                                    <label for="login">Login</label>
+                                    <input type="text" name="login" id="login" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Hasło</label>
+                                    <input type="password" name="pass" id="pass" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <p><a href="#">Zapomniałem hasła</a></p>
+                                    <p><a href="#">Rejestracja konta</a></p>
+                                </div>
+                                <hr class="dialog-divider" />
+                                <button type="submit" class="button primary">Zaloguj się</button>
+                            </form>
+                            <button class="dialog-close" data-dialog_id="dialog2">&times;</button>
+                        </div>
+                    </dialog>
+                    <dialog id="dialog3">
+                        <div class="body">
+                            <h3>Dialog title</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ea error nisi
+                                dolore, et praesentium illo deserunt excepturi ad rem?</p>
+                            <button class="dialog-close" data-dialog_id="dialog3">&times;</button>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="alert">Alert</h3>
+                    <div class="alert slim error">
+                        <div class="data">
+                            <p>Wystąpił błąd przy zapisie pliku.</p>
+                        </div>
+                    </div>
+                    <div class="alert error">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                    <div class="alert information">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                    <div class="alert warning">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                    <div class="alert success">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="form-progress">Form progress</h3>
+                    <div class="form-progress">
+                        <div class="bars">
+                            <div class="bar complete"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="description">
+                            <h2 class="progress-heading">
+                                <span class="current-step">1</span>
+                                <span class="steps-left">z 3</span>
+                            </h2>
+                            <h3>Dane osobowe</h3>
+                            <p>Podaj swoje dane osobowe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="button-group">Button group</h3>
+                    <h5>Fit text</h5>
+                    <div class="button-group fit-text">
+                        <button class="button primary">Przycisk 1</button>
+                        <button class="button primary">Przycisk 2</button>
+                        <button class="button primary">Przycisk 3</button>
+                    </div>
+                    <hr />
+                    <h5>Full width</h5>
+                    <div class="button-group">
+                        <button class="button primary">Przycisk 1</button>
+                        <button class="button primary">Przycisk 2</button>
+                        <button class="button primary">Przycisk 3</button>
+                    </div>
+                    <h5>Buttons pill rounded</h5>
+                    <div class="button-group">
+                        <button class="button primary pill-rounded">Przycisk 1</button>
+                        <button class="button primary">Przycisk 2</button>
+                        <button class="button primary pill-rounded">Przycisk 3</button>
+                    </div>
+                    <h5>Buttons l-radius</h5>
+                    <div class="button-group">
+                        <button class="button primary l-radius">Przycisk 1</button>
+                        <button class="button primary">Przycisk 2</button>
+                        <button class="button primary l-radius">Przycisk 3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="progress-bar">Progress bar</h3>
+                    <p>
+                        <progress max="100" value="30">30%</progress>
+                        <small>30%</small>
+                    </p>
+                    <p>
+                        <progress class="slim" max="100" value="30">30%</progress>
+                        <small>30%</small>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="process-list">Process list</h3>
+                    <div class="process-list">
+                        <ol class="process-list">
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                </ul>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="breadcrumb">Breadcrumb</h3>
+                    <ul class="breadcrumb">
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="summary-box">Summary box</h3>
+                    <div class="summary-box">
+                        <h4>Kluczowe informacje</h4>
+                        <ul>
+                            <li>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, cumque?
+                                <span class="details-mark"
+                                    title="Pamiętaj o uzupełnianiu brakujących informacji.">i</span>
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic natus suscipit
+                                possimus eaque magni?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo porro iste et
+                                consequuntur corporis at?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span class="details-mark" title="Wybierz plan żywieniowy dopasowany do potrzeb.">i</span>
+                    <button class="button primary"
+                        title="Wybierz plan żywieniowy dopasowany do potrzeb.">Przycisk</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span class="badge success" title="Ten komponent przeszedł testy sukcesu WCAG 2.1">Passed WCAG 2.1
+                        (AA)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card-switch">
+                        <ul class="togglers">
+                            <li><a href="#" class="card-toggler">Zakładka 1</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 2</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 3</a></li>
+                        </ul>
+                        <div class="cards">
+                            <div class="card-item">
+                                <h1>to jest pierwsza karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest druga karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest trzecia karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="card-switch big-buttons">
+                        <ul class="togglers">
+                            <li><a href="#" class="card-toggler">Zakładka 1</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 2</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 3</a></li>
+                        </ul>
+                        <div class="cards">
+                            <div class="card-item">
+                                <h1>to jest pierwsza karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest druga karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest trzecia karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="spinner"><span class="spinner"></span></div>
+                    <div class="spinner centered"><span class="spinner"></span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3 id="message-box">Card variant</h3>
+                    <h4>Message inbox card</h4>
+                    <a class="card message-box">
+                        <div class="sender">
+                            <img src="https://placehold.co/512x512" alt="" class="sender-image" />
+                            <span class="sender-name">Adam Abacki</span>
+                        </div>
+                        <div class="description">
+                            <p class="topic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, fugit.</p>
+                            <p class="message">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis repellat
+                                cum nemo iste deserunt amet. Voluptas, voluptatum! Iste dolore harum sunt officiis vero
+                                ipsam quibusdam perferendis id
+                                at illo.
+                            </p>
+                        </div>
+                        <div class="timespan">Dzisiaj, 11:25</div>
+                    </a>
+                    <h4>Message inbox card (slim)</h4>
+                    <a class="card message-box mb-slim">
+                        <div class="sender">
+                            <img src="https://placehold.co/512x512" alt="" class="sender-image" />
+                            <span class="sender-name">Adam Abacki</span>
+                        </div>
+                        <div class="description">
+                            <p class="topic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, fugit.</p>
+                            <p class="message">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo veritatis repellat
+                                cum nemo iste deserunt amet. Voluptas, voluptatum! Iste dolore harum sunt officiis vero
+                                ipsam quibusdam perferendis id
+                                at illo.
+                            </p>
+                        </div>
+                        <div class="timespan">Dzisiaj, 11:25</div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="slider">
+                        <button class="slider-button swipe-left"></button>
+                        <button class="slider-button swipe-right"></button>
+                        <div class="slides">
+                            <div class="slide">
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam hic eos quaerat
+                                    unde tenetur commodi!</p>
+                                <p><a href="#" class="button primary">Przeczytaj</a></p>
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x520" />
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x820" />
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x520" />
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x820" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Urządzenia w sieci</h2>
+                    <div class="table">
+                        <table class="items-group">
+                            <tr>
+                                <th>lp.</th>
+                                <th>Typ urządzenia</th>
+                                <th>Nazwa urządzenia</th>
+                                <th>Adres MAC</th>
+                            </tr>
+                            <tr data-href="https://google.com">
+                                <td>1</td>
+                                <td>Telefon</td>
+                                <td>Apple iPhone 13 Pro 128GB</td>
+                                <td>B0:AE:E7:5D:7A:32</td>
+                            </tr>
+                            <tr data-href="https://google.com">
+                                <td>2</td>
+                                <td>Telefon</td>
+                                <td>Apple iPhone 13 Pro 128GB</td>
+                                <td>B0:AE:E7:5D:7A:32</td>
+                            </tr>
+                            <tr data-href="https://google.com">
+                                <td>3</td>
+                                <td>Telefon</td>
+                                <td>Apple iPhone 13 Pro 128GB</td>
+                                <td>B0:AE:E7:5D:7A:32</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h2>Urządzenia w sieci</h2>
+                    <div class="card no-border shadow no-padding">
+                        <div class="table">
+                            <table class="items-group">
+                                <tr>
+                                    <th>lp.</th>
+                                    <th>Typ urządzenia</th>
+                                    <th>Nazwa urządzenia</th>
+                                    <th>Adres MAC</th>
+                                </tr>
+                                <tr data-href="https://google.com">
+                                    <td>1</td>
+                                    <td>Telefon</td>
+                                    <td>Apple iPhone 13 Pro 128GB</td>
+                                    <td>B0:AE:E7:5D:7A:32</td>
+                                </tr>
+                                <tr data-href="https://google.com">
+                                    <td>2</td>
+                                    <td>Telefon</td>
+                                    <td>Apple iPhone 13 Pro 128GB</td>
+                                    <td>B0:AE:E7:5D:7A:32</td>
+                                </tr>
+                                <tr data-href="https://google.com">
+                                    <td>3</td>
+                                    <td>Telefon</td>
+                                    <td>Apple iPhone 13 Pro 128GB</td>
+                                    <td>B0:AE:E7:5D:7A:32</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <pre class="code-block"><header>jsx</header>{`const [count, setCount] = useState(0);`}</pre>
+                </div>
+            </div>
+            <div class="row card no-border" style="background: linear-gradient(to right, #ffd638 0%, #f7a701 100%)">
+                <div class="col">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error alias ut fugit excepturi
+                        cupiditate exercitationem impedit saepe neque ratione ab?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae earum illum, excepturi
+                        animi, quos ullam laboriosam incidunt accusantium dolorem tenetur, consequuntur perferendis
+                        repellat cum!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="https://placehold.co/500x350" alt="" class="rounded" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="no-points">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officia.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officia.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officia.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card no-border" style="background-color: #0086f312">
+                        <div class="card__header" style="background-color: #0086f3; color: #fff">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                        </div>
+                        <div class="card__content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iusto quae beatae
+                                aspernatur velit odit!</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut fugiat ratione alias odio,
+                                labore inventore.</p>
+                        </div>
+                        <hr class="card-divider" />
+                        <div class="card__footer">
+                            <a href="#" class="button primary full-width">Przeczytaj więcej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card l-radius no-border" style="background-color: #0086f312">
+                        <div class="card__header" style="background-color: #0086f3; color: #fff">
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                        </div>
+                        <div class="card__content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae iusto quae beatae
+                                aspernatur velit odit!</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut fugiat ratione alias odio,
+                                labore inventore.</p>
+                        </div>
+                        <div class="card__footer">
+                            <a href="#" class="button primary full-width">Przeczytaj więcej</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, obcaecati!</p>
+                </div>
+                <div class="vr responsive"></div>
+                <div class="col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, obcaecati!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="form-control highlight">
+                        <input type="radio" name="product" value="1" checked />
+                        <div>
+                            <h3>Produkt 1</h3>
+                            <small>Opis produktu 1</small>
+                            <p>13.99PLN</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-control highlight">
+                        <input type="radio" name="product" value="2" />
+                        <div>
+                            <h3>Produkt 2</h3>
+                            <small>Opis produktu 2</small>
+                            <p>15.99PLN</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-control highlight">
+                        <input type="radio" name="product" value="3" />
+                        <div>
+                            <h3>Produkt 3</h3>
+                            <small>Opis produktu 3</small>
+                            <p>23.99PLN</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#" id="sidenav-toggler" class="button primary">Toggle sidenav</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <fieldset>
+                        <legend>Lorem ipsum dolor sit amet.</legend>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aperiam asperiores cumque sint
+                            laudantium suscipit quis fugiat nesciunt? Voluptatem, vero inventore adipisci soluta fugit
+                            sed.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aperiam asperiores cumque sint
+                            laudantium suscipit quis fugiat nesciunt? Voluptatem, vero inventore adipisci soluta fugit
+                            sed.</p>
+                        <a href="#" class="button outlined small">Lorem, ipsum dolor.</a>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="switch"><input type="checkbox" class="switch-toggler" /> Wyrażam zgodę na
+                        przetwarzanie moich danych osobowych przez Firmę XYZ w celu prowadzenia rekrutacji na aplikowane
+                        przeze mnie stanowisko.</label>
+                    <label class="switch"><input type="checkbox" class="switch-toggler" /> Lorem ipsum dolor sit
+                        amet.</label>
+                    <label class="switch"><input type="checkbox" class="switch-toggler" /> Lorem ipsum dolor sit
+                        amet.</label>
+                </div>
+            </div>
+        </div>
+        <aside id="aside">
+            <h5>Na tej stronie</h5>
+            <ul class="aside-items">
+                <li class="current"><a href="#section-1">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-2">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-3">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-4">Lorem, ipsum dolor.</a></li>
+                <li><a href="#section-5">Lorem, ipsum dolor.</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2025 y4ch0</p>
+            <div class="row">
+                <div class="col">
+                    <h4>Oddziały</h4>
+                    <ul>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Administracja</h4>
+                    <ul>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Fundusze Europejskie</h4>
+                    <ul>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $("#show-password-example").on("click", (e) => {
+            $("#password-example").get(0).type = $("#password-example").get(0).type == "text" ? "password" : "text";
+            $("#show-password-example").text($("#password-example").get(0).type == "text" ? "Ukryj hasło" : "Pokaż hasło");
+        });
+        $("#sidenav-toggler").on("click", (e) => {
+            e.preventDefault();
+            $(".side-nav").toggle();
+        });
+    </script>
+</body>
+
+</html>
