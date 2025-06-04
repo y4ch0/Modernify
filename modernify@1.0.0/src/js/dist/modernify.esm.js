@@ -364,7 +364,8 @@ function initScrollSpy() {
     });
 }
 
-// ✅ Manual init function (for frameworks)
+// Modernify @ 1.0.0
+
 function initAll() {
     initNavbar();
     initDropdowns();
@@ -376,7 +377,6 @@ function initAll() {
     initScrollSpy();
 }
 
-// ✅ Expose globally + auto-init (for HTML-only use)
 if (typeof window !== "undefined") {
     window.Modernify = {
         initAll,
@@ -390,7 +390,6 @@ if (typeof window !== "undefined") {
         initScrollSpy,
     };
 
-    // Automatically run initAll on page load
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", initAll);
     } else {
