@@ -7,8 +7,8 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.0/dist/css/modernify.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.0/dist/js/modernify.bundle.js"></script>
+        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/css/modernify.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/js/modernify.bundle.js"></script>
     <style>
         :root {
             --background-color: 20, 20, 20;
@@ -55,7 +55,7 @@
         <div class="wrapper">
             <div class="logo">
                 <a href="#" class="website-logo">
-                    <img src="logo.svg" alt="" />
+                    <img src="./../logo.svg" alt="" />
                 </a>
             </div>
             <ul id="nav-menu" class="nav">
@@ -65,7 +65,7 @@
                 <li><a href="#">Navigation link</a></li>
                 <li>
                     <div class="dropdown">
-                        <a href="#" class="toggler">Navigation link</a>
+                        <a href="#" data-toggle="dropdown" class="toggler">Navigation link</a>
                         <ul>
                             <li>
                                 <a href="#">Dropdown item</a>
@@ -168,9 +168,18 @@
                                 d="M15.246 14H8.754l-1.6 4H5l6-15h2l6 15h-2.154l-1.6-4zm-.8-2L12 5.885 9.554 12h4.892zM3 20h18v2H3v-2z" />
                         </g>
                     </svg>Podkreśl linki</a>
+                <a href="#" class="wt-toggler wt-f-verdana"><svg viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+                        <path style="fill:#cccccc;stroke:none;"
+                            d="M 98,96 C 91,96 90,95 85,83 L 51,2 48,2 19,73 C 10,94 8.3,96 1.7,96 l 0,3 27.3,0 0,-3 c -6,0 -9,-1 -9,-5 0,-2 0,-5 1,-7 l 6,-16 37,0 5,13 c 2,5 3,9 3,11 0,3 -2,4 -10,4 l 0,3 36,0 0,-3 M 30,62 46,22 62,62 30,62" />
+                        <path style="fill:#222222;stroke:none;"
+                            d="M 97,95 C 90,95 89,94 84,82 L 50,1 47,1 18,72 C 9,93 7.3,95 0.7,95 l 0,3 27.3,0 0,-3 c -6,0 -9,-1 -9,-5 0,-2 0,-5 1,-7 l 6,-16 37,0 5,13 c 2,5 3,9 3,11 0,3 -2,4 -10,4 l 0,3 36,0 0,-3 M 29,61 45,21 61,61 29,61" />
+
+                    </svg>
+                    </svg>Czytelna czcionka</a>
             </div>
         </div>
-
         <nav class="side-nav">
             <ul class="nav">
                 <li class="current"><a href="#">Lorem ipsum dolor sit amet.</a></li>
@@ -189,6 +198,36 @@
             </ul>
         </nav>
         <div class="wrapper">
+            <nav class="row inline-nav">
+                <div class="logo">
+                    <a href="#" class="website-logo">
+                        <img src="logo.svg" alt="" />
+                    </a>
+                </div>
+                <a href="#" class="inline-nav-collapse">&equiv; Menu</a>
+                <ul class="nav-list">
+                    <li class="current"><a href="#">Link strony</a></li>
+                    <li><a href="#">Link strony</a></li>
+                    <li><a href="#">Link strony</a></li>
+                    <li><a href="#">Link strony</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="toggler" data-toggle="dropdown">Link strony</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Dropdown item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dropdown item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dropdown item</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
             <div class="row" id="section-1">
                 <div class="col">
                     <h3 id="layout-grid">Multi-column row</h3>
@@ -252,7 +291,7 @@
                     <h3 id="buttons">Buttons</h3>
                     <h5>Classic</h5>
                     <p>
-                        <button class="button primary underline">Pierwszy priorytet</button>
+                        <button class="button primary underlined">Pierwszy priorytet</button>
                         <button class="button secondary">Drugi priorytet</button>
                         <button class="button outlined">Trzeci priorytet</button>
                         <button class="button">Bez priorytetu</button>
@@ -606,7 +645,8 @@
                 <div class="col">
                     <h3 id="dropdown">Dropdown</h3>
                     <div class="dropdown">
-                        <a class="button outlined toggler" title="No priority color theme set">Dropdown toggler</a>
+                        <a class="button outlined toggler" title="No priority color theme set"
+                            data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
                             <li><a href="#">Dropdown item</a></li>
                             <li><a href="#">Dropdown item</a></li>
@@ -614,7 +654,8 @@
                         </ul>
                     </div>
                     <div class="dropdown primary">
-                        <a class="button primary toggler" title="Primary priority color theme set">Dropdown toggler</a>
+                        <a class="button primary toggler" title="Primary priority color theme set"
+                            data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
                             <li><a href="#">Dropdown item</a></li>
                             <li><a href="#">Dropdown item</a></li>
@@ -622,7 +663,8 @@
                         </ul>
                     </div>
                     <div class="dropdown secondary">
-                        <a class="button secondary toggler" title="Secondary priority color theme set">Dropdown
+                        <a class="button secondary toggler" title="Secondary priority color theme set"
+                            data-toggle="dropdown">Dropdown
                             toggler</a>
                         <ul>
                             <li><a href="#">Dropdown item</a></li>
@@ -916,9 +958,12 @@
             <div class="row">
                 <div class="col">
                     <h3 id="dialog">Modal (dialog)</h3>
-                    <button class="button primary dialog-open" data-dialog_id="dialog1">Open dialog id 1</button>
-                    <button class="button primary dialog-open" data-dialog_id="dialog2">Open dialog id 2</button>
-                    <button class="button primary dialog-open" data-dialog_id="dialog3">Open dialog id 3</button>
+                    <button class="button primary dialog-open" data-target="#dialog1" data-toggle="modal">Open dialog
+                        id 1</button>
+                    <button class="button primary dialog-open" data-target="#dialog2" data-toggle="modal">Open dialog
+                        id 2</button>
+                    <button class="button primary dialog-open" data-target="#dialog3" data-toggle="modal">Open dialog
+                        id 3</button>
                     <dialog id="dialog1">
                         <div class="body">
                             <h3>Dialog with id 1</h3>
@@ -948,7 +993,7 @@
                                 reiciendis fugiat pariatur corrupti debitis earum natus cum! Animi molestiae cumque qui
                                 veritatis dolorem, vero neque asperiores provident expedita, itaque amet?
                             </p>
-                            <button class="dialog-close" data-dialog_id="dialog1">&times;</button>
+                            <button class="dialog-close" data-target="#dialog1">&times;</button>
                         </div>
                     </dialog>
                     <dialog id="dialog2">
@@ -970,7 +1015,7 @@
                                 <hr class="dialog-divider" />
                                 <button type="submit" class="button primary">Zaloguj się</button>
                             </form>
-                            <button class="dialog-close" data-dialog_id="dialog2">&times;</button>
+                            <button class="dialog-close" data-target="#dialog2">&times;</button>
                         </div>
                     </dialog>
                     <dialog id="dialog3">
@@ -978,7 +1023,7 @@
                             <h3>Dialog title</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio ea error nisi
                                 dolore, et praesentium illo deserunt excepturi ad rem?</p>
-                            <button class="dialog-close" data-dialog_id="dialog3">&times;</button>
+                            <button class="dialog-close" data-target="#dialog3">&times;</button>
                         </div>
                     </dialog>
                 </div>
@@ -1013,6 +1058,39 @@
                         </div>
                     </div>
                     <div class="alert success">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                    <div class="alert slim outlined error">
+                        <div class="data">
+                            <p>Wystąpił błąd przy zapisie pliku.</p>
+                        </div>
+                    </div>
+                    <div class="alert outlined error">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                    <div class="alert outlined information">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                    <div class="alert outlined warning">
+                        <div class="data">
+                            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
+                                quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
+                        </div>
+                    </div>
+                    <div class="alert outlined success">
                         <div class="data">
                             <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, molestias.</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta aliquid deserunt autem
@@ -1116,6 +1194,141 @@
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
                                     voluptatibus nostrum ea cumque rerum quas officia totam.</p>
                             </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                </ul>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                </ul>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                </ul>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                </ul>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+                                        temporibus.</li>
+                                </ul>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
+                            <li class="step-item">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo,
+                                    voluptatibus nostrum ea cumque rerum quas officia totam.</p>
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -1169,6 +1382,68 @@
                 <div class="col">
                     <div class="card-switch">
                         <ul class="togglers">
+                            <li><a href="#" class="card-toggler">Zakładka 1</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 2</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 3</a></li>
+                        </ul>
+                        <div class="cards">
+                            <div class="card-item">
+                                <h1>to jest pierwsza karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest druga karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest trzecia karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="card-switch">
+                        <ul class="togglers underlined">
+                            <li><a href="#" class="card-toggler">Zakładka 1</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 2</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 3</a></li>
+                        </ul>
+                        <div class="cards">
+                            <div class="card-item">
+                                <h1>to jest pierwsza karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest druga karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest trzecia karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="card-switch">
+                        <ul class="togglers centered">
                             <li><a href="#" class="card-toggler">Zakładka 1</a></li>
                             <li><a href="#" class="card-toggler">Zakładka 2</a></li>
                             <li><a href="#" class="card-toggler">Zakładka 3</a></li>
@@ -1280,6 +1555,34 @@
                     <div class="slider">
                         <button class="slider-button swipe-left"></button>
                         <button class="slider-button swipe-right"></button>
+                        <div class="slides">
+                            <div class="slide">
+                                <h1>Lorem ipsum dolor sit amet.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam hic eos quaerat
+                                    unde tenetur commodi!</p>
+                                <p><a href="#" class="button primary">Przeczytaj</a></p>
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x520" />
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x820" />
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x520" />
+                            </div>
+                            <div class="slide">
+                                <img src="https://placehold.co/1920x820" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="slider">
+                        <button class="slider-button outlined swipe-left"></button>
+                        <button class="slider-button outlined swipe-right"></button>
                         <div class="slides">
                             <div class="slide">
                                 <h1>Lorem ipsum dolor sit amet.</h1>
@@ -1475,6 +1778,7 @@
             <div class="row">
                 <div class="col">
                     <a href="#" id="sidenav-toggler" class="button primary">Toggle sidenav</a>
+                    <a href="#" id="sidenav-class-toggler" class="button primary">Toggle sidenav inline style</a>
                 </div>
             </div>
             <div class="row">
@@ -1559,6 +1863,10 @@
         $("#sidenav-toggler").on("click", (e) => {
             e.preventDefault();
             $(".side-nav").toggle();
+        });
+        $("#sidenav-class-toggler").on("click", (e) => {
+            e.preventDefault();
+            $(".side-nav").toggleClass('inline');
         });
     </script>
 </body>
