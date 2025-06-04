@@ -364,7 +364,24 @@ function initScrollSpy() {
     });
 }
 
-// Modernify @ 1.0.0
+function initFloatingNavbar() {
+    const nav = document.querySelector(".floating-nav");
+
+    if (!nav) return;
+
+    function handleScroll() {
+        if (window.scrollY > 10) {
+            nav.classList.add("navbar-scrolled");
+        } else {
+            nav.classList.remove("navbar-scrolled");
+        }
+    }
+
+    handleScroll(); // Run once on load
+    window.addEventListener("scroll", handleScroll);
+}
+
+// Modernify @ 1.0.1
 
 function initAll() {
     initNavbar();
@@ -375,6 +392,7 @@ function initAll() {
     initSliders();
     initAccessibility();
     initScrollSpy();
+    initFloatingNavbar();
 }
 
 if (typeof window !== "undefined") {
@@ -388,6 +406,7 @@ if (typeof window !== "undefined") {
         initSliders,
         initAccessibility,
         initScrollSpy,
+        initFloatingNavbar,
     };
 
     if (document.readyState === "loading") {
