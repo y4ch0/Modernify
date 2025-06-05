@@ -1683,6 +1683,8 @@ pre.code-block:has(.language) {
 }
 
 pre.code-block .language {
+    display: flex;
+    gap: 0.35rem;
     padding: 0.35rem 0.65rem;
     margin: -0.75rem;
     font-size: 0.8rem;
