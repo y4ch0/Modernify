@@ -24,12 +24,12 @@ function initNavbar() {
 
 // /src/js/dropdown.js
 function initDropdowns() {
-    document.body.addEventListener("click", function (event) {
+    const handleClick = (event) => {
         const toggler = event.target.closest('[data-toggle="dropdown"]');
         if (toggler) {
             event.preventDefault();
             const dropdown = toggler.nextElementSibling;
-            if (dropdown && dropdown.tagName === "UL") {
+            if (dropdown && dropdown.tagName.toLowerCase() === "ul") {
                 dropdown.classList.toggle("show");
             }
         } else {
@@ -37,7 +37,12 @@ function initDropdowns() {
                 dropdown.classList.remove("show");
             });
         }
-    });
+    };
+
+    if (!document.body.__dropdown_initialized) {
+        document.body.addEventListener("click", handleClick);
+        document.body.__dropdown_initialized = true;
+    }
 }
 
 // /src/js/modal.js
@@ -364,7 +369,7 @@ function initScrollSpy() {
     });
 }
 
-// ✅ Manual init function (for frameworks)
+// Manual init for frameworks
 function initAll() {
     initNavbar();
     initDropdowns();
@@ -376,9 +381,9 @@ function initAll() {
     initScrollSpy();
 }
 
-// ✅ Expose globally + auto-init (for HTML-only use)
+// Auto-initialize for plain HTML
 if (typeof window !== "undefined") {
-    window.Modernify = {
+    window.MyFramework = {
         initAll,
         initNavbar,
         initDropdowns,
@@ -390,7 +395,6 @@ if (typeof window !== "undefined") {
         initScrollSpy,
     };
 
-    // Automatically run initAll on page load
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", initAll);
     } else {
