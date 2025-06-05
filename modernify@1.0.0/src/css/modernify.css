@@ -1678,11 +1678,11 @@ pre.code-block {
     border: 1px solid rgba(var(--default-border-color), 0.1);
 }
 
-pre.code-block:has(header) {
+pre.code-block:has(.language) {
     padding-top: 3rem;
 }
 
-pre.code-block header {
+pre.code-block .language {
     padding: 0.35rem 0.65rem;
     margin: -0.75rem;
     font-size: 0.8rem;
