@@ -6,8 +6,8 @@ export default {
     output: [
         {
             file: "dist/modernify.bundle.js",
-            format: "iife",
-            name: "MyFramework",
+            format: "umd",
+            name: "Modernify",
             plugins: [terser()],
         },
         {
