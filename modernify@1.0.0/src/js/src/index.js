@@ -6,7 +6,6 @@ import { initCardSwitch } from "./js/card-switch.js";
 import { initSliders } from "./js/slider.js";
 import { initAccessibility } from "./js/accessibility.js";
 import { initScrollSpy } from "./js/scrollspy.js";
-import { initInlineNav } from "./js/inline-navbar.js";
 
 // Manual init for frameworks
 export function initAll() {
@@ -18,7 +17,6 @@ export function initAll() {
     initSliders();
     initAccessibility();
     initScrollSpy();
-    initInlineNav();
 }
 
 // Auto-initialize for plain HTML
@@ -33,7 +31,6 @@ if (typeof window !== "undefined") {
         initSliders,
         initAccessibility,
         initScrollSpy,
-        initInlineNav,
     };
 
     if (document.readyState === "loading") {
