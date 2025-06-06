@@ -48,7 +48,7 @@ function initDropdowns() {
 // /src/js/modal.js
 function initModals() {
     document.querySelectorAll('[data-toggle="modal"]').forEach((trigger) => {
-        const targetSelector = trigger.getAttribute("data-target");
+        const targetSelector = trigger.target.getAttribute("data-target");
         const dialog = document.querySelector(targetSelector);
         if (dialog) {
             trigger.addEventListener("click", () => {
@@ -371,6 +371,18 @@ function initScrollSpy() {
     });
 }
 
+function initInlineNav() {
+    var inline_navbar_enabled = false;
+    const inlineNav = document.querySelector(".inline-nav");
+    if (inlineNav) {
+        document.querySelector(".inline-nav-collapse").addEventListener("click", (e) => {
+            e.preventDefault();
+            inline_navbar_enabled = !inline_navbar_enabled;
+            document.querySelector(".inline-nav ul").style.display = inline_navbar_enabled ? "flex" : "none";
+        });
+    }
+}
+
 // Manual init for frameworks
 function initAll() {
     initNavbar();
@@ -381,6 +393,7 @@ function initAll() {
     initSliders();
     initAccessibility();
     initScrollSpy();
+    initInlineNav();
 }
 
 // Auto-initialize for plain HTML
@@ -395,6 +408,7 @@ if (typeof window !== "undefined") {
         initSliders,
         initAccessibility,
         initScrollSpy,
+        initInlineNav,
     };
 
     if (document.readyState === "loading") {
