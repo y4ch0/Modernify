@@ -1,24 +1,25 @@
 // /src/js/accessibility.js
 export function initAccessibility() {
     const root = document.querySelector(":root");
-    const defaultFontSize = getComputedStyle(root).getPropertyValue("--font-size");
-    const defaultBackground = getComputedStyle(root).getPropertyValue("--background-color");
-    const defaultFontColor = getComputedStyle(root).getPropertyValue("--text-default-color");
-    const defaultPrimary = getComputedStyle(root).getPropertyValue("--primary-color");
-    const defaultSecondary = getComputedStyle(root).getPropertyValue("--secondary-color");
-    const defaultPrimaryButton = getComputedStyle(root).getPropertyValue("--primary-button-color");
-    const defaultSecondaryButton = getComputedStyle(root).getPropertyValue("--secondary-button-color");
-    const defaultPrimaryButtonHover = getComputedStyle(root).getPropertyValue("--primary-button-color-hover");
-    const defaultSecondaryButtonHover = getComputedStyle(root).getPropertyValue("--secondary-button-color-hover");
-    const defaultLinkDecor = getComputedStyle(root).getPropertyValue("--link-default-decoration");
-    const defaultPrimaryButtonText = getComputedStyle(root).getPropertyValue("--primary-button-text");
-    const defaultSecondaryButtonText = getComputedStyle(root).getPropertyValue("--secondary-button-text");
-    const defaultLabelColor = getComputedStyle(root).getPropertyValue("--input-label-color");
-    const defaultBorderColor = getComputedStyle(root).getPropertyValue("--default-border-color");
-    const defaultFontFamily = getComputedStyle(root).getPropertyValue("--root-font");
+    const getVar = (name) => getComputedStyle(root).getPropertyValue(name);
+    const defaultFontSize = getVar("--font-size");
+    const defaultBackground = getVar("--background-color");
+    const defaultFontColor = getVar("--text-default-color");
+    const defaultPrimary = getVar("--primary-color");
+    const defaultSecondary = getVar("--secondary-color");
+    const defaultPrimaryButton = getVar("--primary-button-color");
+    const defaultSecondaryButton = getVar("--secondary-button-color");
+    const defaultPrimaryButtonHover = getVar("--primary-button-color-hover");
+    const defaultSecondaryButtonHover = getVar("--secondary-button-color-hover");
+    const defaultLinkDecor = getVar("--link-default-decoration");
+    const defaultPrimaryButtonText = getVar("--primary-button-text");
+    const defaultSecondaryButtonText = getVar("--secondary-button-text");
+    const defaultLabelColor = getVar("--input-label-color");
+    const defaultBorderColor = getVar("--default-border-color");
+    const defaultFontFamily = getVar("--root-font");
 
     function revertVariables() {
-        var r = document.querySelector(":root");
+        const r = document.querySelector(":root");
         r.style.setProperty("--background-color", defaultBackground);
         r.style.setProperty("--text-default-color", defaultFontColor);
         r.style.setProperty("--primary-color", defaultPrimary);
@@ -33,79 +34,80 @@ export function initAccessibility() {
         r.style.setProperty("--secondary-button-color-hover", defaultSecondaryButtonHover);
     }
 
-    document.querySelector(".wt-fs-1").addEventListener("click", (e) => {
-        e.preventDefault();
-        var r = document.querySelector(":root");
-        r.style.setProperty("--font-size", defaultFontSize);
-    });
+    const fs1 = document.querySelector(".wt-fs-1");
+    if (fs1) {
+        fs1.addEventListener("click", (e) => {
+            e.preventDefault();
+            root.style.setProperty("--font-size", defaultFontSize);
+        });
+    }
 
-    document.querySelector(".wt-fs-2").addEventListener("click", (e) => {
-        e.preventDefault();
-        var r = document.querySelector(":root");
-        r.style.setProperty("--font-size", "18px");
-    });
+    const fs2 = document.querySelector(".wt-fs-2");
+    if (fs2) {
+        fs2.addEventListener("click", (e) => {
+            e.preventDefault();
+            root.style.setProperty("--font-size", "18px");
+        });
+    }
 
-    document.querySelector(".wt-c-off").addEventListener("click", (e) => {
-        e.preventDefault();
-        revertVariables();
-    });
+    const colorOff = document.querySelector(".wt-c-off");
+    if (colorOff) {
+        colorOff.addEventListener("click", (e) => {
+            e.preventDefault();
+            revertVariables();
+        });
+    }
 
-    document.querySelector(".wt-c-on").addEventListener("click", (e) => {
-        e.preventDefault();
-        var r = document.querySelector(":root");
-        r.style.setProperty("--text-default-color", "0, 0, 0");
-        r.style.setProperty("--background-color", "255, 255, 0");
-        r.style.setProperty("--primary-color", "0, 0, 0");
-        r.style.setProperty("--secondary-color", "0, 0, 0");
-        r.style.setProperty("--primary-button-color", "0, 0, 0");
-        r.style.setProperty("--secondary-button-color", "0, 0, 0");
-        r.style.setProperty("--primary-button-text", "255, 255, 255");
-        r.style.setProperty("--secondary-button-text", "255, 255, 255");
-        r.style.setProperty("--input-label-color", "0, 0, 0");
-        r.style.setProperty("--default-border-color", "0, 0, 0");
-        r.style.setProperty("--primary-button-color-hover", "60,60,60");
-        r.style.setProperty("--secondary-button-color-hover", "60,60,60");
-    });
+    const colorOn = document.querySelector(".wt-c-on");
+    if (colorOn) {
+        colorOn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const r = document.querySelector(":root");
+            r.style.setProperty("--text-default-color", "0, 0, 0");
+            r.style.setProperty("--background-color", "255, 255, 0");
+            r.style.setProperty("--primary-color", "0, 0, 0");
+            r.style.setProperty("--secondary-color", "0, 0, 0");
+            r.style.setProperty("--primary-button-color", "0, 0, 0");
+            r.style.setProperty("--secondary-button-color", "0, 0, 0");
+            r.style.setProperty("--primary-button-text", "255, 255, 255");
+            r.style.setProperty("--secondary-button-text", "255, 255, 255");
+            r.style.setProperty("--input-label-color", "0, 0, 0");
+            r.style.setProperty("--default-border-color", "0, 0, 0");
+            r.style.setProperty("--primary-button-color-hover", "60,60,60");
+            r.style.setProperty("--secondary-button-color-hover", "60,60,60");
+        });
+    }
 
-    var linkUnderline = false;
+    let linkUnderline = false;
+    const underlineBtn = document.querySelector(".wt-l-und");
+    if (underlineBtn) {
+        underlineBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            linkUnderline = !linkUnderline;
+            underlineBtn.style.fontWeight = linkUnderline ? "bold" : "normal";
+            root.style.setProperty("--link-default-decoration", linkUnderline ? "underline" : defaultLinkDecor);
+        });
+    }
 
-    document.querySelector(".wt-l-und").addEventListener("click", (e) => {
-        e.preventDefault();
-        linkUnderline = !linkUnderline;
-        if (linkUnderline) {
-            document.querySelector(".wt-l-und").style.fontWeight = "bold";
-            document.querySelector(":root").style.setProperty("--link-default-decoration", "underline");
-        } else {
-            document.querySelector(".wt-l-und").style.fontWeight = "normal";
-            document.querySelector(":root").style.setProperty("--link-default-decoration", defaultLinkDecor);
-        }
-    });
+    let verdanaEnabled = false;
+    const verdanaBtn = document.querySelector(".wt-f-verdana");
+    if (verdanaBtn) {
+        verdanaBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            verdanaEnabled = !verdanaEnabled;
+            verdanaBtn.style.fontWeight = verdanaEnabled ? "bold" : "normal";
+            root.style.setProperty("--root-font", verdanaEnabled ? "Verdana, sans-serif" : defaultFontFamily);
+        });
+    }
 
-    var verdanaEnabled = false;
-
-    document.querySelector(".wt-f-verdana").addEventListener("click", (e) => {
-        e.preventDefault();
-        verdanaEnabled = !verdanaEnabled;
-        if (verdanaEnabled) {
-            document.querySelector(".wt-f-verdana").style.fontWeight = "bold";
-            document.querySelector(":root").style.setProperty("--root-font", "Verdana, sans-serif");
-        } else {
-            document.querySelector(".wt-f-verdana").style.fontWeight = "normal";
-            document.querySelector(":root").style.setProperty("--root-font", defaultFontFamily);
-        }
-    });
-
-    var toggled = false;
-
-    document.querySelector(".wcag-tools .toggler").addEventListener("click", (e) => {
-        e.preventDefault();
-        toggled = !toggled;
-        if (toggled) {
-            const root = document.querySelector(".wcag-tools");
-            root.style.transform = "translateX(0)";
-        } else {
-            const root = document.querySelector(".wcag-tools");
-            root.style.transform = "translateX(calc(100% - 3.75rem))";
-        }
-    });
+    let toggled = false;
+    const wcagToggler = document.querySelector(".wcag-tools .toggler");
+    const wcagTools = document.querySelector(".wcag-tools");
+    if (wcagToggler && wcagTools) {
+        wcagToggler.addEventListener("click", (e) => {
+            e.preventDefault();
+            toggled = !toggled;
+            wcagTools.style.transform = toggled ? "translateX(0)" : "translateX(calc(100% - 3.75rem))";
+        });
+    }
 }
