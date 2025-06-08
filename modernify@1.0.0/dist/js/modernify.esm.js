@@ -48,7 +48,7 @@ function initDropdowns() {
 // /src/js/modal.js
 function initModals() {
     document.querySelectorAll('[data-toggle="modal"]').forEach((trigger) => {
-        const targetSelector = trigger.target.getAttribute("data-target");
+        const targetSelector = trigger.dataset.target;
         const dialog = document.querySelector(targetSelector);
         if (dialog) {
             trigger.addEventListener("click", () => {

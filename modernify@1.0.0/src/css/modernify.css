@@ -2338,6 +2338,10 @@ nav.inline-nav .inline-nav-collapse {
         flex-direction: column;
     }
 
+    .card.inline {
+        flex-direction: column;
+    }
+
     div.vr {
         width: 100%;
         height: 1px;
