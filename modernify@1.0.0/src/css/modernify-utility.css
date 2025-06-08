@@ -98,6 +98,11 @@
 .justify-content-between { justify-content: space-between !important; }
 .align-items-center { align-items: center !important; }
 .flex-wrap { flex-wrap: wrap; }
+.flex-gap-1 { gap: 0.25rem; }
+.flex-gap-2 { gap: 0.50rem; }
+.flex-gap-3 { gap: 0.75rem; }
+.flex-gap-4 { gap: 1.00rem; }
+.flex-gap-5 { gap: 1.25rem; }
 
 /* === Sizing === */
 .w-100 { width: 100% !important; }
