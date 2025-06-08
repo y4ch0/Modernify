@@ -1535,7 +1535,7 @@ kbd {
     }
 }
 
-dialog div.body .dialog-close {
+dialog div.body .dialog-close.dialog-close-styled {
     position: absolute;
     right: 0.25rem;
     top: 0.25rem;
@@ -1555,7 +1555,7 @@ dialog div.body .dialog-close {
     color: rgb(var(--text-default-color));
 }
 
-dialog div.body .dialog-close:hover {
+dialog div.body .dialog-close.dialog-close-styled:hover {
     background-color: rgba(var(--text-default-color), 0.1);
 }
 
