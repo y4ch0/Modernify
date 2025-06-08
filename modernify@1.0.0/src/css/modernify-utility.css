@@ -1,3 +1,6 @@
+@import url("https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.0/dist/css/modernify.min.css");
+
+.mx-auto { margin: auto !important; }
 .m-0 { margin: 0.00rem !important; }
 .mt-0 { margin-top: 0.00rem !important; }
 .mb-0 { margin-bottom: 0.00rem !important; }
@@ -94,9 +97,13 @@
 /* === Flex Utilities === */
 .flex-column { flex-direction: column !important; }
 .flex-row { flex-direction: row !important; }
+.justify-content-start { justify-content: start !important; }
 .justify-content-center { justify-content: center !important; }
 .justify-content-between { justify-content: space-between !important; }
+.justify-content-end { justify-content: end !important; }
+.align-items-start { align-items: start !important; }
 .align-items-center { align-items: center !important; }
+.align-items-end { align-items: end !important; }
 .flex-wrap { flex-wrap: wrap !important; }
 .flex-gap-1 { gap: 0.25rem !important; }
 .flex-gap-2 { gap: 0.50rem !important; }
@@ -137,13 +144,21 @@
 .invisible { visibility: hidden !important; }
 
 /* === Background / Border / Rounded === */
-.bg-light { background-color: #f8f9fa !important; }
-.bg-dark { background-color: #212529 !important; }
-.text-light { color: #f8f9fa !important; }
-.text-dark { color: #212529 !important; }
 
-.border { border: 1px solid #dee2e6 !important; }
+.border { border: 1px solid rgba(var(--default-border-color), 0.2) !important; }
 .border-0 { border: 0 !important; }
 
-.rounded { border-radius: 0.25rem !important; }
+.rounded-1 { border-radius: 0.25rem !important; }
+.rounded-2 { border-radius: 0.5rem !important; }
+.rounded-3 { border-radius: 0.75rem !important; }
+.rounded-4 { border-radius: 1rem !important; }
+.rounded-5 { border-radius: 1.25rem !important; }
+.rounded-6 { border-radius: 1.50rem !important; }
 .rounded-circle { border-radius: 50% !important; }
+
+/* Opacity */
+.opacity-100 { opacity: 1 !important; }
+.opacity-75 { opacity: 0.75 !important; }
+.opacity-50 { opacity: 0.5 !important; }
+.opacity-25 { opacity: 0.25 !important; }
+.opacity-0 { opacity: 0 !important; }
