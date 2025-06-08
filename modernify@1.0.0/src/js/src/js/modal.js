@@ -4,14 +4,16 @@ export function initModals() {
         const targetSelector = trigger.dataset.target;
         const dialog = document.querySelector(targetSelector);
         if (dialog) {
-            trigger.addEventListener("click", () => {
+            trigger.addEventListener("click", (e) => {
+                e.preventDefault();
                 dialog.setAttribute("open", "");
             });
         }
     });
 
     document.querySelectorAll(".dialog-close").forEach((btn) => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
             const dialog = document.querySelector(btn.getAttribute("data-target"));
             animateClose(dialog);
         });
