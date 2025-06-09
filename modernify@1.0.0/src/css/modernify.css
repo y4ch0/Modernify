@@ -1797,7 +1797,8 @@ span.details-mark.serif {
     flex-direction: column;
 }
 
-.card-switch.big-buttons ul.togglers {
+.card-switch.big-buttons ul.togglers,
+.card-switch ul.togglers.background {
     min-width: 100%;
     border-bottom: none;
     background-color: rgba(var(--text-default-color), 0.05);
@@ -1808,13 +1809,24 @@ span.details-mark.serif {
 }
 
 .card-switch.big-buttons ul.togglers li a,
-.card-switch.big-buttons ul.togglers li {
+.card-switch.big-buttons ul.togglers li,
+.card-switch ul.togglers.background li a,
+.card-switch ul.togglers.background li {
     width: 100%;
+    border: none;
+}
+
+.card-switch ul.togglers.background li a.card-toggler {
+    border: none;
+}
+
+.card-switch.big-buttons ul.togglers li a,
+.card-switch ul.togglers.background li a {
+    border-radius: 0.5rem !important;
 }
 
 .card-switch.big-buttons ul.togglers li a {
     font-size: 1.6rem !important;
-    border-radius: 0.5rem !important;
 }
 
 .card-switch ul.togglers {
@@ -1873,13 +1885,15 @@ span.details-mark.serif {
     border-color: rgb(var(--primary-button-color)) !important;
 }
 
-.card-switch.big-buttons ul.togglers li a.card-toggler.current {
-    background-color: rgb(var(--primary-button-color));
+.card-switch.big-buttons ul.togglers li a.card-toggler.current,
+.card-switch ul.togglers.background li a.card-toggler.current {
+    background-color: rgb(var(--primary-button-color)) !important;
     color: rgb(var(--primary-button-text)) !important;
     font-weight: normal !important;
 }
 
-.card-switch.big-buttons ul.togglers li a.card-toggler:not(.current):hover {
+.card-switch.big-buttons ul.togglers li a.card-toggler:not(.current):hover,
+.card-switch ul.togglers.background li a.card-toggler:not(.current):hover {
     background-color: rgba(var(--primary-button-color), 0.15);
 }
 
