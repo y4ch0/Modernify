@@ -10,8 +10,7 @@
     <script src="scrollspy.js"></script>
     <script src="modernify.accessibility.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.0/dist/css/modernify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.0/src/css/modernify.css">
     <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.0/dist/js/modernify.bundle.js"></script>
     <style>
         body {
@@ -964,8 +963,9 @@
                         id 1</button>
                     <button class="button primary dialog-open" data-target="#dialog2" data-toggle="modal">Open dialog
                         id 2</button>
-                    <button class="button primary dialog-open" data-target="#dialog3" data-toggle="modal">Open dialog
-                        id 3</button>
+                    <a href="#" class="button primary dialog-open" data-target="#dialog3" data-toggle="modal">Open
+                        dialog
+                        id 3</a>
                     <dialog id="dialog1">
                         <div class="body">
                             <h3>Dialog with id 1</h3>
@@ -1384,6 +1384,38 @@
                         </div>
                     </div>
                     <hr />
+                    <h2>Togglers with background</h2>
+                    <div class="card-switch">
+                        <ul class="togglers background">
+                            <li><a href="#" class="card-toggler">Zakładka 1</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 2</a></li>
+                            <li><a href="#" class="card-toggler">Zakładka 3</a></li>
+                        </ul>
+                        <div class="cards">
+                            <div class="card-item">
+                                <h1>to jest pierwsza karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest druga karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                            <div class="card-item">
+                                <h1>to jest trzecia karta</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum, iusto unde
+                                    dolorum aperiam hic quas explicabo culpa labore molestias!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
                     <div class="card-switch">
                         <ul class="togglers">
                             <li><a href="#" class="card-toggler">Zakładka 1</a></li>
@@ -1464,8 +1496,8 @@
             <div class="row">
                 <div class="col">
                     <div class="slider">
-                        <button class="slider-button swipe-left"></button>
-                        <button class="slider-button swipe-right"></button>
+                        <button class="slider-button swipe-left swipe-left-styled"></button>
+                        <button class="slider-button swipe-right swipe-right-styled"></button>
                         <div class="slides">
                             <div class="slide">
                                 <h1>Lorem ipsum dolor sit amet.</h1>
@@ -1492,8 +1524,8 @@
             <div class="row">
                 <div class="col">
                     <div class="slider">
-                        <button class="slider-button outlined swipe-left"></button>
-                        <button class="slider-button outlined swipe-right"></button>
+                        <button class="slider-button swipe-left swipe-left-styled outlined"></button>
+                        <button class="slider-button swipe-right swipe-right-styled outlined"></button>
                         <div class="slides">
                             <div class="slide">
                                 <h1>Lorem ipsum dolor sit amet.</h1>
