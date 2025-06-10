@@ -1993,15 +1993,15 @@ div.spinner span.spinner::after {
     outline: 5px auto -webkit-focus-ring-color;
 }
 
-.swipe-left {
+.slider-button.swipe-left-styled {
     left: 10px;
 }
 
-.swipe-right {
+.slider-button.swipe-right-styled {
     right: 10px;
 }
 
-.swipe-right::after {
+.slider-button.swipe-right-styled::after {
     content: "";
     border: 0.3rem solid rgb(var(--primary-button-color));
     border-left: none;
@@ -2013,7 +2013,7 @@ div.spinner span.spinner::after {
     rotate: 45deg;
 }
 
-.swipe-left::after {
+.slider-button.swipe-left-styled::after {
     content: "";
     border: 0.3rem solid rgb(var(--primary-button-color));
     border-left: none;
@@ -2179,10 +2179,10 @@ label.switch input.switch-toggler {
     border: none;
     border-radius: 2rem;
     width: 2.55rem;
-    height: 1.5rem;
+    height: fit-content;
     min-height: 1.5rem;
     min-width: 2.55rem;
-    padding: 0.2rem;
+    padding: 3px;
     background-color: rgba(var(--text-default-color), 0.3);
     position: relative;
     transition: background-color 100ms ease;
@@ -2190,8 +2190,8 @@ label.switch input.switch-toggler {
 
 label.switch input.switch-toggler::before {
     content: "";
-    width: 1.1rem;
-    height: 1.1rem;
+    width: calc(1.5rem - 6px);
+    height: calc(1.5rem - 6px);
     background-color: white;
     border-radius: 1rem;
     transition: all 100ms ease;
@@ -2203,7 +2203,7 @@ label.switch input.switch-toggler:checked {
 }
 
 label.switch input.switch-toggler:checked::before {
-    transform: translateX(calc(100% - 1px));
+    transform: translateX(calc(100% - 1.5px));
 }
 
 nav.inline-nav {
