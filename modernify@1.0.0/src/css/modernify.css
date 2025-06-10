@@ -2176,12 +2176,12 @@ label.switch input.switch-toggler {
     display: flex;
     align-content: center;
     justify-content: start;
-    border: none;
+    border: 0;
     border-radius: 2rem;
-    width: 2.55rem;
+    width: 2.5rem;
     height: fit-content;
-    min-height: 1.5rem;
-    min-width: 2.55rem;
+    min-height: fit-content;
+    min-width: 2.5rem;
     padding: 3px;
     background-color: rgba(var(--text-default-color), 0.3);
     position: relative;
@@ -2203,7 +2203,7 @@ label.switch input.switch-toggler:checked {
 }
 
 label.switch input.switch-toggler:checked::before {
-    transform: translateX(calc(100% - 1.5px));
+    transform: translateX(calc(100% - 2px));
 }
 
 nav.inline-nav {
