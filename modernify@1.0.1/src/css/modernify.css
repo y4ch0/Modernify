@@ -2357,10 +2357,11 @@ nav.inline-nav .inline-nav-collapse {
 
     nav .wrapper .logo button.sidenav-collapse {
         position: static;
+        display: flex;
     }
 
-    main nav.side-nav {
-        display: flex;
+    main nav.side-nav.collapsing {
+        display: none;
         flex-direction: row;
         align-items: end;
         width: 100vw !important;
@@ -2371,7 +2372,7 @@ nav.inline-nav .inline-nav-collapse {
         border-radius: 0;
     }
 
-    main nav.side-nav ul.nav {
+    main nav.side-nav.collapsing ul.nav {
         height: 90vh;
         flex-direction: column;
         align-items: center;
@@ -2422,7 +2423,7 @@ nav.inline-nav .inline-nav-collapse {
         display: none;
     }
 
-    nav.side-nav ul.nav {
+    nav.side-nav.collapsing ul.nav {
         display: flex;
         padding: 0 1rem;
     }
@@ -2434,8 +2435,10 @@ nav.inline-nav .inline-nav-collapse {
         z-index: inherit;
     }
 
+
+
     nav ul.nav button.nav-collapse,
-    nav button.sidenav-collapse {
+    nav.side-nav button.sidenav-collapse {
         display: flex;
     }
 
