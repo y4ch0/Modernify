@@ -48,6 +48,10 @@
     --form-progress-bar-color: var(--primary-color);
     --form-progress-step-background: var(--primary-button-color);
     --form-progress-step-text: var(--primary-button-text);
+    /* Shadow patterns */
+    --shadow-s: 0 0.125rem 0.25rem rgba(var(--text-default-color), 0.075);
+    --shadow-m: 0 0.5rem 1rem rgba(var(--text-default-color), 0.15);
+    --shadow-l: 0 1rem 3rem rgba(var(--text-default-color), 0.175);
     interpolate-size: allow-keywords;
 }
 
@@ -2271,6 +2275,12 @@ nav.inline-nav .inline-nav-collapse {
     background-color: rgb(var(--primary-button-color));
     color: rgb(var(--primary-button-text));
 }
+
+/* Shadow */
+.shadow-none { box-shadow: none !important; }
+.shadow-s { box-shadow: var(--shadow-s) !important; }
+.shadow-m { box-shadow: var(--shadow-m) !important; }
+.shadow-l { box-shadow: var(--shadow-l) !important; }
 
 @keyframes dropdown-show {
     0% {
