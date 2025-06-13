@@ -735,14 +735,6 @@ p {
     margin: 0.4rem 0;
 }
 
-p.s-margin {
-    margin: 0.15rem 0;
-}
-
-p.xs-margin {
-    margin: 0;
-}
-
 h1,
 h2,
 h3,
@@ -1287,6 +1279,30 @@ dialog[open] div.body {
     animation: modal_fadein_1 0.3s ease forwards;
 }
 
+dialog div.body .dialog-close.dialog-close-styled {
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    opacity: 0.75;
+    font-weight: 350;
+    cursor: pointer;
+    border: none;
+    color: rgb(var(--text-default-color));
+}
+
+dialog div.body .dialog-close.dialog-close-styled:hover {
+    background-color: rgba(var(--text-default-color), 0.1);
+}
+
 .alert {
     width: 100%;
     padding: 1rem 1.25rem;
@@ -1485,8 +1501,13 @@ kbd {
     gap: 0;
 }
 
+.button-group.fit-text {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
 .button-group.fit-text .button {
-    width: fit-content;
+    width: max-content !important;
 }
 
 .button-group .button {
@@ -1541,30 +1562,6 @@ kbd {
     100% {
         transform: scale(1);
     }
-}
-
-dialog div.body .dialog-close.dialog-close-styled {
-    position: absolute;
-    right: 0.25rem;
-    top: 0.25rem;
-    font-size: 2rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.2rem;
-    line-height: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    opacity: 0.75;
-    font-weight: 350;
-    cursor: pointer;
-    border: none;
-    color: rgb(var(--text-default-color));
-}
-
-dialog div.body .dialog-close.dialog-close-styled:hover {
-    background-color: rgba(var(--text-default-color), 0.1);
 }
 
 progress {
@@ -2552,8 +2549,7 @@ nav.inline-nav .inline-nav-collapse {
         flex-direction: column;
     }
 
-    .button-group .button,
-    .button-group.fit-text {
+    .button-group .button {
         width: 100% !important;
     }
 
