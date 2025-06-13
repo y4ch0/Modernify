@@ -10,7 +10,8 @@
     <script src="scrollspy.js"></script>
     <script src="modernify.accessibility.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/src/css/modernify.css">
+    <link rel="stylesheet" href="modernify@1.0.1/src/css/modernify.css">
+    <link rel="stylesheet" href="modernify@1.0.1/src/css/modernify-utility.css">
     <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/js/modernify.bundle.js"></script>
     <style>
         body {
@@ -357,6 +358,10 @@
                         <input type="text" class="form-control" value="Jan" />
                     </div>
                     <div class="form-group">
+                        <label>Imię</label>
+                        <input type="text" class="form-control small" value="Jan" />
+                    </div>
+                    <div class="form-group">
                         <label>Data urodzenia</label>
                         <input type="date" class="form-control" value="1987-01-01" />
                     </div>
@@ -442,6 +447,15 @@
                         <div>
                             <input type="password" class="form-control" value="TestoweHasło123" id="password-example" />
                             <button class="button primary" type="submit" id="show-password-example">Pokaż hasło</button>
+                        </div>
+                    </div>
+                    <div class="form-group inline">
+                        <label>Hasło</label>
+                        <div>
+                            <input type="password" class="form-control small" value="TestoweHasło123"
+                                id="password-example" />
+                            <button class="button small primary" type="submit" id="show-password-example">Pokaż
+                                hasło</button>
                         </div>
                     </div>
                 </div>
@@ -1035,7 +1049,7 @@
             <div class="row">
                 <div class="col">
                     <h3 id="alert">Alert</h3>
-                    <div class="alert slim error">
+                    <div class="alert small error">
                         <div class="data">
                             <p>Wystąpił błąd przy zapisie pliku.</p>
                         </div>
@@ -1068,7 +1082,7 @@
                                 quae quo ex minus laudantium nostrum! Sint non cum beatae eveniet nemo esse.</p>
                         </div>
                     </div>
-                    <div class="alert slim outlined error">
+                    <div class="alert small outlined error">
                         <div class="data">
                             <p>Wystąpił błąd przy zapisie pliku.</p>
                         </div>
@@ -1161,7 +1175,7 @@
                         <small>30%</small>
                     </p>
                     <p>
-                        <progress class="slim" max="100" value="30">30%</progress>
+                        <progress class="small" max="100" value="30">30%</progress>
                         <small>30%</small>
                     </p>
                 </div>
@@ -1476,8 +1490,8 @@
                         </div>
                         <div class="timespan">Dzisiaj, 11:25</div>
                     </a>
-                    <h4>Message inbox card (slim)</h4>
-                    <a class="card message-box mb-slim">
+                    <h4>Message inbox card (small)</h4>
+                    <a class="card message-box mb-small">
                         <div class="sender">
                             <img src="https://placehold.co/512x512" alt="" class="sender-image" />
                             <span class="sender-name">Adam Abacki</span>
@@ -1553,65 +1567,33 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <h2>Urządzenia w sieci</h2>
-                    <div class="table">
-                        <table class="items-group">
-                            <tr>
-                                <th>lp.</th>
-                                <th>Typ urządzenia</th>
-                                <th>Nazwa urządzenia</th>
-                                <th>Adres MAC</th>
-                            </tr>
-                            <tr data-href="https://google.com">
-                                <td>1</td>
-                                <td>Telefon</td>
-                                <td>Apple iPhone 13 Pro 128GB</td>
-                                <td>B0:AE:E7:5D:7A:32</td>
-                            </tr>
-                            <tr data-href="https://google.com">
-                                <td>2</td>
-                                <td>Telefon</td>
-                                <td>Apple iPhone 13 Pro 128GB</td>
-                                <td>B0:AE:E7:5D:7A:32</td>
-                            </tr>
-                            <tr data-href="https://google.com">
-                                <td>3</td>
-                                <td>Telefon</td>
-                                <td>Apple iPhone 13 Pro 128GB</td>
-                                <td>B0:AE:E7:5D:7A:32</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <h2>Urządzenia w sieci</h2>
-                    <div class="card no-border shadow no-padding">
-                        <div class="table">
-                            <table class="items-group">
-                                <tr>
-                                    <th>lp.</th>
-                                    <th>Typ urządzenia</th>
-                                    <th>Nazwa urządzenia</th>
-                                    <th>Adres MAC</th>
-                                </tr>
-                                <tr data-href="https://google.com">
-                                    <td>1</td>
-                                    <td>Telefon</td>
-                                    <td>Apple iPhone 13 Pro 128GB</td>
-                                    <td>B0:AE:E7:5D:7A:32</td>
-                                </tr>
-                                <tr data-href="https://google.com">
-                                    <td>2</td>
-                                    <td>Telefon</td>
-                                    <td>Apple iPhone 13 Pro 128GB</td>
-                                    <td>B0:AE:E7:5D:7A:32</td>
-                                </tr>
-                                <tr data-href="https://google.com">
-                                    <td>3</td>
-                                    <td>Telefon</td>
-                                    <td>Apple iPhone 13 Pro 128GB</td>
-                                    <td>B0:AE:E7:5D:7A:32</td>
-                                </tr>
-                            </table>
+                    <div class="items-group">
+                        <div class="items-group-item current">
+                            <p>Lorem ipsum dolor sit amet</p>
                         </div>
+                        <div class="items-group-item">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <div class="items-group-item">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <div class="items-group-item">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <div class="items-group-item">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                    <div class="items-group mt-4">
+                        <a href="#" class="items-group-item card current">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </a>
+                        <a href="#" class="items-group-item card">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </a>
+                        <a href="#" class="items-group-item card">
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </a>
                     </div>
                 </div>
             </div>
