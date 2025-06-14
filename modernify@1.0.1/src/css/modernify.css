@@ -986,8 +986,8 @@ div.dropdown ul.show {
 
 .card.no-border hr.card-divider,
 .block-cards.no-border .card hr.card-divider {
-    width: calc(100% + 2rem + 2px);
-    margin-left: calc(-1rem - 1px);
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
 }
 
 .card.content-space-between {
@@ -1012,8 +1012,8 @@ div.dropdown ul.show {
 }
 
 .card.no-border .card__header {
-    width: calc(100% + 2rem + 2px);
-    margin: calc(-1rem - 1px);
+    width: calc(100% + 2rem);
+    margin: -1rem;
     margin-bottom: 0.25rem;
 }
 
