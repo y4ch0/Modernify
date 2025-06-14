@@ -1,6 +1,8 @@
 // /src/js/slider.js
 export function initSliders() {
     document.querySelectorAll(".slider").forEach((slider) => {
+        if (slider.querySelector(".current-slide-indicator")) return;
+
         const slidesContainer = slider.querySelector(".slides");
         const slides = slider.querySelectorAll(".slide-item");
         const prevButton = slider.querySelector(".swipe-left");
