@@ -1945,7 +1945,7 @@ div.spinner span.spinner::after {
     transition: transform 0.5s ease-in-out;
 }
 
-.slider .slides .slide {
+.slider .slides .slide-item {
     min-width: 100%;
     overflow-x: hidden;
     display: flex;
@@ -1954,7 +1954,7 @@ div.spinner span.spinner::after {
     padding: 0 5rem;
 }
 
-.slider .slides .slide img {
+.slider .slides .slide-item img {
     width: calc(100% + 10rem) !important;
     max-width: unset !important;
     margin-left: -5rem;
@@ -2471,7 +2471,7 @@ nav.inline-nav .inline-nav-collapse {
         font-size: 1.5rem;
     }
 
-    .slider .slides .slide {
+    .slider .slides .slide-item {
         padding: 0 3rem;
     }
 }
