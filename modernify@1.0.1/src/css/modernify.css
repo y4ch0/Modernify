@@ -2340,7 +2340,7 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-2);
     }
 
-    main nav.side-nav {
+    main nav.side-nav:not(.collapsing) {
         width: var(--wrapper-width-bp-2);
         position: static;
         z-index: 1;
