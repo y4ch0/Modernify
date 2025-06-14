@@ -194,7 +194,7 @@ function initCardSwitch() {
 function initSliders() {
     document.querySelectorAll(".slider").forEach((slider) => {
         const slidesContainer = slider.querySelector(".slides");
-        const slides = slider.querySelectorAll(".slide");
+        const slides = slider.querySelectorAll(".slide-item");
         const prevButton = slider.querySelector(".swipe-left");
         const nextButton = slider.querySelector(".swipe-right");
         let currentIndex = 0;
