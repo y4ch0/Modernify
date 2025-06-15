@@ -533,6 +533,7 @@ form p {
     border: 1px solid rgba(var(--default-border-color), 0.3);
     background-color: rgb(var(--background-color));
     padding: 0.45rem 0.85rem;
+    box-shadow: none;
     margin: 0;
     background-clip: padding-box;
     display: block;
@@ -540,7 +541,8 @@ form p {
     line-height: 1.5 !important;
     outline: 3px solid transparent;
     outline-offset: -1px;
-    transition: outline 80ms ease-in-out;
+    transition: all 80ms ease-in-out;
+    transition-property: outline, box-shadow;
 }
 
 .form-control.no-border {
@@ -553,6 +555,7 @@ form p {
 
 .form-control:focus {
     outline-color: rgb(var(--primary-color));
+    box-shadow: 0 0 0 4px #fff;
 }
 
 .form-control:is(input[type="date"], input[type="file"]) {
@@ -2608,40 +2611,40 @@ nav.inline-nav .inline-nav-collapse {
         flex-direction: column;
     }
 
-    .button-group {
+    .button-group:not(.fit-text) {
         flex-direction: column;
     }
 
-    .button-group .button {
+    .button-group:not(.fit-text) .button {
         width: 100% !important;
     }
 
-    .button-group .button:first-child {
+    .button-group:not(.fit-text) .button:first-child {
         border-radius: 0.3rem 0.3rem 0 0;
     }
 
-    .button-group .button.pill-rounded:first-child {
+    .button-group:not(.fit-text) .button.pill-rounded:first-child {
         border-radius: 1rem 1rem 0 0 !important;
     }
 
-    .button-group .button.pill-rounded:last-child {
+    .button-group:not(.fit-text) .button.pill-rounded:last-child {
         border-radius: 0 0 1rem 1rem !important;
     }
 
-    .button-group .button.l-radius:first-child {
+    .button-group:not(.fit-text) .button.l-radius:first-child {
         border-radius: 0.5rem 0.5rem 0 0 !important;
     }
 
-    .button-group .button.l-radius:last-child {
+    .button-group:not(.fit-text) .button.l-radius:last-child {
         border-radius: 0 0 0.5rem 0.5rem !important;
     }
 
-    .button-group .button.outlined:not(:last-child) {
+    .button-group:not(.fit-text) .button.outlined:not(:last-child) {
         border-right: 1px solid rgb(var(--primary-color));
         border-bottom: none;
     }
 
-    .button-group .button:last-child {
+    .button-group:not(.fit-text) .button:last-child {
         border-radius: 0 0 0.3rem 0.3rem;
     }
 
