@@ -611,7 +611,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .form-check-box:checked {
-    --bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    --bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='none'%3E%3Cpath fill='%23fff' d='M27.672 51.53c-1.58 0-2.878-.595-3.898-1.784l-11.09-13.04c-.487-.53-.825-1.04-1.011-1.526a4.857 4.857 0 0 1-.259-1.59c0-1.232.417-2.256 1.25-3.072.832-.817 1.887-1.225 3.165-1.225 1.363 0 2.497.523 3.402 1.568l8.355 9.99 16.688-26.146c.531-.816 1.091-1.39 1.68-1.719.602-.343 1.335-.515 2.196-.515 1.249 0 2.297.408 3.144 1.224.861.802 1.292 1.82 1.292 3.051 0 .444-.08.91-.237 1.397a5.929 5.929 0 0 1-.732 1.439L31.742 49.467c-.92 1.375-2.276 2.062-4.07 2.062Z'/%3E%3C/svg%3E");
+
     background-color: rgb(var(--primary-color));
     border-color: rgb(var(--primary-color));
 }
@@ -623,7 +624,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .form-check-box {
-    border-radius: .25em;
+    border-radius: 0.25rem;
     flex-shrink: 0;
     vertical-align: top;
     -webkit-appearance: none;
@@ -2236,32 +2237,22 @@ label.switch input.switch-toggler {
     justify-content: start;
     border: 0;
     border-radius: 2rem;
-    width: 2.5rem;
-    height: fit-content;
-    min-height: fit-content;
-    min-width: 2.5rem;
-    padding: 3px;
+    width: 2.65rem;
+    min-width: 2.65rem;
+    height: 1.55rem;
     background-color: rgba(var(--text-default-color), 0.3);
     position: relative;
-    transition: background-color 100ms ease;
-}
-
-label.switch input.switch-toggler::before {
-    content: "";
-    width: calc(1.5rem - 6px);
-    height: calc(1.5rem - 6px);
-    background-color: white;
-    border-radius: 1rem;
-    transition: all 100ms ease;
-    transition-property: transform;
+    transition: all 125ms ease;
+    transition-property: background-position, background-color;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Ccircle cx='11' cy='11' r='8' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
 }
 
 label.switch input.switch-toggler:checked {
     background-color: rgb(var(--primary-color));
-}
-
-label.switch input.switch-toggler:checked::before {
-    transform: translateX(calc(100% - 2px));
+    background-position: right center;
 }
 
 nav.inline-nav {
