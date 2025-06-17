@@ -645,9 +645,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-check-radio {
     width: 1.05rem !important;
     height: 1.05rem !important;
-    max-width: 1.05rem;
-    max-height: 1.05rem;
-    aspect-ratio: 1/1 !important;
+    max-width: 1.05rem !important;
+    max-height: 1.05rem !important;
+    min-width: 1.05rem !important;
+    min-height: 1.05rem !important;
+    aspect-ratio: 1/1;
     margin: 0;
     padding: 0;
 }
