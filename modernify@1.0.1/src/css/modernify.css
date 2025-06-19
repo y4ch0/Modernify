@@ -541,8 +541,7 @@ form p {
     line-height: 1.5 !important;
     outline: 3px solid transparent;
     outline-offset: -1px;
-    transition: all 80ms ease-in-out;
-    transition-property: outline, box-shadow;
+
 }
 
 .form-control.no-border {
@@ -643,12 +642,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form-check-box,
 .form-check-radio {
-    width: 1.05rem !important;
-    height: 1.05rem !important;
-    max-width: 1.05rem !important;
-    max-height: 1.05rem !important;
-    min-width: 1.05rem !important;
-    min-height: 1.05rem !important;
+    display: flex;
+    width: 1rem !important;
+    height: 1rem !important;
     aspect-ratio: 1/1;
     margin: 0;
     padding: 0;
@@ -1481,7 +1477,7 @@ dialog div.body .dialog-close.dialog-close-styled:hover {
     width: auto;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    font-size: 0.85rem;
+    font-size: 0.85em;
     margin: 0.25rem 0.25rem 0.25rem 0;
     display: inline-block;
     background-color: rgba(var(--text-default-color), 0.1);
@@ -1691,8 +1687,8 @@ progress::-webkit-progress-value {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0.125rem;
-    left: -1.5rem;
+    top: 0;
+    left: -1.3rem;
     border: 0.2rem solid rgb(var(--default-border-color));
     font-weight: bold;
     border-radius: 1.5rem;
@@ -1701,9 +1697,9 @@ progress::-webkit-progress-value {
 .process-list ol.process-list li.step-item::after {
     content: "";
     width: 0.35rem;
-    height: calc(100% - 3rem);
+    height: calc(100% - 2.75rem);
     position: absolute;
-    top: 3rem;
+    top: 2.5rem;
     left: -0.5rem;
     background-color: rgb(var(--process-list-divider-color));
 }
