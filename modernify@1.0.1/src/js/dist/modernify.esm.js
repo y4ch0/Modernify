@@ -34,6 +34,17 @@ function initNavbar() {
             }
         });
     }
+
+    if (document.querySelector(".collapsing-nav")) {
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".collapsing-nav");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    }
 }
 
 // /src/js/dropdown.js
@@ -401,6 +412,14 @@ function initAll() {
     initScrollSpy();
 }
 
+function initModal() {
+    initModals();
+}
+
+function initSlider() {
+    initSliders();
+}
+
 // Auto-initialize for plain HTML
 if (typeof window !== "undefined") {
     window.MyFramework = {
@@ -422,4 +441,4 @@ if (typeof window !== "undefined") {
     }
 }
 
-export { initAll };
+export { initAll, initModal, initSlider };

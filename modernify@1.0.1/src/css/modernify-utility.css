@@ -153,6 +153,7 @@
 /* === Background / Border / Rounded === */
 .border-0 { border: 0 !important; }
 
+.rounded-0 { border-radius: 0 !important; }
 .rounded-1 { border-radius: calc(var(--spacer) * 0.25) !important; }
 .rounded-2 { border-radius: calc(var(--spacer) * 0.5) !important; }
 .rounded-3 { border-radius: var(--spacer) !important; }

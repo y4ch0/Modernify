@@ -34,4 +34,15 @@ export function initNavbar() {
             }
         });
     }
+
+    if (document.querySelector(".collapsing-nav")) {
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".collapsing-nav");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    }
 }

@@ -44,6 +44,7 @@
     --tab-switch-link-color: var(--primary-color);
     --accent-color: var(--primary-color);
     --dialog-border: none;
+    --collapsing-nav-start-color: 255, 255, 255;
     /* Form progress */
     --form-progress-bar-color: var(--primary-color);
     --form-progress-step-background: var(--primary-button-color);
@@ -251,6 +252,29 @@ nav ul.nav button.sidenav-collapse {
 nav button.nav-collapse img {
     width: 100%;
     opacity: 0.75;
+}
+
+nav.collapsing-nav {
+    background-color: transparent;
+    box-shadow: none;
+    transition: all 100ms ease;
+    transition-property: background-color, box-shadow;
+}
+
+nav.collapsing-nav.scrolled {
+    background-color: rgb(var(--background-color));
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 5px 8px 0px;
+}
+
+nav.collapsing-nav ul li a,
+nav.collapsing-nav ul li {
+    color: rgb(var(--collapsing-nav-start-color));
+    transition: color 100ms ease;
+}
+
+nav.collapsing-nav.scrolled ul li a,
+nav.collapsing-nav.scrolled ul li {
+    color: rgb(var(--navbar-text-color));
 }
 
 main {
