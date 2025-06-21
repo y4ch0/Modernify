@@ -98,7 +98,7 @@
 
 /* === Flex Utilities === */
 .flex-column { flex-direction: column !important; }
-.flex-row { flex-direction: row !important; }
+.flex-row, .flex-l-row, .flex-m-row, .flex-s-row { flex-direction: row !important; }
 .justify-content-start { justify-content: start !important; }
 .justify-content-center { justify-content: center !important; }
 .justify-content-between { justify-content: space-between !important; }
@@ -168,3 +168,21 @@
 .opacity-50 { opacity: 0.5 !important; }
 .opacity-25 { opacity: 0.25 !important; }
 .opacity-0 { opacity: 0 !important; }
+
+@media screen and (max-width: 1280px) {
+    .flex-l-row {
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .flex-m-row {
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-s-row {
+        flex-direction: column !important;
+    }
+}
