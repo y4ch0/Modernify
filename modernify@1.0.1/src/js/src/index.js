@@ -19,14 +19,6 @@ export function initAll() {
     initScrollSpy();
 }
 
-export function initModal() {
-    initModals();
-}
-
-export function initSlider() {
-    initSliders();
-}
-
 // Auto-initialize for plain HTML
 if (typeof window !== "undefined") {
     window.MyFramework = {

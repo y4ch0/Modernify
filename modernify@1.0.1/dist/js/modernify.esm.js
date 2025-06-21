@@ -412,14 +412,6 @@ function initAll() {
     initScrollSpy();
 }
 
-function initModal() {
-    initModals();
-}
-
-function initSlider() {
-    initSliders();
-}
-
 // Auto-initialize for plain HTML
 if (typeof window !== "undefined") {
     window.MyFramework = {
@@ -441,4 +433,4 @@ if (typeof window !== "undefined") {
     }
 }
 
-export { initAll, initModal, initSlider };
+export { initAll };
