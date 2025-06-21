@@ -994,7 +994,7 @@ div.dropdown ul {
     font-weight: normal;
     background-color: rgb(var(--dropdown-background-color));
     padding: 0.25rem 0;
-    border: 1px solid rgba(var(--default-border-color), 0.05);
+    border: 1px solid rgba(var(--default-border-color), 0.065);
     border-radius: 0.35rem;
     width: max-content;
     max-width: 300px;
