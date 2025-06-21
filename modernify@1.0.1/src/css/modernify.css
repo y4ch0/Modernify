@@ -984,7 +984,6 @@ div.dropdown {
 div.dropdown ul {
     display: none;
     list-style: none;
-    padding: 0;
     margin: 0;
     position: absolute;
     top: 100%;
@@ -994,12 +993,12 @@ div.dropdown ul {
     z-index: 99;
     font-weight: normal;
     background-color: rgb(var(--dropdown-background-color));
-    padding: 0.25rem;
-    border: 1px solid rgba(var(--default-border-color), 0.1);
+    padding: 0.25rem 0;
+    border: 1px solid rgba(var(--default-border-color), 0.05);
     border-radius: 0.35rem;
     width: max-content;
     max-width: 300px;
-    box-shadow: 0 0 2px rgba(var(--text-default-color), 0.12), 0 8px 16px rgba(var(--text-default-color), 0.14);
+    box-shadow: var(--shadow-s);
 }
 
 div.dropdown .toggler {
@@ -1024,13 +1023,13 @@ div.dropdown .toggler::after {
 }
 
 div.dropdown ul li a {
-    padding: 0.25rem 0.5rem !important;
+    padding: 0.35rem 0.5rem !important;
     display: flex;
     gap: 0.35rem;
-    color: rgba(var(--text-default-color), 0.8);
-    border-radius: 0.25rem;
-    font-weight: inherit;
+    color: rgba(var(--text-default-color), 0.8) !important;
+    font-weight: normal;
     font-size: 0.95rem;
+    transition: filter 100ms ease;
 }
 
 div.dropdown.primary ul li a {
@@ -1044,6 +1043,12 @@ div.dropdown.secondary ul li a {
 div.dropdown ul li a:hover {
     background-color: rgba(var(--text-default-color), 0.05);
     text-decoration: var(--link-default-decoration);
+}
+
+div.dropdown ul li a:active {
+    filter: brightness(0.85) !important;
+    transition: background-color 100ms ease;
+    background-color: rgba(var(--text-default-color), 0.1);
 }
 
 div.dropdown ul.show {
@@ -1310,7 +1315,7 @@ img {
 
 hr {
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.75rem 0;
     padding: 0;
     border: 1px solid rgba(var(--default-border-color), 0.2);
     border-bottom: none;
