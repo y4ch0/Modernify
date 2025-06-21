@@ -10,8 +10,9 @@
     <script src="scrollspy.js"></script>
     <script src="modernify.accessibility.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/css/modernify.min.css">
+    <!--<link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/css/modernify.min.css">-->
+    <link rel="stylesheet" href="modernify@1.0.1/src/css/modernify.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/css/modernify.utility.min.css">
     <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/js/modernify.bundle.js"></script>
@@ -40,6 +41,7 @@
             text-align: center;
             color: #fff;
         }
+
 
         @media screen and (max-width: 1024px) {
             body {
@@ -73,6 +75,7 @@
                             <li>
                                 <a href="#">Dropdown item</a>
                             </li>
+                            <hr class="my-1">
                             <li>
                                 <a href="#">Dropdown item</a>
                             </li>
@@ -353,6 +356,10 @@
                     <div class="form-group">
                         <label>Imię</label>
                         <input type="text" class="form-control" value="Jan" />
+                    </div>
+                    <div class="form-group">
+                        <label>Imię</label>
+                        <input type="text" class="form-control no-border hover-highlight" value="Jan" />
                     </div>
                     <div class="form-group">
                         <label>Imię</label>
@@ -1737,7 +1744,7 @@
                 <div class="col">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, obcaecati!</p>
                 </div>
-                <div class="vr responsive"></div>
+                <div class="vr"></div>
                 <div class="col">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, obcaecati!</p>
                 </div>
@@ -1745,7 +1752,7 @@
             <div class="row">
                 <div class="col">
                     <label class="form-control highlight">
-                        <input type="radio" name="product" value="1" checked />
+                        <input type="radio" class="form-check-radio" name="product" value="1" checked />
                         <div>
                             <h3>Produkt 1</h3>
                             <small>Opis produktu 1</small>
@@ -1755,7 +1762,7 @@
                 </div>
                 <div class="col">
                     <label class="form-control highlight">
-                        <input type="radio" name="product" value="2" />
+                        <input type="radio" class="form-check-radio" name="product" value="2" />
                         <div>
                             <h3>Produkt 2</h3>
                             <small>Opis produktu 2</small>
@@ -1765,7 +1772,7 @@
                 </div>
                 <div class="col">
                     <label class="form-control highlight">
-                        <input type="radio" name="product" value="3" />
+                        <input type="radio" class="form-check-radio" name="product" value="3" />
                         <div>
                             <h3>Produkt 3</h3>
                             <small>Opis produktu 3</small>
