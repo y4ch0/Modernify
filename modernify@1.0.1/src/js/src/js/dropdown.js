@@ -2,6 +2,8 @@
 export function initDropdowns() {
     const handleClick = (event) => {
         const toggler = event.target.closest('[data-toggle="dropdown"]');
+        const clickedInsideDropdown = event.target.closest(".dropdown");
+
         if (toggler) {
             event.preventDefault();
             const dropdown = toggler.nextElementSibling;
@@ -10,6 +12,14 @@ export function initDropdowns() {
             }
         } else {
             document.querySelectorAll("ul.show").forEach((dropdown) => {
+                const parentDropdown = dropdown.closest(".dropdown");
+                const autoClose = parentDropdown?.getAttribute("data-auto-close");
+
+                // If the clicked target is inside this dropdown and auto-close is "outside", skip closing
+                if (autoClose === "outside" && clickedInsideDropdown === parentDropdown) {
+                    return;
+                }
+
                 dropdown.classList.remove("show");
             });
         }
