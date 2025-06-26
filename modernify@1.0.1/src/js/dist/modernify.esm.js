@@ -112,7 +112,7 @@ function initModals() {
 
     function animateClose(dialog) {
         const body = dialog.querySelector(".body");
-        const keyFrame = new KeyframeEffect(body, [{ transform: "scale(1)" }, { transform: "scale(0.8)" }], {
+        const keyFrame = new KeyframeEffect(body, [{ transform: "scale(1)" }, { transform: "scale(0.85)" }], {
             duration: 300,
             easing: "ease",
         });
