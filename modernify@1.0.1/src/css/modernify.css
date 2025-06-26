@@ -609,9 +609,13 @@ form p {
     box-shadow: 0 0 0 2px #fff;
 }
 
-.form-control:is(input[type="date"], input[type="file"]) {
+.form-control:is(input[type="date"], input[type="file"], input[type="time"]) {
     padding: calc(0.45rem - 1px) 0.85rem;
     appearance: none;
+}
+
+.form-control:is(input[type="date"], input[type="time"]) {
+    cursor: text !important;
 }
 
 .form-control:is(select) {
@@ -752,6 +756,7 @@ input[type="range"] {
     margin-bottom: 1rem;
     accent-color: rgb(var(--accent-color));
     outline-offset: 1px !important;
+    cursor: pointer;
 }
 
 input[type="radio"],
