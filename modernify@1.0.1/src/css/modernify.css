@@ -1120,6 +1120,7 @@ div.dropdown ul.show {
     color: rgb(var(--text-default-color));
     border-radius: 0.4rem;
     outline-offset: -1px;
+    outline-color: rgb(var(--card-outline-color));
     transition: outline 80ms ease-in-out;
 }
 
@@ -1396,7 +1397,7 @@ dialog {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.45);
     border: none;
     z-index: 9999;
     padding: 0;
