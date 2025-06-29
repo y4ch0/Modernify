@@ -1435,12 +1435,6 @@ dialog div.body {
     position: relative;
 }
 
-dialog div.body p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.35rem 0;
-}
-
 dialog[open] div.body {
     animation: modal_fadein_1 0.3s ease forwards;
 }
