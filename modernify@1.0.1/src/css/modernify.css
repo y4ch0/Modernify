@@ -1081,7 +1081,7 @@ div.dropdown ul li a {
     padding: 0.35rem 0.5rem !important;
     display: flex;
     gap: 0.35rem;
-    color: rgba(var(--text-default-color), 0.8) !important;
+    color: rgb(var(--text-default-color)) !important;
     font-weight: normal;
     font-size: 0.95rem;
     transition: filter 100ms ease;
