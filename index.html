@@ -221,7 +221,7 @@
             </ul>
             <button class="sidenav-collapse close">&times;</button>
         </nav>
-        <div class="wrapper">
+        <div class="wrapper" id="sidenav-dependent-demo">
             <nav class="row inline-nav">
                 <div class="logo">
                     <a href="#" class="website-logo">
@@ -710,18 +710,18 @@
                         <a class="button outlined toggler" title="No priority color theme set"
                             data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
                         </ul>
                     </div>
                     <div class="dropdown primary">
                         <a class="button primary toggler" title="Primary priority color theme set"
                             data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
                         </ul>
                     </div>
                     <div class="dropdown secondary">
@@ -729,9 +729,18 @@
                             data-toggle="dropdown">Dropdown
                             toggler</a>
                         <ul>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown" data-auto-close="outside">
+                        <a class="button secondary toggler" title="Secondary priority color theme set"
+                            data-toggle="dropdown">Disable closing on click</a>
+                        <ul>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1809,6 +1818,9 @@
                 <div class="col">
                     <a href="#" id="sidenav-toggler" class="button primary">Toggle sidenav</a>
                     <a href="#" id="sidenav-class-toggler" class="button primary">Toggle sidenav inline style</a>
+                    <a href="#" id="sidenav-dependent-demo-toggler" class="button primary">Toggle sidenav-dependent
+                        demo</a>
+                    <a href="#" id="scrollspy-toggler" class="button primary">Aside toggler</a>
                 </div>
             </div>
             <div class="row">
@@ -1896,6 +1908,14 @@
             e.preventDefault();
             $(".side-nav").toggleClass('inline');
         });
+        $("#sidenav-dependent-demo-toggler").on("click", (e) => {
+            e.preventDefault();
+            $("#sidenav-dependent-demo").toggleClass("sidenav-dependent")
+        })
+        $("#scrollspy-toggler").on("click", (e) => {
+            e.preventDefault();
+            $("#aside").toggle();
+        })
     </script>
 </body>
 

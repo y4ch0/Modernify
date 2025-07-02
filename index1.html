@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modernify@1.0.0/src/css/modernify.css">
+    <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.0/dist/js/modernify.bundle.js"></script>
+    <style>
+        :root {
+            --root-font: "Rubik", sans-serif;
+        }
+
+        main {
+            flex-direction: column;
+        }
+
+        .row .wrapper {
+            flex-direction: row;
+        }
+
+        .row .wrapper .col {
+            width: 100%;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav.collapsing-nav {
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .row .wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="collapsing-nav">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#" class="website-logo">
+                    <img src="logo.svg" alt="">
+                </a>
+            </div>
+            <ul id="nav-menu" class="nav">
+                <button class="nav-collapse">×</button>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="toggler">Navigation link</a>
+                        <ul>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <button class="nav-collapse">≡</button>
+        </div>
+    </nav>
+    <main>
+
+        <div class="row">
+            <div class="wrapper">
+                <div class="col">
+                    <h1>Bezpieczne dane</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+                <div class="col">
+                    <h1>Bogaty wybór</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+                <div class="col">
+                    <h1>Stale rozwijane</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: rgb(12, 14, 107);color: #fff;">
+            <div class="wrapper">
+                <div class="col">
+                    <h1>Dane przyszłości</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="wrapper">
+                <div class="col">
+                    <h1>Bezpieczne dane</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+                <div class="col">
+                    <h1>Bogaty wybór</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+                <div class="col">
+                    <h1>Stale rozwijane</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: rgb(240, 240, 240);">
+            <div class="wrapper">
+                <div class="col">
+                    <h1>Dane przyszłości</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="wrapper">
+                <div class="col">
+                    <h1>Bezpieczne dane</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius molestias consectetur optio eum!
+                        Expedita aut, tempora neque, aperiam quod asperiores vitae earum ducimus ut doloribus magni
+                        delectus, alias ab eos!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
