@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -49,19 +49,39 @@
             }
         }
     </style>
+    <style>
+        [data-theme="dark"] {
+            --background-color: 18, 18, 21;
+            --text-default-color: 247, 247, 248;
+            --sidenav-text-color: var(--text-default-color);
+            --sidenav-accent-color: 247, 247, 248;
+
+            --primary-color: 51, 95, 255;
+            --primary-button-color-hover: 42, 79, 211;
+
+            --secondary-color: 247, 247, 248;
+            --secondary-button-color: var(--secondary-color);
+            --secondary-button-text: var(--background-color);
+            --secondary-button-color-hover: 217, 217, 218;
+
+            --link-color: 61, 164, 255;
+            --default-border-color: var(--text-default-color);
+            --dialog-border: 1px solid rgba(var(--text-default-color), 0.2)
+        }
+    </style>
 </head>
 
 <body>
     <nav>
         <div class="wrapper">
             <div class="logo">
-                <button class="sidenav-collapse"></button>
+                <button class="sidenav-collapse">&ctdot;</button>
                 <a href="#" class="website-logo">
                     <img src="logo.svg" alt="" />
                 </a>
             </div>
             <ul id="nav-menu" class="nav">
-                <button class="nav-collapse close"></button>
+                <button class="nav-collapse close">&times;</button>
                 <li><a href="#">Navigation link</a></li>
                 <li><a href="#">Navigation link</a></li>
                 <li><a href="#">Navigation link</a></li>
@@ -83,7 +103,7 @@
                     </div>
                 </li>
             </ul>
-            <button class="nav-collapse"></button>
+            <button class="nav-collapse">&equiv;</button>
         </div>
     </nav>
     <header class="website-warning">
@@ -199,7 +219,7 @@
                     </ul>
                 </li>
             </ul>
-            <button class="sidenav-collapse close"></button>
+            <button class="sidenav-collapse close">&times;</button>
         </nav>
         <div class="wrapper">
             <nav class="row inline-nav">
@@ -372,6 +392,10 @@
                     <div class="form-group">
                         <label>Waga (kg)</label>
                         <input type="number" class="form-control" value="75" />
+                    </div>
+                    <div class="form-group">
+                        <label>Godzina</label>
+                        <input type="time" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label>Zdjęcie</label>
@@ -1021,7 +1045,7 @@
             <div class="row">
                 <div class="col">
                     <h3 id="image">Image</h3>
-                    <img src="https://placehold.co/1920x200" />
+                    <img src="https://placehold.co/1920x200" alt="" />
                 </div>
             </div>
             <div class="row">
@@ -1574,16 +1598,16 @@
                                 <p><a href="#" class="button primary">Przeczytaj</a></p>
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                         </div>
                     </div>
@@ -1602,16 +1626,16 @@
                                 <p><a href="#" class="button primary">Przeczytaj</a></p>
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                         </div>
                     </div>
