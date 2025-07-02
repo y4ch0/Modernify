@@ -439,6 +439,10 @@ footer .wrapper {
     width: var(--wrapper-width);
 }
 
+main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
+    margin-left: calc(calc(100vw - var(--wrapper-width) - var(--sidenav-width)) / 2);
+}
+
 *:is(.button, button, input[type="submit"], input[type="reset"], a):active {
     filter: brightness(0.85);
 }
@@ -604,6 +608,10 @@ form p {
 
 .form-control:is(input[type="date"], input[type="time"]) {
     cursor: text !important;
+}
+
+.form-control:is(input[type="time"]) {
+    min-height: 2.5rem;
 }
 
 .form-control:is(select) {
@@ -2478,6 +2486,10 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-1);
     }
 
+    main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
+        margin-left: calc(calc(100vw - var(--wrapper-width-bp-1) - var(--sidenav-width)) / 2);
+    }
+
     nav ul.nav {
         display: flex;
     }
@@ -2526,6 +2538,10 @@ nav.inline-nav .inline-nav-collapse {
     header.website-warning .wrapper,
     .website-intro .wrapper {
         width: var(--wrapper-width-bp-2);
+    }
+
+    main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
+        margin-left: 0;
     }
 
     nav .wrapper .logo button.sidenav-collapse {
@@ -2647,6 +2663,10 @@ nav.inline-nav .inline-nav-collapse {
     header.website-warning .wrapper,
     .website-intro .wrapper {
         width: var(--wrapper-width-bp-3);
+    }
+
+    main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
+        margin-left: 0;
     }
 
     header.gov-mark .wrapper .row {
