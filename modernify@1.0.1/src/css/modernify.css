@@ -441,14 +441,18 @@ footer .wrapper {
 
 /* ===== BEZ ASIDE ===== */
 main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent {
-    margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - var(--wrapper-width)) / 2));
+    margin-left: calc(var(--sidenav-width) + (100vw - var(--wrapper-width) - var(--sidenav-width)) / 2);
     width: var(--wrapper-width);
 }
 
 /* ===== Z ASIDE ===== */
 main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
-    margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - 200px - var(--wrapper-width)) / 2));
-    width: var(--wrapper-width);
+    margin-left: calc(var(--sidenav-width) + (100vw - var(--wrapper-width) - var(--sidenav-width) - 100px + 1rem) / 2);
+    width: calc(var(--wrapper-width) - 200px + 2rem);
+}
+
+main:has(nav.side-nav:not(.inline)):has(div.wrapper.sidenav-dependent) {
+    justify-content: start;
 }
 
 *:is(.button, button, input[type="submit"], input[type="reset"], a):active {
@@ -2494,13 +2498,9 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-1);
     }
 
-    main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent {
-        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - var(--wrapper-width-bp-1)) / 2));
-        width: var(--wrapper-width-bp-1);
-    }
-
+    main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent,
     main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
-        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - 200px - var(--wrapper-width-bp-1)) / 2));
+        margin-left: 0;
         width: var(--wrapper-width-bp-1);
     }
 
@@ -2520,16 +2520,20 @@ nav.inline-nav .inline-nav-collapse {
         align-items: center;
     }
 
+    main:has(nav.side-nav:not(.inline)):has(div.wrapper.sidenav-dependent) {
+        justify-content: start;
+    }
+
     main aside {
         display: none;
     }
 
     main:has(aside) div.wrapper {
-        width: var(--wrapper-width-bp-2);
+        width: var(--wrapper-width-bp-1);
     }
 
     main nav.side-nav:not(.collapsing) {
-        width: var(--wrapper-width-bp-2);
+        width: var(--wrapper-width-bp-1);
         position: static;
         z-index: 1;
         order: -1;
@@ -2554,13 +2558,13 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-2);
     }
 
-    main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
-        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - 200px - var(--wrapper-width-bp-2)) / 2));
-        width: var(--wrapper-width-bp-2);
+    main {
+        align-items: center;
     }
 
-    main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent {
-        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - var(--wrapper-width-bp-2)) / 2));
+    main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent,
+    main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
+        margin-left: 0;
         width: var(--wrapper-width-bp-2);
     }
 
