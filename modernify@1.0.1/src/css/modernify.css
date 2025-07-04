@@ -439,8 +439,16 @@ footer .wrapper {
     width: var(--wrapper-width);
 }
 
-main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
-    margin-left: calc(calc(100vw - var(--wrapper-width) - var(--sidenav-width)) / 2);
+/* ===== BEZ ASIDE ===== */
+main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent {
+    margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - var(--wrapper-width)) / 2));
+    width: var(--wrapper-width);
+}
+
+/* ===== Z ASIDE ===== */
+main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
+    margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - 200px - var(--wrapper-width)) / 2));
+    width: var(--wrapper-width);
 }
 
 *:is(.button, button, input[type="submit"], input[type="reset"], a):active {
@@ -2486,8 +2494,14 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-1);
     }
 
-    main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
-        margin-left: calc(calc(100vw - var(--wrapper-width-bp-1) - var(--sidenav-width)) / 2);
+    main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent {
+        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - var(--wrapper-width-bp-1)) / 2));
+        width: var(--wrapper-width-bp-1);
+    }
+
+    main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
+        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - 200px - var(--wrapper-width-bp-1)) / 2));
+        width: var(--wrapper-width-bp-1);
     }
 
     nav ul.nav {
@@ -2540,8 +2554,14 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-2);
     }
 
-    main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
-        margin-left: 0;
+    main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
+        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - 200px - var(--wrapper-width-bp-2)) / 2));
+        width: var(--wrapper-width-bp-2);
+    }
+
+    main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent {
+        margin-left: calc(var(--sidenav-width) + ((100vw - var(--sidenav-width) - var(--wrapper-width-bp-2)) / 2));
+        width: var(--wrapper-width-bp-2);
     }
 
     nav .wrapper .logo button.sidenav-collapse {
@@ -2665,8 +2685,14 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-3);
     }
 
-    main:has(nav.side-nav:not(.inline)) .sidenav-dependent {
+    main:has(nav.side-nav:not(.inline)):has(aside) div.wrapper.sidenav-dependent {
         margin-left: 0;
+        width: var(--wrapper-width-bp-3);
+    }
+
+    main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent {
+        margin-left: 0;
+        width: var(--wrapper-width-bp-3);
     }
 
     header.gov-mark .wrapper .row {
