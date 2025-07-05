@@ -2504,6 +2504,11 @@ nav.inline-nav .inline-nav-collapse {
         width: var(--wrapper-width-bp-1);
     }
 
+    main:has(nav.side-nav.collapsing):not(:has(aside)) div.wrapper.sidenav-dependent,
+    main:has(nav.side-nav.collapsing):has(aside) div.wrapper.sidenav-dependent {
+        margin-left: calc(var(--sidenav-width) + (100vw - var(--wrapper-width-bp-1) - var(--sidenav-width)) / 2);
+    }
+
     nav ul.nav {
         display: flex;
     }
@@ -2521,7 +2526,7 @@ nav.inline-nav .inline-nav-collapse {
     }
 
     main:has(nav.side-nav:not(.inline)):has(div.wrapper.sidenav-dependent) {
-        justify-content: start;
+        align-items: start;
     }
 
     main aside {
@@ -2559,6 +2564,10 @@ nav.inline-nav .inline-nav-collapse {
     }
 
     main {
+        align-items: center;
+    }
+
+    main:has(nav.side-nav:not(.inline)):has(div.wrapper.sidenav-dependent) {
         align-items: center;
     }
 
@@ -2740,6 +2749,10 @@ nav.inline-nav .inline-nav-collapse {
 
     main:has(aside) div.wrapper {
         width: var(--wrapper-width-bp-3);
+    }
+
+    main:has(nav.side-nav:not(.inline)):has(div.wrapper.sidenav-dependent) {
+        align-items: center;
     }
 
     main nav.side-nav {
