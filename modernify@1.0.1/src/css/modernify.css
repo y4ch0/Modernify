@@ -32,7 +32,7 @@
     --intro-height: 30rem;
     --sidenav-width: 13vw;
     --input-label-color: var(--text-default-color);
-    --sidenav-text-color: 0, 0, 0;
+    --sidenav-text-color: var(--text-default-color);
     --sidenav-accent-color: 255, 0, 0;
     --navbar-text-color: var(--primary-color);
     --details-label-color: var(--primary-color);
@@ -1471,6 +1471,29 @@ dialog div.body .dialog-close.dialog-close-styled:hover {
     background-color: rgba(var(--text-default-color), 0.1);
 }
 
+dialog.dialog-width-xs .body {
+    max-width: 20%;
+    min-width: 15%;
+    max-height: 40%;
+}
+
+dialog.dialog-width-s .body {
+    max-width: 30%;
+    max-height: 50%;
+}
+
+dialog.dialog-width-l .body {
+    max-width: 60%;
+    min-width: 45%;
+    max-height: 60%;
+}
+
+dialog.dialog-width-xl .body {
+    max-width: 80%;
+    min-width: 60%;
+    max-height: 80%;
+}
+
 .alert {
     width: 100%;
     padding: 1rem 1.25rem;
@@ -2550,6 +2573,23 @@ nav.inline-nav .inline-nav-collapse {
     header.accessibility-tools .wrapper {
         width: var(--wrapper-width-bp-1);
     }
+
+    dialog.dialog-width-xl .body {
+        max-width: 85%;
+        min-width: 75%;
+    }
+
+    dialog.dialog-width-s .body {
+        max-width: 45%;
+        min-width: 35%;
+        max-height: 50%;
+    }
+
+    dialog.dialog-width-xs .body {
+        max-width: 35%;
+        min-width: 25%;
+        max-height: 45%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2684,6 +2724,24 @@ nav.inline-nav .inline-nav-collapse {
 
     .slider .slides .slide-item {
         padding: 0 3rem;
+    }
+
+    dialog.dialog-width-l .body {
+        max-width: 70%;
+        min-width: 50%;
+        max-height: 70%;
+    }
+
+    dialog.dialog-width-s .body {
+        max-width: 50%;
+        min-width: 40%;
+        max-height: 60%;
+    }
+
+    dialog.dialog-width-xs .body {
+        max-width: 40%;
+        min-width: 30%;
+        max-height: 50%;
     }
 }
 
@@ -2836,5 +2894,15 @@ nav.inline-nav .inline-nav-collapse {
 
     div.dropdown ul li a {
         font-size: 1rem;
+    }
+
+    dialog.dialog-width-xs .body,
+    dialog.dialog-width-s .body,
+    dialog.dialog-width-l .body,
+    dialog.dialog-width-xl .body {
+        max-width: unset;
+        min-width: unset;
+        width: 95%;
+        max-height: 80%;
     }
 }
