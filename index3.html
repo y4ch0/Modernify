@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/css/modernify.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/js/modernify.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#" class="website-logo">
+                    <h1>Modernify Docs</h1>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col d-flex flex-column flex-gap-4">
+                    <div class="component-card">
+                        <h3>Buttons</h3>
+                        <div class="component-card-view">
+                            <div class="row">
+                                <button class="button small primary">Label</button>
+                                <button class="button small secondary">Label</button>
+                                <button class="button small outlined">Label</button>
+                                <button class="button small">Label</button>
+                                <button class="button small" disabled>Label</button>
+                            </div>
+                            <div class="row">
+                                <button class="button primary">Label</button>
+                                <button class="button secondary">Label</button>
+                                <button class="button outlined">Label</button>
+                                <button class="button">Label</button>
+                                <button class="button" disabled>Label</button>
+                            </div>
+                            <div class="row">
+                                <button class="button big primary">Label</button>
+                                <button class="button big secondary">Label</button>
+                                <button class="button big outlined">Label</button>
+                                <button class="button big">Label</button>
+                                <button class="button big" disabled>Label</button>
+                            </div>
+                            <div class="row">
+                                <button class="button square-radius primary">Label</button>
+                                <button class="button l-radius primary">Label</button>
+                                <button class="button pill-rounded primary">Label</button>
+                                <button class="button underlined primary">Label</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3>Dialog</h3>
+                        <div class="component-card-view">
+                            <div class="row">
+                                <button class="button primary dialog-open" data-toggle="modal"
+                                    data-target="#showcase">Launch dialog
+                                    showcase</button>
+                            </div>
+                            <dialog class="dialog-width-xs" data-disable_pe="1" id="showcase" open>
+                                <div class="body rounded-3">
+                                    <h3 class="text-center mt-3">Are you sure to delete these files?</h3>
+                                    <p class="text-center mb-4">All the files you selected (12) will be permanently
+                                        deleted.
+                                        Are you sure about
+                                        this?</p>
+                                    <div class="d-flex flex-m-row flex-gap-2">
+                                        <button class="button l-radius w-100 dialog-close"
+                                            data-target="#showcase">Cancel</button>
+                                        <button class="button l-radius primary w-100 dialog-close"
+                                            data-target="#showcase">Delete</button>
+                                    </div>
+
+                                </div>
+                            </dialog>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

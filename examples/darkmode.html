@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <!--<link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/css/modernify.min.css">-->
-    <link rel="stylesheet" href="../modernify@1.0.1/src/css/modernify.css">
-    <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.1/dist/js/modernify.bundle.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/css/modernify.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/js/modernify.bundle.js"></script>
     <style>
         :root {
             --background-color: 20, 20, 20;
@@ -55,13 +54,13 @@
     <nav>
         <div class="wrapper">
             <div class="logo">
-                <button class="sidenav-collapse"></button>
+                <button class="sidenav-collapse">&ctdot;</button>
                 <a href="#" class="website-logo">
                     <img src="logo.svg" alt="" />
                 </a>
             </div>
             <ul id="nav-menu" class="nav">
-                <button class="nav-collapse close"></button>
+                <button class="nav-collapse close">&times;</button>
                 <li><a href="#">Navigation link</a></li>
                 <li><a href="#">Navigation link</a></li>
                 <li><a href="#">Navigation link</a></li>
@@ -83,7 +82,7 @@
                     </div>
                 </li>
             </ul>
-            <button class="nav-collapse"></button>
+            <button class="nav-collapse">&equiv;</button>
         </div>
     </nav>
     <header class="website-warning">
@@ -199,9 +198,9 @@
                     </ul>
                 </li>
             </ul>
-            <button class="sidenav-collapse close"></button>
+            <button class="sidenav-collapse close">&times;</button>
         </nav>
-        <div class="wrapper">
+        <div class="wrapper" id="sidenav-dependent-demo">
             <nav class="row inline-nav">
                 <div class="logo">
                     <a href="#" class="website-logo">
@@ -372,6 +371,10 @@
                     <div class="form-group">
                         <label>Waga (kg)</label>
                         <input type="number" class="form-control" value="75" />
+                    </div>
+                    <div class="form-group">
+                        <label>Godzina</label>
+                        <input type="time" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label>Zdjęcie</label>
@@ -686,18 +689,18 @@
                         <a class="button outlined toggler" title="No priority color theme set"
                             data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
                         </ul>
                     </div>
                     <div class="dropdown primary">
                         <a class="button primary toggler" title="Primary priority color theme set"
                             data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
                         </ul>
                     </div>
                     <div class="dropdown secondary">
@@ -705,9 +708,18 @@
                             data-toggle="dropdown">Dropdown
                             toggler</a>
                         <ul>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
-                            <li><a href="#">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown" data-auto-close="outside">
+                        <a class="button secondary toggler" title="Secondary priority color theme set"
+                            data-toggle="dropdown">Disable closing on click</a>
+                        <ul>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
+                            <li><a href="#dropdown">Dropdown item</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1021,7 +1033,7 @@
             <div class="row">
                 <div class="col">
                     <h3 id="image">Image</h3>
-                    <img src="https://placehold.co/1920x200" />
+                    <img src="https://placehold.co/1920x200" alt="" />
                 </div>
             </div>
             <div class="row">
@@ -1574,16 +1586,16 @@
                                 <p><a href="#" class="button primary">Przeczytaj</a></p>
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                         </div>
                     </div>
@@ -1602,16 +1614,16 @@
                                 <p><a href="#" class="button primary">Przeczytaj</a></p>
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x520" />
+                                <img src="https://placehold.co/1920x520" alt="" />
                             </div>
                             <div class="slide-item">
-                                <img src="https://placehold.co/1920x820" />
+                                <img src="https://placehold.co/1920x820" alt="" />
                             </div>
                         </div>
                     </div>
@@ -1785,6 +1797,9 @@
                 <div class="col">
                     <a href="#" id="sidenav-toggler" class="button primary">Toggle sidenav</a>
                     <a href="#" id="sidenav-class-toggler" class="button primary">Toggle sidenav inline style</a>
+                    <a href="#" id="sidenav-dependent-demo-toggler" class="button primary">Toggle sidenav-dependent
+                        demo</a>
+                    <a href="#" id="scrollspy-toggler" class="button primary">Aside toggler</a>
                 </div>
             </div>
             <div class="row">
@@ -1872,6 +1887,14 @@
             e.preventDefault();
             $(".side-nav").toggleClass('inline');
         });
+        $("#sidenav-dependent-demo-toggler").on("click", (e) => {
+            e.preventDefault();
+            $("#sidenav-dependent-demo").toggleClass("sidenav-dependent")
+        })
+        $("#scrollspy-toggler").on("click", (e) => {
+            e.preventDefault();
+            $("#aside").toggle();
+        })
     </script>
 </body>
 

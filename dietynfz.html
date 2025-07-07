@@ -2,75 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olsztyn - Ogród z natury</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modernify - Modern needs. Modern solutions.</title>
+    <!-- useless - use when something went wrong 
+    <script src="utility.js"></script>
+    <script src="scrollspy.js"></script>
+    <script src="modernify.accessibility.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/css/modernify.min.css">
     <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/js/modernify.bundle.js"></script>
-    <link rel="shortcut icon" href="https://olsztyn.eu/favicon2.ico" type="image/x-icon">
     <style>
         :root {
-            --primary-color: 53, 128, 46;
-            --secondary-color: 53, 128, 46;
-            --primary-button-color-hover: 53, 109, 46;
-            --root-font: "Open Sans", sans-serif;
+            --collapsing-nav-start-color: 0, 0, 0;
+            --wrapper-width: 60vw;
         }
 
-        .website-intro {
-            background-image: url("https://meteor-turystyka.pl/images/places/0/107.jpg");
-            background-size: cover;
-        }
-
-        .website-intro h1 {
-            font-size: 4rem;
-            color: #fff;
-            text-shadow: 2px 2px 6px rgba(30, 30, 30, 0.6);
-        }
-
-        .website-intro h2 {
-            font-size: 1.75rem;
-            color: #fff;
-            text-shadow: 2px 2px 3px rgba(30, 30, 30, 0.75);
-            font-weight: 300;
-        }
-
-        @media screen and (max-width: 1024px) {
-            nav div:has(form) {
-                display: none;
-            }
+        nav.collapsing-nav {
+            background-color: #fafafa;
         }
     </style>
 </head>
 
 <body>
-    <nav>
+    <nav class="collapsing-nav">
         <div class="wrapper">
             <div class="logo">
+                <button class="sidenav-collapse">&equiv;</button>
                 <a href="#" class="website-logo">
-                    <img src="https://olsztyn.eu/fileadmin/templates/gfx/logo_olsztyn.jpg" alt="Logo miasta Olsztyna" />
-                    Portal urzędu miasta Olsztyna
+                    <img src="https://diety.nfz.gov.pl/images/logo_diety.png" alt="" />
+                    <img src="https://diety.nfz.gov.pl/images/logo_mz.png" alt="" />
                 </a>
             </div>
             <ul id="nav-menu" class="nav">
                 <button class="nav-collapse">&times;</button>
-                <li><a href="#">Gospodarka</a></li>
-                <li><a href="#">Edukacja</a></li>
-                <li><a href="#">Kultura</a></li>
-                <li><a href="#">Senior</a></li>
-                <li><a href="#">Sport</a></li>
-                <li><a href="#">ZIT</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li><a href="#">Navigation link</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="toggler">Navigation link</a>
+                        <ul>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown item</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-            <button class="nav-collapse">&equiv;</button>
+            <button class="nav-collapse">&ctdot;</button>
         </div>
     </nav>
-    <header class="website-warning">
-        <div class="wrapper">
-            <p><strong>Komunikat urzędu:</strong> Roboty drogowe w okolicach ulicy Kopernika, oraz pl. Pułaskiego <a
-                    href="#">Szczegóły utrudnień</a></p>
-        </div>
-    </header>
     <main>
         <div class="wcag-tools">
             <a href="#" class="toggler"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
@@ -145,74 +134,51 @@
         </div>
         <div class="wrapper">
             <div class="row">
-                <div class="col">
-                    <h2 class="header-underlined">Portal urzędu miasta Olsztyna</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="block-cards small">
-                        <a href="#" class="card content-space-between" style="height: 10rem;justify-content: center;">
-                            <h4 class="header-underlined">Gospodarka</h4>
-                            <img src="./assets/img/gospodarka.svg" alt="" style="height:5rem;width:fit-content">
-                        </a>
-                        <a href="#" class="card content-space-between" style="height: 10rem;justify-content: center;">
-                            <h4 class="header-underlined">Edukacja</h4>
-                            <img src="./assets/img/edukacja.svg" alt="" style="height:5rem;width:fit-content">
-                        </a>
-                        <a href="#" class="card content-space-between" style="height: 10rem;justify-content: center;">
-                            <h4 class="header-underlined">Kultura</h4>
-                            <img src="./assets/img/kultura.svg" alt="" style="height:5rem;width:fit-content">
-                        </a>
-                        <a href="#" class="card content-space-between" style="height: 10rem;justify-content: center;">
-                            <h4 class="header-underlined">Senior</h4>
-                            <img src="./assets/img/senior.svg" alt="" style="height:5rem;width:fit-content">
-                        </a>
-                        <a href="#" class="card content-space-between" style="height: 10rem;justify-content: center;">
-                            <h4 class="header-underlined">Sport</h4>
-                            <img src="./assets/img/sport.svg" alt="" style="height:5rem;width:fit-content">
-                        </a>
-                        <a href="#" class="card content-space-between" style="height: 10rem;justify-content: center;">
-                            <h4 class="header-underlined">ZIT</h4>
-                            <img src="./assets/img/ue.svg" alt="" style="height:5rem;width:fit-content">
-                        </a>
+                <div class="col rounded-2 p-4" style="background: #ffd638;
+    background: -moz-linear-gradient(left, #ffd638 0%, #f7a701 100%);
+    background: -webkit-linear-gradient(left, #ffd638 0%, #f7a701 100%);
+    background: linear-gradient(to right, #ffd638 0%, #f7a701 100%);">
+                    <h2 class="text-center header-primary">Kalkulator BMI</h2>
+                    <p class="text-center header-secondary">Wpisz dane do kalkulatora i wylicz swoje BMI. Wynik określi
+                        jakie
+                        zapotrzebowanie energetyczne ma
+                        Twój organizm. Pozwoli też oszacować zagrożenie chorobami związanymi z nadwagą i otyłością.</p>
+                    <div class="d-flex flex-gap-2 align-items-end">
+                        <div class="form-group w-100 mb-0">
+                            <label for="input1">Płeć</label>
+                            <select name="input1" id="input1" class="form-control">
+                                <option value="-1">- wybierz płeć -</option>
+                                <option value="1">kobieta</option>
+                                <option value="2">mężczyzna</option>
+                            </select>
+                        </div>
+                        <div class="form-group w-100 mb-0">
+                            <label for="input2">Wiek</label>
+                            <input type="number" class="form-control" id="input2" placeholder="Podaj wiek">
+                        </div>
+                        <div class="form-group w-100 mb-0">
+                            <label for="input3">Wzrost</label>
+                            <input type="number" class="form-control" id="input3" placeholder="Podaj wzrost">
+                        </div>
+                        <div class="form-group w-100 mb-0">
+                            <label for="input4">Masa ciała (kg)</label>
+                            <input type="number" class="form-control" id="input4" placeholder="Podaj wagę">
+                        </div>
+                        <div class="form-group w-100 mb-0">
+                            <label for="input5">Aktywność (PAL) <span class="details-mark"
+                                    title="Współczynnik aktywności fizycznej, inaczej Physical Activity Level (PAL), to określenie poziomu aktywności człowieka. Wybierz z listy poziom aktywności, który najlepiej oddaje Twoją ruchliwość w ciągu dnia.">?</span></label>
+                            <select name="input5" id="input5" class="form-control">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="4">Option 4</option>
+                                <option value="5">Option 5</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Zmęczony kolejkami? Wypróbuj <span class="header-primary">urzędomat</span></h2>
-                    <p>Urzędomat to nowoczesne rozwiązanie w odpowiedzi na potrzeby mieszkańców.</p>
-                    <p>24 godziny na dobę, 7 dni w tygodniu. <span class="header-primary"><b>Codziennie, bez
-                                kolejek</b></span></p>
-                    <p>Interesanci nie będą musieć czekać w kolejkach, aby odebrać dowód rejestracyjny swojego pojazdu.
-                        Wystarczy zaznaczyć odpowiednie pole w formularzu podczas składania wniosku, a dokument będzie
-                        czekał w Urzędomacie gotowy do odbioru w dowolnym momencie.</p>
-                </div>
-                <div class="col"><img
-                        src="https://s10.tvp.pl/images2/0/b/b/uid_0bb8fd01a271449e8454809593551131_width_900_play_0_pos_0_gs_0_height_506.PNG">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Informacje</h2>
-                    <details>
-                        <summary>Gdzie się znajduje urząd miasta Olsztyna?</summary>
-                        <p>Urząd znajduje się w centrum Olsztyna, na Placu Jana Pawła II. Jego dokładny adres to <b>Plac
-                                Jana Pawła II 1
-                                10-101 Olsztyn</b>.</p>
-                        <p>Dojedziesz tam autobusami linii <b>101, 105, 106, 107, 109, 110, 111, 113, 117, 119, 128,
-                                135, 136
-                            </b> wysiadając na przystanku <b>CENTRUM</b>, <b>ŚW. WOJCIECHA</b> lub <b>TEATR IM. S.
-                                JARACZA</b>, oraz tramwajami linii <b>1, 5</b> wysiadając na przystanku <b>CENTRUM</b>.
-                        </p>
-                    </details>
-                    <details>
-                        <summary>Gdzie się znajduje urząd miasta Olsztyna?</summary>
-                        <p>Urząd znajduje się w centrum Olsztyna, na Placu Jana Pawła II. Jego dokładny adres to <b>Plac
-                                Jana Pawła II 1
-                                10-101 Olsztyn</b>.</p>
-                    </details>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="button secondary underlined">Oblicz BMI</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -220,46 +186,35 @@
     <footer>
         <div class="wrapper">
             <p>&copy; 2025 y4ch0</p>
-            <p>Portal urzędu miasta Olsztyna | Projekt i wykonanie: y4ch0 na zlecenie: CIUWO Olsztyn</p>
             <div class="row">
                 <div class="col">
-                    <h4>Portale miasta Olsztyna</h4>
+                    <h4>Oddziały</h4>
                     <ul>
-                        <li><a href="#">Portal miasta</a></li>
-                        <li><a href="#">ZDZiT Olsztyn</a></li>
-                        <li><a href="#">CIUWO</a></li>
-                        <li><a href="#">Straż Miejska</a></li>
-                        <li><a href="#">MOPS</a></li>
-                        <li><a href="#">Inwestuj w Olsztyn</a></li>
-                        <li><a href="#">Olsztyński Budżet Obywatleski</a></li>
-                        <li><a href="#">Czysty Olsztyn</a></li>
-                        <li><a href="#">Bezpieczny Olsztyn</a></li>
-                        <li><a href="#">Program "Czyste Powietrze"</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h4>Poznaj Olsztyn</h4>
+                    <h4>Administracja</h4>
                     <ul>
-                        <li><a href="#">Władze miasta</a></li>
-                        <li><a href="#">Rada miasta</a></li>
-                        <li><a href="#">Samorządowcy</a></li>
-                        <li><a href="#">Visit Olsztyn - Portal turystyczny</a></li>
-                        <li><a href="#">Imprezy w Olsztynie</a></li>
-                        <li><a href="#">Kortowiada</a></li>
-                        <li><a href="#">Hala Urania</a></li>
-                        <li><a href="#">Zabytki w Olsztynie</a></li>
-                        <li><a href="#">Honorowi Obywatele Olsztyna</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h4>Adresy</h4>
+                    <h4>Fundusze Europejskie</h4>
                     <ul>
-                        <li>
-                            <h5>Urząd Miasta Olsztyna</h5>
-                            <p>Plac Jana Pawła II 1<br>10-101 Olsztyn</p>
-                            <p>Tel. 89 50 60 727</p>
-                            <p>E-mail: rzecznikprasowy@olsztyn.eu</p>
-                        </li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
                     </ul>
                 </div>
             </div>
