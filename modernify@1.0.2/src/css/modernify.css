@@ -2139,18 +2139,18 @@ div.spinner span.spinner::after {
     right: -50%;
 }
 
-.slider {
+.carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.slider .slides {
+.carousel .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.slider .slides .slide-item {
+.carousel .slides .slide-item {
     min-width: 100%;
     overflow-x: hidden;
     display: flex;
@@ -2159,14 +2159,14 @@ div.spinner span.spinner::after {
     padding: 0 5rem;
 }
 
-.slider .slides .slide-item img {
+.carousel .slides .slide-item img {
     width: calc(100% + 10rem) !important;
     max-width: unset !important;
     margin-left: -5rem;
     display: block;
 }
 
-.slider-button {
+.carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -2184,34 +2184,34 @@ div.spinner span.spinner::after {
     border-radius: 0.35rem;
 }
 
-.slider-button.outlined {
+.carousel-button.outlined {
     border: 1px solid var(--mdf-primary-button-color);
 }
 
-.slider-button img {
+.carousel-button img {
     height: 100%;
     width: calc(100% + 2.5rem);
     max-width: unset !important;
     opacity: 0.5;
 }
 
-.slider-button:hover {
+.carousel-button:hover {
     background-color: rgb(from var(--mdf-primary-button-color) r g b / 0.2);
 }
 
-.slider-button:focus {
+.carousel-button:focus {
     outline: 5px auto -webkit-focus-ring-color;
 }
 
-.slider-button.swipe-left-styled {
+.carousel-button.swipe-left-styled {
     left: 10px;
 }
 
-.slider-button.swipe-right-styled {
+.carousel-button.swipe-right-styled {
     right: 10px;
 }
 
-.slider-button.swipe-right-styled::after {
+.carousel-button.swipe-right-styled::after {
     content: "";
     border: 0.3rem solid var(--mdf-primary-button-color);
     border-left: none;
@@ -2223,7 +2223,7 @@ div.spinner span.spinner::after {
     rotate: 45deg;
 }
 
-.slider-button.swipe-left-styled::after {
+.carousel-button.swipe-left-styled::after {
     content: "";
     border: 0.3rem solid var(--mdf-primary-button-color);
     border-left: none;
@@ -3382,7 +3382,7 @@ nav.inline-nav .inline-nav-collapse {
         font-size: 1.5rem;
     }
 
-    .slider .slides .slide-item {
+    .carousel .slides .slide-item {
         padding: 0 3rem;
     }
 
