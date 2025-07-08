@@ -1621,7 +1621,7 @@ dialog.dialog-width-xl .body {
 
 .badge.warning {
     background-color: rgb(from var(--mdf-yellow) r g b / 0.85);
-    color: var(--mdf-text-default-color);
+    color: #000;
 }
 
 .badge.success {
