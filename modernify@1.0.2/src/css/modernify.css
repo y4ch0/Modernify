@@ -134,8 +134,7 @@ h4 {
 
 h5,
 h6 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
+    font-size: calc(var(--mdf-header-base-size) * 0.4);
 }
 
 h6 {
