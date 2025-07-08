@@ -1786,7 +1786,8 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
     background-color: var(--mdf-progress-bar-color);
-    border-radius: 0.4rem 0 0 0.4rem;
+    border-radius: 0.4rem;
+    transition: width 250ms ease;
 }
 
 .process-list {
