@@ -3,7 +3,7 @@ import { initDropdowns } from "./js/dropdown.js";
 import { initModals } from "./js/modal.js";
 import { initTooltips } from "./js/tooltip.js";
 import { initCardSwitch } from "./js/card-switch.js";
-import { initSliders } from "./js/slider.js";
+import { initCarousel } from "./js/carousel.js";
 import { initAccessibility } from "./js/accessibility.js";
 import { initScrollSpy } from "./js/scrollspy.js";
 
@@ -14,7 +14,7 @@ export function initAll() {
     initModals();
     initTooltips();
     initCardSwitch();
-    initSliders();
+    initCarousel();
     initAccessibility();
     initScrollSpy();
 }
@@ -28,7 +28,7 @@ if (typeof window !== "undefined") {
         initModals,
         initTooltips,
         initCardSwitch,
-        initSliders,
+        initCarousel,
         initAccessibility,
         initScrollSpy,
     };

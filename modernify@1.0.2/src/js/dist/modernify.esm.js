@@ -211,33 +211,33 @@ function initCardSwitch() {
     });
 }
 
-// /src/js/slider.js
-function initSliders() {
-    document.querySelectorAll(".slider").forEach((slider) => {
-        if (slider.querySelector(".current-slide-indicator")) return;
+// /src/js/carousel.js
+function initCarousel() {
+    document.querySelectorAll(".carousel").forEach((carousel) => {
+        if (carousel.querySelector(".current-slide-indicator")) return;
 
-        const slidesContainer = slider.querySelector(".slides");
-        const slides = slider.querySelectorAll(".slide-item");
-        const prevButton = slider.querySelector(".swipe-left");
-        const nextButton = slider.querySelector(".swipe-right");
+        const slidesContainer = carousel.querySelector(".slides");
+        const slides = carousel.querySelectorAll(".slide-item");
+        const prevButton = carousel.querySelector(".swipe-left");
+        const nextButton = carousel.querySelector(".swipe-right");
         let currentIndex = 0;
 
         const indicators = document.createElement("ol");
         indicators.classList.add("current-slide-indicator");
-        slider.appendChild(indicators);
+        carousel.appendChild(indicators);
 
         slides.forEach((_, index) => {
             const dot = document.createElement("li");
             dot.addEventListener("click", () => {
                 currentIndex = index;
-                updateSliderPosition();
+                updatecarouselPosition();
             });
             indicators.appendChild(dot);
         });
 
         const dots = indicators.querySelectorAll("li");
 
-        function updateSliderPosition() {
+        function updatecarouselPosition() {
             const offset = -currentIndex * 100;
             slidesContainer.style.transform = `translateX(${offset}%)`;
             updateIndicators();
@@ -251,12 +251,12 @@ function initSliders() {
 
         function nextSlide() {
             currentIndex = (currentIndex + 1) % slides.length;
-            updateSliderPosition();
+            updatecarouselPosition();
         }
 
         function prevSlide() {
             currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateSliderPosition();
+            updatecarouselPosition();
         }
 
         nextButton?.addEventListener("click", nextSlide);
@@ -417,7 +417,7 @@ function initAll() {
     initModals();
     initTooltips();
     initCardSwitch();
-    initSliders();
+    initCarousel();
     initAccessibility();
     initScrollSpy();
 }
@@ -431,7 +431,7 @@ if (typeof window !== "undefined") {
         initModals,
         initTooltips,
         initCardSwitch,
-        initSliders,
+        initCarousel,
         initAccessibility,
         initScrollSpy,
     };
