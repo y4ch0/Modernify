@@ -61,7 +61,9 @@
     --mdf-border-thick: rgb(from var(--mdf-text-default-color) r g b / 0.5);
     --mdf-red: #FF453A;
     --mdf-green: #28CD41;
+    --mdf-dark-green: #118623;
     --mdf-blue: #1288FF;
+    --mdf-navy-blue: #08417B;
     --mdf-orange: #F99810;
     --mdf-yellow: #F9CA10;
     --mdf-violet: #E90DFD;
@@ -1451,10 +1453,25 @@ dialog div.body {
     overflow-y: auto;
     color: var(--mdf-text-default-color);
     padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 0.75rem;
+    box-shadow: rgb(from var(--mdf-text-default-color) r g b / 0.1) 0px 4px 16px, rgba(from var(--mdf-text-default-color) r g b / 0.05) 0px 8px 32px;
     border: var(--mdf-dialog-border) !important;
     position: relative;
+}
+
+dialog div.body * {
+    background-color: red;
+}
+
+dialog div.body h1:is(:first-child),
+dialog div.body h2:is(:first-child),
+dialog div.body h3:is(:first-child),
+dialog div.body h4:is(:first-child),
+dialog div.body h5:is(:first-child),
+dialog div.body h6:is(:first-child),
+dialog div.body p:is(:first-child) {
+    margin-top: 0;
+    width: calc(100% - 3rem);
 }
 
 dialog[open] div.body {
@@ -1465,17 +1482,17 @@ dialog div.body .dialog-close.dialog-close-styled {
     position: absolute;
     right: 0.25rem;
     top: 0.25rem;
-    font-size: 2rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.2rem;
+    font-size: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.45rem;
     line-height: normal;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     opacity: 0.75;
-    font-weight: 350;
+    font-weight: 250;
     cursor: pointer;
     border: none;
     color: var(--mdf-text-default-color);
