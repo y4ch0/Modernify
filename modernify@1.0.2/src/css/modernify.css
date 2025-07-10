@@ -1459,10 +1459,6 @@ dialog div.body {
     position: relative;
 }
 
-dialog div.body * {
-    background-color: red;
-}
-
 dialog div.body h1:is(:first-child),
 dialog div.body h2:is(:first-child),
 dialog div.body h3:is(:first-child),
