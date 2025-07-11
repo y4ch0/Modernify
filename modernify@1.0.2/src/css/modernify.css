@@ -970,10 +970,10 @@ details summary::before {
     border-radius: 2rem;
     aspect-ratio: 1/1;
     font-size: 1.5rem;
-    display: flex;
+    display: inline-flex;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
-    text-decoration: none !important;
     background-color: var(--mdf-primary-button-color);
     color: var(--mdf-primary-button-text);
 }
