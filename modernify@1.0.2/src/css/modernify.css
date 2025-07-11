@@ -910,12 +910,12 @@ h6 {
     color: var(--mdf-secondary-color);
 }
 
-.header-underline-hover {
+.header-underline {
     position: relative;
     margin-bottom: calc(0.5rem + 3px);
 }
 
-.header-underline-hover::after {
+.header-underline::after {
     content: "";
     width: 5rem;
     height: 3px;
@@ -2021,7 +2021,7 @@ span.details-mark.serif {
     flex-direction: column;
 }
 
-.card-switch.big-buttons ul.togglers,
+.card-switch ul.togglers.big-buttons,
 .card-switch ul.togglers.background {
     min-width: 100%;
     border-bottom: none;
@@ -2032,8 +2032,8 @@ span.details-mark.serif {
     overflow-x: auto;
 }
 
-.card-switch.big-buttons ul.togglers li a,
-.card-switch.big-buttons ul.togglers li,
+.card-switch ul.togglers.big-buttons li a,
+.card-switch ul.togglers.big-buttons li,
 .card-switch ul.togglers.background li a,
 .card-switch ul.togglers.background li {
     width: 100%;
@@ -2044,12 +2044,12 @@ span.details-mark.serif {
     border: none;
 }
 
-.card-switch.big-buttons ul.togglers li a,
+.card-switch ul.togglers.big-buttons li a,
 .card-switch ul.togglers.background li a {
     border-radius: 0.5rem !important;
 }
 
-.card-switch.big-buttons ul.togglers li a {
+.card-switch ul.togglers.big-buttons li a {
     font-size: 1.6rem !important;
 }
 
@@ -2064,7 +2064,7 @@ span.details-mark.serif {
 }
 
 .card-switch ul.togglers.underline-hover li a.card-toggler:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 .card-switch ul.togglers.centered {
@@ -2098,7 +2098,7 @@ span.details-mark.serif {
     border-bottom: 3px solid transparent;
 }
 
-.card-switch:not(.big-buttons) ul.togglers li a.card-toggler:hover {
+.card-switch ul.togglers:not(.big-buttons) li a.card-toggler:hover {
     background-color: rgb(from var(--mdf-primary-button-color) r g b / 0.1) !important;
 }
 
@@ -2109,14 +2109,14 @@ span.details-mark.serif {
     border-color: var(--mdf-primary-button-color) !important;
 }
 
-.card-switch.big-buttons ul.togglers li a.card-toggler.current,
+.card-switch ul.togglers.big-buttons li a.card-toggler.current,
 .card-switch ul.togglers.background li a.card-toggler.current {
     background-color: var(--mdf-primary-button-color) !important;
     color: var(--mdf-primary-button-text) !important;
     font-weight: normal !important;
 }
 
-.card-switch.big-buttons ul.togglers li a.card-toggler:not(.current):hover,
+.card-switch ul.togglers.big-buttons li a.card-toggler:not(.current):hover,
 .card-switch ul.togglers.background li a.card-toggler:not(.current):hover {
     background-color: rgb(from var(--mdf-primary-button-color) r g b / 0.15);
 }
