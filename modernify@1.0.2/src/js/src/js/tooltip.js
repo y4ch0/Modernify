@@ -2,42 +2,69 @@
 export function initTooltips() {
     const tooltip = document.createElement("div");
     tooltip.className = "custom-tooltip";
+    tooltip.setAttribute("role", "tooltip");
+    tooltip.style.position = "absolute";
+    tooltip.style.visibility = "hidden";
     document.body.appendChild(tooltip);
 
-    document.addEventListener("mouseover", function (event) {
-        const target = event.target.closest("[title]");
-        if (!target) return;
+    function showTooltip(target, event) {
+        if (!target.hasAttribute("title") || target.dataset.tooltip !== "toggle") return;
 
         const titleText = target.getAttribute("title");
         target.removeAttribute("title");
-        target.dataset.tooltip = titleText;
+        target.dataset.tooltipContent = titleText;
 
         tooltip.textContent = titleText;
         tooltip.style.visibility = "visible";
         positionTooltip(event, target, tooltip);
+    }
+
+    function hideTooltip(target) {
+        if (target.dataset.tooltipContent) {
+            target.setAttribute("title", target.dataset.tooltipContent);
+            delete target.dataset.tooltipContent;
+        }
+        tooltip.style.visibility = "hidden";
+    }
+
+    // MOUSE SUPPORT
+    document.addEventListener("mouseover", function (event) {
+        const target = event.target.closest("[data-tooltip='toggle']");
+        if (!target) return;
+        showTooltip(target, event);
     });
 
     document.addEventListener("mousemove", function (event) {
-        const target = event.target.closest("[data-tooltip]");
-        if (target) {
+        const target = event.target.closest("[data-tooltip='toggle']");
+        if (!target) return;
+        if (tooltip.style.visibility === "visible") {
             positionTooltip(event, target, tooltip);
         }
     });
 
     document.addEventListener("mouseout", function (event) {
-        const target = event.target.closest("[data-tooltip]");
+        const target = event.target.closest("[data-tooltip='toggle']");
         if (!target) return;
+        hideTooltip(target);
+    });
 
-        target.setAttribute("title", target.dataset.tooltip);
-        delete target.dataset.tooltip;
-        tooltip.style.visibility = "hidden";
+    // KEYBOARD ACCESSIBILITY SUPPORT
+    document.addEventListener("focusin", function (event) {
+        const target = event.target.closest("[data-tooltip='toggle']");
+        if (!target) return;
+        showTooltip(target, event);
+    });
+
+    document.addEventListener("focusout", function (event) {
+        const target = event.target.closest("[data-tooltip='toggle']");
+        if (!target) return;
+        hideTooltip(target);
     });
 
     function positionTooltip(event, target, tooltip) {
-        const padding = 4;
+        const padding = 6;
         const maxWidth = window.innerWidth * 0.95;
         tooltip.style.maxWidth = `${maxWidth}px`;
-        tooltip.style.position = "absolute";
 
         const tooltipRect = tooltip.getBoundingClientRect();
         const targetRect = target.getBoundingClientRect();
