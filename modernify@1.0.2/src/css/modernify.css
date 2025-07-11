@@ -973,6 +973,7 @@ details summary::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none !important;
     background-color: var(--mdf-primary-button-color);
     color: var(--mdf-primary-button-text);
 }
