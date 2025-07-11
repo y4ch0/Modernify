@@ -10,9 +10,9 @@
     <script src="scrollspy.js"></script>
     <script src="modernify.accessibility.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/css/modernify.min.css">
-    <!--<link rel="stylesheet" href="modernify@1.0.2/src/css/modernify.css">-->
+    <!--<link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/css/modernify.min.css">-->
+    <link rel="stylesheet" href="modernify@1.0.2/src/css/modernify.css">
     <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/js/modernify.bundle.js"></script>
     <style>
         body {
@@ -705,7 +705,7 @@
                 <div class="col">
                     <h3 id="dropdown">Dropdown</h3>
                     <div class="dropdown">
-                        <a class="button outlined toggler" title="No priority color theme set"
+                        <a class="button outlined toggler" data-tooltip="toggle" title="No priority color theme set"
                             data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
                             <li><a href="#dropdown">Dropdown item</a></li>
@@ -714,7 +714,7 @@
                         </ul>
                     </div>
                     <div class="dropdown primary">
-                        <a class="button primary toggler" title="Primary priority color theme set"
+                        <a class="button primary toggler" data-tooltip="toggle" title="Primary priority color theme set"
                             data-toggle="dropdown">Dropdown toggler</a>
                         <ul>
                             <li><a href="#dropdown">Dropdown item</a></li>
@@ -1075,7 +1075,8 @@
                         id 3</a>
                     <dialog id="dialog1">
                         <div class="body">
-                            <h3>Dialog with id 1</h3>
+                            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias animi dolor autem dicta
+                                rem, nobis ex temporibus expedita magni quae, natus minima veritatis esse officiis.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fuga.</p>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias totam atque aut error
@@ -1340,8 +1341,8 @@
                         <ul>
                             <li>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, cumque?
-                                <span class="details-mark"
-                                    title="Pamiętaj o uzupełnianiu brakujących informacji.">i</span>
+                                <span class="details-mark" title="Pamiętaj o uzupełnianiu brakujących informacji."
+                                    data-tooltip="toggle">i</span>
                             </li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic natus suscipit
                                 possimus eaque magni?</li>
@@ -1354,7 +1355,8 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <span class="details-mark" title="Wybierz plan żywieniowy dopasowany do potrzeb.">i</span>
+                    <span class="details-mark" data-tooltip="toggle"
+                        title="Wybierz plan żywieniowy dopasowany do potrzeb.">i</span>
                     <button class="button primary"
                         title="Wybierz plan żywieniowy dopasowany do potrzeb.">Przycisk</button>
                 </div>
@@ -1460,8 +1462,8 @@
                         </div>
                     </div>
                     <hr />
-                    <div class="card-switch big-buttons">
-                        <ul class="togglers">
+                    <div class="card-switch">
+                        <ul class="togglers big-buttons">
                             <li><a href="#" class="card-toggler">Zakładka 1</a></li>
                             <li><a href="#" class="card-toggler">Zakładka 2</a></li>
                             <li><a href="#" class="card-toggler">Zakładka 3</a></li>
