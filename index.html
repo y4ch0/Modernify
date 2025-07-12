@@ -10,9 +10,9 @@
     <script src="scrollspy.js"></script>
     <script src="modernify.accessibility.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <!--<link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/css/modernify.min.css">-->
-    <link rel="stylesheet" href="modernify@1.0.2/src/css/modernify.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/css/modernify.min.css">
+    <!--<link rel="stylesheet" href="modernify@1.0.2/src/css/modernify.css">-->
     <script src="https://cdn.jsdelivr.net/gh/y4ch0/Modernify/modernify@1.0.2/dist/js/modernify.bundle.js"></script>
     <style>
         body {
@@ -45,6 +45,10 @@
             body {
                 background-size: 300vh;
             }
+        }
+
+        :root {
+            --mdf-details-label-color: #f00;
         }
     </style>
     <style>
@@ -375,6 +379,24 @@
                         <label>Imię</label>
                         <input type="text" class="form-control" value="Jan" />
                     </div>
+                    <div class="form-group floating-label">
+                        <input type="text" id="username" class="form-control" placeholder="" required />
+                        <label for="username">Username</label>
+                    </div>
+
+                    <div class="form-group floating-label">
+                        <textarea id="message" class="form-control" placeholder="" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="form-group floating-label">
+                        <select id="country" class="form-control" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="pl">Poland</option>
+                            <option value="de">Germany</option>
+                        </select>
+                        <label for="country">Country</label>
+                    </div>
+
                     <div class="form-group">
                         <label>Imię</label>
                         <input type="text" class="form-control no-border hover-highlight" value="Jan" />
