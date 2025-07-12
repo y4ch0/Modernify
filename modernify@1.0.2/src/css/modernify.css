@@ -813,6 +813,53 @@ textarea {
     margin-bottom: 0.25rem;
 }
 
+.form-group.floating-label {
+    position: relative;
+    margin-top: 0.75rem !important;
+}
+
+.form-group.floating-label label {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.15s ease-in-out;
+    background-color: var(--mdf-background-color);
+    padding: 0 0.3rem;
+    margin: 0;
+    font-size: inherit;
+    color: rgb(from var(--mdf-input-label-color) r g b / 0.35);
+    pointer-events: none;
+    z-index: 2;
+    line-height: 1;
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-drag: none !important;
+}
+
+.form-group.floating-label input.form-control:focus+label,
+.form-group.floating-label input.form-control:not(:placeholder-shown)+label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    color: var(--mdf-input-label-color);
+}
+
+.form-group.floating-label input.form-control:focus+label,
+.form-group.floating-label input.form-control:not(:placeholder-shown)+label,
+.form-group.floating-label textarea.form-control:focus+label,
+.form-group.floating-label textarea.form-control:not(:placeholder-shown)+label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    color: var(--mdf-input-label-color);
+}
+
+.form-group.floating-label select.form-control:focus+label,
+.form-group.floating-label select.form-control:valid+label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    color: var(--mdf-input-label-color);
+}
+
 .form-group.inline div {
     display: flex;
 }
