@@ -63,18 +63,18 @@ export function initAccessibility() {
         colorOn.addEventListener("click", (e) => {
             e.preventDefault();
             const r = document.querySelector(":root");
-            r.style.setProperty("--mdf-text-default-color", "0, 0, 0");
-            r.style.setProperty("--mdf-background-color", "255, 255, 0");
-            r.style.setProperty("--mdf-primary-color", "0, 0, 0");
-            r.style.setProperty("--mdf-secondary-color", "0, 0, 0");
-            r.style.setProperty("--mdf-primary-button-color", "0, 0, 0");
-            r.style.setProperty("--mdf-secondary-button-color", "0, 0, 0");
-            r.style.setProperty("--mdf-primary-button-text", "255, 255, 255");
-            r.style.setProperty("--mdf-secondary-button-text", "255, 255, 255");
-            r.style.setProperty("--mdf-input-label-color", "0, 0, 0");
-            r.style.setProperty("--mdf-default-border-color", "0, 0, 0");
-            r.style.setProperty("--mdf-primary-button-color-hover", "60,60,60");
-            r.style.setProperty("--mdf-secondary-button-color-hover", "60,60,60");
+            r.style.setProperty("--mdf-text-default-color", "#000000");
+            r.style.setProperty("--mdf-background-color", "#ffff00");
+            r.style.setProperty("--mdf-primary-color", "#000000");
+            r.style.setProperty("--mdf-secondary-color", "#000000");
+            r.style.setProperty("--mdf-primary-button-color", "#000000");
+            r.style.setProperty("--mdf-secondary-button-color", "#000000");
+            r.style.setProperty("--mdf-primary-button-text", "#ffffff");
+            r.style.setProperty("--mdf-secondary-button-text", "#ffffff");
+            r.style.setProperty("--mdf-input-label-color", "#000000");
+            r.style.setProperty("--mdf-default-border-color", "#000000");
+            r.style.setProperty("--mdf-primary-button-color-hover", "#3c3c3c");
+            r.style.setProperty("--mdf-secondary-button-color-hover", "#3c3c3c");
         });
     }
 
