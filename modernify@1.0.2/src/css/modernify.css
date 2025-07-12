@@ -963,23 +963,39 @@ details summary {
     gap: 0.5rem;
 }
 
-details summary::before {
-    content: "\002B";
+details summary::after {
+    content: "";
+    position: absolute;
+    border-radius: 2rem;
     width: 2rem;
     height: 2rem;
-    border-radius: 2rem;
-    aspect-ratio: 1/1;
-    font-size: 1.5rem;
-    display: inline-flex;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
     background-color: var(--mdf-primary-button-color);
+    z-index: 0;
+}
+
+details summary::before {
+    content: "";
+    background-color: var(--mdf-primary-button-text);
     color: var(--mdf-primary-button-text);
+    border-color: var(--mdf-primary-button-text);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M65 30C67.7614 30 70 32.2386 70 35V60H95C97.7614 60 100 62.2386 100 65C100 67.7614 97.7614 70 95 70H70V95C70 97.7614 67.7614 100 65 100C62.2386 100 60 97.7614 60 95V70H35C32.2386 70 30 67.7614 30 65C30 62.2386 32.2386 60 35 60H60V35C60 32.2386 62.2386 30 65 30Z' fill='white'/%3E%3C/svg%3E%0A");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 100%;
+    mask-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M65 30C67.7614 30 70 32.2386 70 35V60H95C97.7614 60 100 62.2386 100 65C100 67.7614 97.7614 70 95 70H70V95C70 97.7614 67.7614 100 65 100C62.2386 100 60 97.7614 60 95V70H35C32.2386 70 30 67.7614 30 65C30 62.2386 32.2386 60 35 60H60V35C60 32.2386 62.2386 30 65 30Z' fill='white'/%3E%3C/svg%3E%0A");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    width: 2rem;
+    height: 2rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    z-index: 2;
 }
 
 details[open] summary::before {
-    content: "\2212";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M95 60C97.7614 60 100 62.2386 100 65C100 67.7614 97.7614 70 95 70H35C32.2386 70 30 67.7614 30 65C30 62.2386 32.2386 60 35 60H95Z' fill='white'/%3E%3C/svg%3E%0A");
+    mask-image: url("data:image/svg+xml,%3Csvg width='130' height='130' viewBox='0 0 130 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M95 60C97.7614 60 100 62.2386 100 65C100 67.7614 97.7614 70 95 70H35C32.2386 70 30 67.7614 30 65C30 62.2386 32.2386 60 35 60H95Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 
 details summary:hover {
