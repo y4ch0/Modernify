@@ -603,8 +603,9 @@ form p {
     border-color: var(--mdf-border-thick);
 }
 
-.form-control.hover-highlight:hover {
-    filter: brightness(0.96);
+.form-control.hover-highlight:hover,
+.form-control.no-border:hover {
+    background-color: rgb(from var(--mdf-text-default-color) r g b / 0.075);
 }
 
 .form-control.no-border {
