@@ -607,7 +607,7 @@ form p {
 }
 
 .form-control.hover-highlight:hover,
-.form-control.no-border:hover {
+.form-control:is(input).no-border:hover {
     background-color: rgb(from var(--mdf-text-default-color) r g b / 0.075);
 }
 
