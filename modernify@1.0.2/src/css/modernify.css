@@ -73,7 +73,7 @@
     --mdf-brown: #A28A6E;
     --mdf-gray: #ACACAF;
     /* Text colors */
-    --mdf-text-color-light: #f3f3f3;
+    --mdf-text-color-light: #f5f5f5;
     --mdf-text-color-dark: #0A0A0A;
     interpolate-size: allow-keywords;
 }
