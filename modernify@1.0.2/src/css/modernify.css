@@ -15,7 +15,7 @@
     --mdf-header-base-size: 2.05rem;
     --mdf-link-color: var(--mdf-blue);
     --mdf-link-default-decoration: none;
-    --mdf-text-default-color: #0A0A0A;
+    --mdf-text-default-color: var(--mdf-text-color-dark);
     /* Buttons */
     --mdf-primary-button-color: var(--mdf-primary-color);
     --mdf-primary-button-text: #FFFFFF;
@@ -72,6 +72,9 @@
     --mdf-mint: #0EF5DA;
     --mdf-brown: #A28A6E;
     --mdf-gray: #ACACAF;
+    /* Text colors */
+    --mdf-text-color-light: #f3f3f3;
+    --mdf-text-color-dark: #0A0A0A;
     interpolate-size: allow-keywords;
 }
 
