@@ -1132,12 +1132,19 @@ div.dropdown ul {
     z-index: 99;
     font-weight: normal;
     background-color: var(--mdf-dropdown-background-color);
-    padding: 0.3rem 0;
+    padding: 3px;
     border: 1px solid rgb(from var(--mdf-default-border-color) r g b / 0.065);
-    border-radius: 0.35rem;
+    border-radius: 0.5rem;
     width: max-content;
     max-width: 300px;
     box-shadow: var(--mdf-shadow-s);
+}
+
+div.dropdown hr {
+    max-width: unset;
+    width: calc(100% + 6px);
+    margin-left: -3px;
+    margin-right: -3px;
 }
 
 div.dropdown .toggler {
@@ -1162,9 +1169,10 @@ div.dropdown .toggler::after {
 }
 
 div.dropdown ul li a {
-    padding: 0.35rem 0.5rem !important;
+    padding: 0.25rem 0.55rem !important;
     display: flex;
     gap: 0.35rem;
+    border-radius: calc(0.5rem - 3px);
     color: var(--mdf-text-default-color) !important;
     font-weight: normal;
     font-size: 0.95rem;
@@ -1180,14 +1188,19 @@ div.dropdown.secondary ul li a {
 }
 
 div.dropdown ul li a:hover {
-    background-color: rgb(from var(--mdf-text-default-color) r g b / 0.05);
+    background-color: var(--mdf-blue);
+    color: var(--mdf-text-color-light) !important;
     text-decoration: var(--mdf-link-default-decoration);
+}
+
+div.dropdown.light ul li a:hover {
+    background-color: rgb(from var(--mdf-text-default-color) r g b / 0.055) !important;
+    color: var(--mdf-text-default-color) !important;
 }
 
 div.dropdown ul li a:active {
     filter: brightness(0.85) !important;
     transition: background-color 100ms ease;
-    background-color: rgb(from var(--mdf-text-default-color) r g b / 0.1);
 }
 
 div.dropdown ul.show {
@@ -2332,6 +2345,7 @@ div.spinner span.spinner::after {
     width: 10px;
     height: 10px;
     background: rgb(from var(--mdf-text-default-color) r g b / 0.2);
+    box-shadow: var(--mdf-shadow-s);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -2353,6 +2367,7 @@ div.spinner span.spinner::after {
     border-radius: 0.3rem;
     padding: 0;
     margin: 0;
+    background-color: var(--mdf-background-color);
 }
 
 .items-group .items-group-item {
@@ -2362,6 +2377,8 @@ div.spinner span.spinner::after {
     border-bottom: 1px solid rgb(from var(--mdf-default-border-color) r g b / 0.15) !important;
     padding: 0 0.5rem !important;
     outline-offset: 1px;
+    color: var(--mdf-default-text-color);
+    text-decoration: none;
 }
 
 .items-group .items-group-item:first-child {
@@ -2376,6 +2393,19 @@ div.spinner span.spinner::after {
 .items-group .items-group-item.current {
     background-color: var(--mdf-primary-button-color);
     color: var(--mdf-primary-button-text);
+}
+
+.items-group .items-group-item:is(a) {
+    transition: background-color 50ms ease;
+}
+
+.items-group .items-group-item:is(a):hover {
+    background-color: rgb(from var(--mdf-text-default-color) r g b / 0.055);
+    outline: initial;
+}
+
+.items-group .items-group-item.current:is(a):hover {
+    background-color: rgb(from var(--mdf-primary-button-color) r g b / 0.75);
 }
 
 img.rounded {
@@ -2469,9 +2499,9 @@ label.switch input.switch-toggler {
     justify-content: start;
     border: 0;
     border-radius: 2rem;
-    width: 2.65rem;
-    min-width: 2.65rem;
-    height: 1.55rem;
+    width: 45px;
+    min-width: 45px;
+    height: 27px;
     background-color: rgb(from var(--mdf-text-default-color) r g b / 0.3);
     position: relative;
     transition: all 125ms ease;
@@ -3569,6 +3599,12 @@ nav.inline-nav .inline-nav-collapse {
         max-width: 40%;
         min-width: 30%;
         max-height: 50%;
+    }
+
+    label.switch input.switch-toggler {
+        width: 52px;
+        min-width: 52px;
+        height: 30px;
     }
 }
 
