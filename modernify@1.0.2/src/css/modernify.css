@@ -55,6 +55,9 @@
     --mdf-shadow-m: 0 0.5rem 1rem rgb(from var(--mdf-text-default-color) r g b / 0.15);
     --mdf-shadow-l: 0 1rem 3rem rgb(from var(--mdf-text-default-color) r g b / 0.175);
     --mdf-spacer: 1rem;
+    /* Form check colors */
+    --mdf-form-check-accent: var(--mdf-primary-button-color);
+    --mdf-form-check-background: var(--mdf-primary-button-text);
     /* Border patterns */
     --mdf-border-thin: rgb(from var(--mdf-text-default-color) r g b / 0.15);
     --mdf-border-default: rgb(from var(--mdf-text-default-color) r g b / 0.3);
@@ -691,21 +694,21 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form-check-box:checked {
     /*--bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='none'%3E%3Cpath fill='%23fff' d='M27.672 51.53c-1.58 0-2.878-.595-3.898-1.784l-11.09-13.04c-.487-.53-.825-1.04-1.011-1.526a4.857 4.857 0 0 1-.259-1.59c0-1.232.417-2.256 1.25-3.072.832-.817 1.887-1.225 3.165-1.225 1.363 0 2.497.523 3.402 1.568l8.355 9.99 16.688-26.146c.531-.816 1.091-1.39 1.68-1.719.602-.343 1.335-.515 2.196-.515 1.249 0 2.297.408 3.144 1.224.861.802 1.292 1.82 1.292 3.051 0 .444-.08.91-.237 1.397a5.929 5.929 0 0 1-.732 1.439L31.742 49.467c-.92 1.375-2.276 2.062-4.07 2.062Z'/%3E%3C/svg%3E");*/
-    background-color: var(--mdf-primary-color);
-    border-color: var(--mdf-primary-color);
+    background-color: var(--mdf-form-check-accent);
+    border-color: var(--mdf-form-check-accent);
 }
 
 .form-check-box:indeterminate {
     /*--bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");*/
-    background-color: var(--mdf-primary-color);
-    border-color: var(--mdf-primary-color);
+    background-color: var(--mdf-form-check-accent);
+    border-color: var(--mdf-form-check-accent);
 }
 
 .form-check-box:checked::before {
     content: "";
-    background-color: var(--mdf-background-color);
-    border-color: var(--mdf-background-color);
-    color: var(--mdf-background-color);
+    background-color: var(--mdf-form-check-background);
+    border-color: var(--mdf-form-check-background);
+    color: var(--mdf-form-check-background);
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='black'%3E%3Cpath d='M27.672 51.53c-1.58 0-2.878-.595-3.898-1.784l-11.09-13.04c-.487-.53-.825-1.04-1.011-1.526a4.857 4.857 0 0 1-.259-1.59c0-1.232.417-2.256 1.25-3.072.832-.817 1.887-1.225 3.165-1.225 1.363 0 2.497.523 3.402 1.568l8.355 9.99 16.688-26.146c.531-.816 1.091-1.39 1.68-1.719.602-.343 1.335-.515 2.196-.515 1.249 0 2.297.408 3.144 1.224.861.802 1.292 1.82 1.292 3.051 0 .444-.08.91-.237 1.397a5.929 5.929 0 0 1-.732 1.439L31.742 49.467c-.92 1.375-2.276 2.062-4.07 2.062Z'/%3E%3C/svg%3E");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
@@ -720,9 +723,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form-check-box:indeterminate::before {
     content: "";
-    background-color: var(--mdf-background-color);
-    border-color: var(--mdf-background-color);
-    color: var(--mdf-background-color);
+    background-color: var(--mdf-form-check-background);
+    border-color: var(--mdf-form-check-background);
+    color: var(--mdf-form-check-background);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
@@ -768,8 +771,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .form-check-radio:checked {
-    background-color: var(--mdf-background-color);
-    border: 5px solid var(--mdf-primary-color);
+    background-color: var(--mdf-form-check-background);
+    border: 5px solid var(--mdf-form-check-accent);
 }
 
 input[type="range"] {
