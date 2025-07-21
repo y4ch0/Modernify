@@ -2378,7 +2378,7 @@ div.spinner span.spinner::after {
     border: none !important;
     border-radius: 0 !important;
     border-bottom: 1px solid rgb(from var(--mdf-default-border-color) r g b / 0.15) !important;
-    padding: 0 0.5rem !important;
+    padding: 0.5rem 0.75rem;
     outline-offset: 1px;
     color: var(--mdf-default-text-color);
     text-decoration: none;
