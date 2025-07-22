@@ -655,7 +655,7 @@ form p {
     padding: 0.3rem 0.6rem;
 }
 
-.form-control:is(select, input[type="date"]) {
+.form-control:is(select) {
     cursor: pointer;
 }
 
@@ -674,7 +674,6 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 0.55rem 0.85rem;
     padding-left: 0.5rem;
     margin-bottom: 0.25rem;
-    cursor: pointer;
     outline: 3px solid transparent;
     outline-offset: -1px;
 }
@@ -780,6 +779,9 @@ input[type="range"] {
     margin-bottom: 1rem;
     accent-color: var(--mdf-accent-color);
     outline-offset: 1px !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
