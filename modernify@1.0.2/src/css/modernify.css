@@ -933,6 +933,47 @@ textarea {
     pointer-events: none;
 }
 
+.form-check-label {
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.95rem;
+    border-radius: 0.35rem;
+    margin: 0 !important;
+    padding: 0.15rem 0.5rem;
+    font-weight: normal;
+    border: 1px solid var(--mdf-border-default);
+    background-color: transparent;
+    transition: all 100ms ease;
+    transition-property: background-color, color;
+    cursor: pointer;
+}
+
+.form-check-label input {
+    appearance: none;
+    display: none;
+}
+
+.form-check-label:has(input:checked) {
+    background-color: var(--mdf-form-check-accent);
+    color: var(--mdf-form-check-background)
+}
+
+.form-check-set {
+    display: flex;
+    gap: 0.35rem;
+    width: max-content;
+    flex-wrap: nowrap;
+    background-color: rgb(from var(--mdf-text-default-color) r g b / 0.075);
+    padding: 0.25rem;
+    border-radius: 0.6rem;
+}
+
+.form-check-set .form-check-label {
+    border: 1px solid var(--mdf-border-thin);
+}
+
 h1,
 h2,
 h3,
@@ -3465,6 +3506,10 @@ nav.inline-nav .inline-nav-collapse {
 
     main {
         align-items: center;
+    }
+
+    .form-check-label {
+        font-size: 1rem;
     }
 
     main:has(nav.side-nav:not(.inline)):has(div.wrapper.sidenav-dependent) {
