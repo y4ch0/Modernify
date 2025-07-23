@@ -296,7 +296,7 @@ nav.collapsing-nav {
 
 nav.collapsing-nav.scrolled {
     background-color: var(--mdf-background-color);
-    box-shadow: rgba(from var(--mdf-text-default-color) r g b / 0.1) 0px 5px 8px 0px;
+    box-shadow: rgb(from var(--mdf-text-default-color) r g b / 0.1) 0px 5px 8px 0px;
 }
 
 nav.collapsing-nav ul li a,
@@ -308,6 +308,27 @@ nav.collapsing-nav ul li {
 nav.collapsing-nav.scrolled ul li a,
 nav.collapsing-nav.scrolled ul li {
     color: var(--mdf-navbar-text-color);
+}
+
+body:has(nav.variant-floating) {
+    padding-top: 0.5rem;
+}
+
+nav.variant-floating {
+    width: calc(100% - 1rem);
+    max-width: unset;
+    top: 0.5rem;
+    left: 0.5rem;
+    border-radius: calc(var(--mdf-spacer) * 0.5) !important;
+    box-shadow: var(--mdf-shadow-s) !important;
+}
+
+nav.side-nav.variant-floating {
+    border: none;
+    top: 5.5rem;
+    left: 0.5rem;
+    height: calc(100vh - 6rem);
+    box-shadow: var(--mdf-shadow-s) !important;
 }
 
 main {
@@ -958,6 +979,14 @@ textarea {
 .form-check-label:has(input:checked) {
     background-color: var(--mdf-form-check-accent);
     color: var(--mdf-form-check-background)
+}
+
+.form-check-label:hover {
+    background-color: rgb(from var(--mdf-form-check-accent) r g b / 0.15);
+}
+
+.form-check-label:has(input:checked):hover {
+    background-color: rgb(from var(--mdf-form-check-accent) r g b / 0.85);
 }
 
 .form-check-set {
@@ -3514,6 +3543,12 @@ nav.inline-nav .inline-nav-collapse {
 
     main:has(nav.side-nav:not(.inline)):has(div.wrapper.sidenav-dependent) {
         align-items: center;
+    }
+
+    nav.side-nav.variant-floating {
+        border-radius: 0 !important;
+        background-color: var(--mdf-background-color) !important;
+        backdrop-filter: unset;
     }
 
     main:has(nav.side-nav:not(.inline)):not(:has(aside)) div.wrapper.sidenav-dependent,
