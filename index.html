@@ -73,7 +73,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="top-nav">
         <div class="wrapper">
             <div class="logo">
                 <button class="sidenav-collapse">&ctdot;</button>
@@ -1866,6 +1866,7 @@
                     <a href="#" id="sidenav-dependent-demo-toggler" class="button primary">Toggle sidenav-dependent
                         demo</a>
                     <a href="#" id="scrollspy-toggler" class="button primary">Aside toggler</a>
+                    <a href="#" id="floating-nav-toggler" class="button primary">Floating nav toggle</a>
                 </div>
             </div>
             <div class="row">
@@ -1981,6 +1982,11 @@
         $("#scrollspy-toggler").on("click", (e) => {
             e.preventDefault();
             $("#aside").toggle();
+        })
+        $("#floating-nav-toggler").on("click", (e) => {
+            e.preventDefault();
+            $("#top-nav").toggleClass("variant-floating")
+            $("#side-nav").toggleClass("variant-floating")
         })
     </script>
 </body>
